@@ -28,9 +28,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Notice&quot;&gt;Notice:&lt;/h2&gt;
-&lt;p&gt;​		This article is only apply to those who store images locally.&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h2 id=&quot;Notice&quot;&gt;&lt;a href=&quot;#Notice&quot; class=&quot;headerlink&quot; title=&quot;Notice:&quot;&gt;&lt;/a&gt;Notice:&lt;/h2&gt;&lt;p&gt;​		This article is only apply to those who store</summary>
         
       
     
@@ -59,8 +57,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;2-7&quot;&gt;2.7&lt;/h3&gt;
-&lt;p&gt;it only print &lt;code&gt;61 62 63 64 65 66&lt;/code&gt; cause &lt;code&gt;strlen&lt;/code&gt; doesn’t print the last character</summary>
+    <summary type="html">&lt;h3 id=&quot;2-7&quot;&gt;&lt;a href=&quot;#2-7&quot; class=&quot;headerlink&quot; title=&quot;2.7&quot;&gt;&lt;/a&gt;2.7&lt;/h3&gt;&lt;p&gt;it only print &lt;code&gt;61 62 63 64 65 66&lt;/code&gt; cause</summary>
         
       
     
@@ -69,9 +66,9 @@
     <category term="solutions" scheme="https://yenaibangbing.github.io/categories/solutions/"/>
     
     
-    <category term="CSAPP" scheme="https://yenaibangbing.github.io/tags/CSAPP/"/>
-    
     <category term="solutions" scheme="https://yenaibangbing.github.io/tags/solutions/"/>
+    
+    <category term="CSAPP" scheme="https://yenaibangbing.github.io/tags/CSAPP/"/>
     
   </entry>
   
@@ -87,9 +84,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-Bernoulli-Distribution&quot;&gt;1. Bernoulli Distribution&lt;/h2&gt;
-&lt;h3 id=&quot;1-1&quot;&gt;1.1&lt;/h3&gt;
-&lt;p&gt;If we are tossing</summary>
+    <summary type="html">&lt;h2 id=&quot;1-Bernoulli-Distribution&quot;&gt;&lt;a href=&quot;#1-Bernoulli-Distribution&quot; class=&quot;headerlink&quot; title=&quot;1. Bernoulli Distribution&quot;&gt;&lt;/a&gt;1. Bernoulli</summary>
         
       
     
@@ -118,7 +113,9 @@
       
         
         
-    <summary type="html">&lt;h3</summary>
+    <summary type="html">&lt;h3 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1&quot;&gt;&lt;/a&gt;1.1&lt;/h3&gt;&lt;p&gt;人工智能就是用人工的方法在计算机上实现的智能，也成为机器智能.&lt;br&gt;发展阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;孕育：1956年之前 </summary>
         
       
     
@@ -145,8 +142,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;  At first I thought the method is dp or classification discussion, but they are all very copmlex.&lt;br&gt;
-  So I found it can be solved in</summary>
+    <summary type="html">&lt;p&gt;&amp;amp;emsp;&amp;amp;emsp;At first I thought the method is dp or classification discussion, but they are all very</summary>
         
       
     
@@ -173,9 +169,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Error&quot;&gt;Error&lt;/h2&gt;
-&lt;p&gt;When I insert code block to my articles, I found the code blocks could’t be rendered correctly.&lt;br&gt;
-They are</summary>
+    <summary type="html">&lt;h2 id=&quot;Error&quot;&gt;&lt;a href=&quot;#Error&quot; class=&quot;headerlink&quot; title=&quot;Error&quot;&gt;&lt;/a&gt;Error&lt;/h2&gt;&lt;p&gt;When I insert code block to my articles, I found the code</summary>
         
       
     

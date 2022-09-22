@@ -384,15 +384,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Error">Error</h2>
-<p>When I insert code block to my articles, I found the code blocks could’t be rendered correctly.<br>
-They are quite <strong>ugly</strong> and all the functions, such as folding, copying and shrinking, don’t work.</p>
-<h2 id="Reason">Reason</h2>
-<p>The highlight function can’t work correctly.</p>
-<h2 id="Solution">Solution</h2>
-<ul>
-<li>Open <strong>_config.yml</strong> and find <strong>highlight</strong> and <strong>prismjs</strong>, then config them like this:</li>
-</ul>
+                <h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><p>When I insert code block to my articles, I found the code blocks could’t be rendered correctly.<br>They are quite <strong>ugly</strong> and all the functions, such as folding, copying and shrinking, don’t work.  </p>
+<h2 id="Reason"><a href="#Reason" class="headerlink" title="Reason"></a>Reason</h2><p>The highlight function can’t work correctly.  </p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ul>
+<li><p>Open <strong>_config.yml</strong> and find <strong>highlight</strong> and <strong>prismjs</strong>, then config them like this:</p>
 <pre class="line-numbers language-none"><code class="language-none">highlight:
   enable: false
   line_number: true
@@ -405,10 +400,11 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>Uninstall <strong>hexo-prism-plugin</strong></li>
+</li>
+<li><p>Uninstall <strong>hexo-prism-plugin</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">npm uninstall hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">npm uninstall hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
