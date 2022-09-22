@@ -400,13 +400,13 @@
 <p>Then we can get $Var[\mu]$ readily<br>$$<br>Var[\mu]=\frac{(a+1)a}{(a+b+1)(a+b)}-(\frac{a}{a+b})^2\<br>=\frac{ab}{(a+b+1)(a+b)^2} \tag{12}<br>$$</p>
 <p>If our target is to better predict next result of $x$, that’s equal to pretict<br>$$<br>p(x=1|D)=\int_0^1p(x=1|\mu)p(\mu|D)d\mu\<br>=\int_0^1\mu p(\mu|D)d\mu\<br>=E[\mu|D] \tag{13}<br>$$<br>So we can get<br>$$<br>p(x=1|D)=\frac{m+a}{m+a+l+b} \tag{14}<br>$$<br>It tell us when the number of tests ( m , l ) is big enough, the result is <strong>Maximum Likelihood Estimate</strong>.<br>For limited dataset, the estimate of $\mu$ is between prior and  Maximum Likelihood Estimate.</p>
 <h2 id="3-The-Gaussian-Distribution"><a href="#3-The-Gaussian-Distribution" class="headerlink" title="3. The Gaussian Distribution"></a>3. The Gaussian Distribution</h2><h3 id="3-1-The-Gaussian-Distribution"><a href="#3-1-The-Gaussian-Distribution" class="headerlink" title="3.1 The Gaussian Distribution"></a>3.1 The Gaussian Distribution</h3><p>As we all know, the Gaussian distribution can be written in the form of<br>$$<br>N( x | \mu , \sigma^2 )=\frac{1} {(2\pi\sigma^2)^ {1/2} }exp{ {-\frac{1}{2\sigma^2}(x-\mu)^2} } \tag{15}<br>$$<br>where $\mu$ is the mean and $\sigma^2$ is the variane.<br>If x is $D$-dimensional vector x, it take the form<br>$$<br>N ( x | \mu , \Sigma ) = \frac{1}{(2 \pi)^ {D/2} } \frac {1} { |\Sigma| ^ {1/2} }exp{ {-\frac{1}{2}(x-\mu)^T\Sigma^{-1} (x-\mu) } }   \tag  {16}<br>$$<br>Let<br>$$<br>\Delta^2=(x-\mu)^T\Sigma^{-1}(x-\mu) \tag{17}<br>$$<br>and the quantity $\Delta$ is called the <strong>Mahalanobis distance</strong><br>from µ to x and reduces to the Euclidean distance when Σ is the identity matrix.   </p>
-<p>Usually, we assume $\Sigma$ is a <strong>symmetric matrix</strong>, so we can <strong>Singular Value Decomposition</strong> it.<br><strong>Geo expression of Gaussian Distribution</strong>:<br>Imagine an elliptical surface of constant proba<br>bility density for a Gaussian in<br>a two-dimensional space x =<br>($x_1,x_2$) on which the density<br>is exp(−1/2) of its value at<br>x = $\mu$. The major axes of<br>the ellipse are defined by the<br>eigenvectors $u_i$ of the covari-<br>ance matrix, with correspond-<br>ing eigenvalues $\lambda_i$ .</p>
+<p>Usually, we assume $\Sigma$ is a <strong>symmetric matrix</strong>, so we can <strong>Singular Value Decomposition</strong> it.<br><strong>Geo expression of Gaussian Distribution</strong>:<br>Imagine an elliptical surface of constant probability density for a Gaussian in a two-dimensional space x = ($x_1,x_2$) on which the density is exp(−1/2) of its value at x = $\mu$. The major axes of the ellipse are defined by the eigenvectors $u_i$ of the covariance matrix, with corresponding eigenvalues $\lambda_i$ .</p>
 <h3 id="3-2-Conditional-Gaussian-Distribution"><a href="#3-2-Conditional-Gaussian-Distribution" class="headerlink" title="3.2 Conditional Gaussian Distribution"></a>3.2 Conditional Gaussian Distribution</h3><p>An important property of the multivariate Gaussian distribution is that if two<br>sets of variables are jointly Gaussian, then the conditional distribution of one set<br>conditioned on the other is again Gaussian.<br>Split $x$ in two  </p>
 <p>$$<br>x={x_a \choose x_b}<br>$$<br>$$<br>\mu = {\mu <em>{a} \choose  \mu</em>{b} }<br>$$</p>
 <p>$$<br>\Sigma = {\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } }<br>$$<br>Where $\mu$ is mean and $\Sigma$ is covariance matrix.<br>Let<br>$$<br>\Lambda = \Sigma ^{-1 }<br>$$<br>so<br>$$<br>\Lambda = {\Lambda_{aa } \quad \Lambda_{ab } \choose \Lambda_{ba } \quad \Lambda_{bb } }<br>$$</p>
-<p>We just need remember the mean and variance of conditional Gaussian distribution<br>$$<br>\mu_{a|b } = \mu _a + \Sigma _{ab } + \Sigma _{bb }^-1 (x_b-\mu _b )   \tag{18}<br>$$</p>
+<p>We just need remember the mean and variance of conditional Gaussian distribution<br>$$<br>\mu_{a|b } = \mu _a + \Sigma _{ab } + \Sigma _{bb }^{-1} (x_b-\mu _b )   \tag{18}<br>$$</p>
 <p>$$<br>\Sigma_{a|b } = \Sigma_{aa}- \Sigma_{ab } \Sigma_{bb } ^{-1} \Sigma_{ba }  \tag{19}<br>$$</p>
-<h3 id="3-3-Marginal-Gaussian-Distribution"><a href="#3-3-Marginal-Gaussian-Distribution" class="headerlink" title="3.3 Marginal Gaussian Distribution"></a>3.3 Marginal Gaussian Distribution</h3><p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian, then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of<br>the marginal distribution given by</p>
+<h3 id="3-3-Marginal-Gaussian-Distribution"><a href="#3-3-Marginal-Gaussian-Distribution" class="headerlink" title="3.3 Marginal Gaussian Distribution"></a>3.3 Marginal Gaussian Distribution</h3><p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian,then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of the marginal distribution given by</p>
 <p>$$<br> p(x_a) = \int p(x_a,x_b)dx_b<br>$$<br>conclusion<br>$$<br>E[x_a] = \mu_a \tag{20}<br>$$</p>
 <p>$$<br>cov[x_a]=\Sigma_{aa} \tag{21}<br>$$</p>
 <h3 id="3-4-Bayes’-Theorem-for-Gaussian-Variables"><a href="#3-4-Bayes’-Theorem-for-Gaussian-Variables" class="headerlink" title="3.4 Bayes’ Theorem for Gaussian Variables"></a>3.4 Bayes’ Theorem for Gaussian Variables</h3><h3 id="3-5-Maximum-likelihood-for-the-Gaussian"><a href="#3-5-Maximum-likelihood-for-the-Gaussian" class="headerlink" title="3.5 Maximum likelihood for the Gaussian"></a>3.5 Maximum likelihood for the Gaussian</h3><h3 id="3-6"><a href="#3-6" class="headerlink" title="3.6"></a>3.6</h3>
@@ -511,12 +511,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/solutions/">
-                        <span class="chip bg-color">solutions</span>
-                    </a>
-                    
                     <a href="/tags/CSAPP/">
                         <span class="chip bg-color">CSAPP</span>
+                    </a>
+                    
+                    <a href="/tags/solutions/">
+                        <span class="chip bg-color">solutions</span>
                     </a>
                     
                 </div>

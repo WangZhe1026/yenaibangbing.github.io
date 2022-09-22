@@ -388,16 +388,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Notice"><a href="#Notice" class="headerlink" title="Notice:"></a>Notice:</h2><p>​		This article is only apply to those who store images locally.</p>
-<h2 id="Principle-of-inserting-images-in-hexo"><a href="#Principle-of-inserting-images-in-hexo" class="headerlink" title="Principle of inserting images in hexo"></a>Principle of inserting images in hexo</h2><p>&amp;emsp;&amp;emsp;Firstly, you should turn on <code>post_asset_folder</code> and <code>Hexo</code> will generate a folder with the same name as each article, then <code>Hexo</code> will link the images in the folder to the corresponding article. For example, you create an article called <strong>lbwnb.md</strong> and <code>Hexo</code> will create a folder called <strong>lbwnb</strong> automatically. Then you put <strong>17killandeatchicken.jpg</strong> in the folder and write <code>!(p1)[17killsandeatchicken.jpg]</code> in <strong>lbwnb.md</strong>, <code>Hexo</code> will just show the image in your blog instead of this line of code.<br>&amp;emsp;&amp;emsp;However, it’s inconvenient for us to do these steps, you should put the images in the folder, copy the name of the image and write the code like <code>!(p1)[17killsandeatchicken.jpg]</code>. Here I will show you 2 ways to insert images.</p>
-<h2 id="Insert-images-via-Typora-recommend"><a href="#Insert-images-via-Typora-recommend" class="headerlink" title="Insert images via Typora (recommend)"></a>Insert images via Typora (recommend)</h2><p>&amp;emsp;&amp;emsp;It’s quite simple in Typora to do that.<br>&amp;emsp;&amp;emsp;You just need to open the image setting and set <code>copy image to custom folder</code> to <code>/$(filename)$</code>, then when you paste images to your articles, it will automatically store it in the  corresponding folder.</p>
+                <h2 id="Notice"><a href="#Notice" class="headerlink" title="Notice:"></a>Notice:</h2><p>This article is only apply to those who store images locally.</p>
+<h2 id="Principle-of-inserting-images-in-hexo"><a href="#Principle-of-inserting-images-in-hexo" class="headerlink" title="Principle of inserting images in hexo"></a>Principle of inserting images in hexo</h2><p>Firstly, you should turn on <code>post_asset_folder</code> and <code>Hexo</code> will generate a folder with the same name as each article, then <code>Hexo</code> will link the images in the folder to the corresponding article. For example, you create an article called <strong>lbwnb.md</strong> and <code>Hexo</code> will create a folder called <strong>lbwnb</strong> automatically. Then you put <strong>17killandeatchicken.jpg</strong> in the folder and write <code>!(p1)[17killsandeatchicken.jpg]</code> in <strong>lbwnb.md</strong>, <code>Hexo</code> will just show the image in your blog instead of this line of code.<br>However, it’s inconvenient for us to do these steps, you should put the images in the folder, copy the name of the image and write the code like <code>!(p1)[17killsandeatchicken.jpg]</code>. Here I will show you 2 ways to insert images.</p>
+<h2 id="Insert-images-via-Typora-recommend"><a href="#Insert-images-via-Typora-recommend" class="headerlink" title="Insert images via Typora (recommend)"></a>Insert images via Typora (recommend)</h2><p>It’s quite simple in Typora to do that.<br>You just need to open the image setting and set <code>copy image to custom folder</code> to <code>/$(filename)$</code>, then when you paste images to your articles, it will automatically store it in the  corresponding folder.</p>
 <p><img src="image-20220922160233295.png" alt="image 1"></p>
-<h3 id="Insert-images-via-VSCode-not-recommend"><a href="#Insert-images-via-VSCode-not-recommend" class="headerlink" title="Insert images via VSCode (not recommend)"></a>Insert images via VSCode (not recommend)</h3><p>​		However, it’s difficult to insert images in VSCode.</p>
-<p>​		First, you should open the whole folder in VSCode.</p>
-<p><img src="image-20220922160851370.png" alt="image 2"></p>
-<p>​		Then, because of VSCode plugins don’t support set variables in storage path (default path is /images ), so you have to move the images in <code>/images</code> to the corresponding folder. </p>
+<h3 id="Insert-images-via-VSCode-not-recommend"><a href="#Insert-images-via-VSCode-not-recommend" class="headerlink" title="Insert images via VSCode (not recommend)"></a>Insert images via VSCode (not recommend)</h3><p>However, it’s difficult to insert images in VSCode.</p>
+<p>First, you should open the whole folder in VSCode.</p>
+<p><img src="image-20220922160851370.png" alt="image 2"><br>Then, because of VSCode plugins don’t support set variables in storage path (default path is /images ), so you have to move the images in <code>/images</code> to the corresponding folder. </p>
 <p><img src="image-20220922160549159.png" alt="image 3"></p>
-<p>​		Finally, delete <code>/images</code> in the reference path, such as replacing <code>![iamge 13](images/2022_09_22_04_17_08.png)  </code> with <code>![iamge 13](2022_09_22_04_17_08.png)</code> </p>
+<p>Finally, delete <code>/images</code> in the reference path, such as replacing <code>![iamge 13](images/2022_09_22_04_17_08.png)  </code> with <code>![iamge 13](2022_09_22_04_17_08.png)</code> </p>
 <p>​		</p>
 
                 
@@ -560,12 +559,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/solutions/">
-                        <span class="chip bg-color">solutions</span>
-                    </a>
-                    
                     <a href="/tags/CSAPP/">
                         <span class="chip bg-color">CSAPP</span>
+                    </a>
+                    
+                    <a href="/tags/solutions/">
+                        <span class="chip bg-color">solutions</span>
                     </a>
                     
                 </div>
