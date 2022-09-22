@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Insert Images to Your Blog</title>
+      <link href="/2022/09/22/insert-images-to-your-blog/"/>
+      <url>/2022/09/22/insert-images-to-your-blog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Notice">Notice:</h2><p>​This article is only apply to those who store images locally.</p><h2 id="Principle-of-inserting-images-in-hexo">Principle of inserting images in hexo</h2><p>  Firstly, you should turn on <code>post_asset_folder</code> and <code>Hexo</code> will generate a folder with the same name as each article, then <code>Hexo</code> will link the images in the folder to the corresponding article. For example, you create an article called <strong><a href="http://lbwnb.md">lbwnb.md</a></strong> and <code>Hexo</code> will create a folder called <strong>lbwnb</strong> automatically. Then you put <strong>17killandeatchicken.jpg</strong> in the folder and write <code>!(p1)[17killsandeatchicken.jpg]</code> in <strong><a href="http://lbwnb.md">lbwnb.md</a></strong>, <code>Hexo</code> will just show the image in your blog instead of this line of code.<br>  However, it’s inconvenient for us to do these steps, you should put the images in the folder, copy the name of the image and write the code like <code>!(p1)[17killsandeatchicken.jpg]</code>. Here I will show you 2 ways to insert images.</p><h2 id="Insert-images-via-Typora-recommend">Insert images via Typora (recommend)</h2><p>  It’s quite simple in Typora to do that.<br>  You just need to open the image setting and set <code>copy image to custom folder</code> to <code>/$(filename)$</code>, then when you paste images to your articles, it will automatically store it in the  corresponding folder.</p><p><img src="image-20220922160233295.png" alt="image 1"></p><h3 id="Insert-images-via-VSCode-not-recommend">Insert images via VSCode (not recommend)</h3><p>​However, it’s difficult to insert images in VSCode.</p><p>​First, you should open the whole folder in VSCode.</p><p><img src="image-20220922160851370.png" alt="image 2"></p><p>​Then, because of VSCode plugins don’t support set variables in storage path (default path is /images ), so you have to move the images in <code>/images</code> to the corresponding folder.</p><p><img src="image-20220922160549159.png" alt="image 3"></p><p>​Finally, delete <code>/images</code> in the reference path, such as replacing <code>![iamge 13](images/2022_09_22_04_17_08.png)  </code> with <code>![iamge 13](2022_09_22_04_17_08.png)</code></p><p>​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> images </tag>
+            
+            <tag> VSCode </tag>
+            
+            <tag> Typora </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSAPP Chapter2 Solution</title>
+      <link href="/2022/09/20/CSAPP-Chapter2-Solution/"/>
+      <url>/2022/09/20/CSAPP-Chapter2-Solution/</url>
+      
+        <content type="html"><![CDATA[<h3 id="2-7">2.7</h3><p>it only print <code>61 62 63 64 65 66</code> cause <code>strlen</code> doesn’t print the last character <code>\</code></p><h3 id="2-10">2.10</h3><table><thead><tr><th>step</th><th>*x</th><th>*y</th></tr></thead><tbody><tr><td>start</td><td>a</td><td>b</td></tr><tr><td>step1</td><td>a</td><td>a^b</td></tr><tr><td>step2</td><td>b</td><td>a^b</td></tr><tr><td>step3</td><td>b</td><td>a</td></tr></tbody></table><h3 id="2-11">2.11</h3><p>    A. <code>first = last = k</code>, it’s obvious.<br>    B. That’s because the swap function we call is based on bitwise XOR operation, however, we get <code>0</code> when we calculate <code>a^a</code>, so it’s unsuitable to use that function.<br>    C. Just replace <code>first&lt;=last</code> with <code>first&lt;last</code> .</p><h3 id="2-12">2.12</h3><p>    A. <code>x &amp; 0xFF</code><br>    B. <code>~x ^ 0xFF</code> or <code>x ^ ~0xFF</code><br>    C. <code>x | 0xFF</code></p><h3 id="2-13">2.13</h3><ul><li><code>bis(x,y)</code></li><li><code>bis(bic(x,y),bic(y,x))</code></li><li>It’s obvious that <code>bix(x,y)</code> is equal to OR operation and <code>bic(x,y)</code> is equal to <code>x + ~y</code>  .</li></ul><h3 id="2-1-9-notes">2.1.9 notes:</h3><ul><li>shift logical right:   fill <code>k</code> zeros on the left</li><li>arithmetic shift right: fill <code>k</code> highest order number on the left</li></ul><h3 id="2-15">2.15</h3><p><code>!(x^y)</code></p><h3 id="2-25">2.25</h3><p><code>length</code> is <code>unsigned int</code> so <code>length - 1 == MAXINT</code><br>how to modity:</p><ul><li>replace <code>unsighed int</code> with <code>int</code><br>or</li><li>replace <code>i &lt;= length - 1</code> with <code>i &lt; length</code></li></ul><h3 id="2-26">2.26</h3><ul><li>when: when <code>strlen(s) &lt; strlen(t)</code></li><li>why: because <code>strlen</code> is <code>unsighed</code> and it will return a very big positive number if  <code>strlen(s) &lt; strlen(t)</code></li><li>how: change the return code to <code>return strlen(s) &gt; strlen(t)</code></li></ul><h3 id="2-27">2.27</h3><pre class="line-numbers language-none"><code class="language-none">int uadd_ok(unsigned x, unsigned y){  unsighed sum = x+y;  return sum &gt;= x;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-30">2.30</h3><pre class="line-numbers language-none"><code class="language-none">int tadd_ok(int x,int y){  if((x&gt;0 &amp;&amp; y&gt;0 &amp;&amp; x+y&lt;=0)+(x&lt;0 &amp;&amp; y&lt;0 &amp;&amp; x+y&gt;=0)==1)return 0;  return 1;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="2-31">2.31</h3><p>Whether <code>x + y</code> overflows or not doesn’t affect the result because <code>complementary code addition</code> forms an <code>abelian group</code> so the answer is fixed 0.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> solutions </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSAPP </tag>
+            
+            <tag> solutions </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PRML Probability Distributions</title>
+      <link href="/2022/09/19/ML-Probability-Distributions/"/>
+      <url>/2022/09/19/ML-Probability-Distributions/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-Bernoulli-Distribution">1. Bernoulli Distribution</h2><h3 id="1-1">1.1</h3><p>If we are tossing coins.<br>Let<br>$$<br>p(x=1|\mu )=\mu \\<br>p(x=0|\mu )=1-\mu \tag{1}<br>$$<br>Where 0 $\leq$ $\mu$ $\leq$ 1<br>So it’s easy to know<br>$$<br>E[x]= \mu \\<br>var[x]=\mu (1-\mu) \tag{2}<br>$$<br>Let<br>$D$ = {$x_1$ ,…,$x_N$} as  observed values of x, we can get the likelihood function and differentiate it<br>$$<br>ln(p(D|\mu))= \sum_{n=1}^Nln(p(x_n|\mu))= \sum_{n=1}^N{x_nln\mu+(1-x_n)ln(1-\mu)}\tag{3}<br>$$<br>set the derivative of $ln(p(D|\mu))=0$, we obtain the maximum likelihood estimator.<br>$$<br>\mu_{ML}=\frac{1}{N}\sum_{n=1}^Nx_n  \tag{4}<br>$$<br>In order to obtain thenormalization coefficient we note that out of N coin flips, we have to add up all of the possible ways of obtaining m heads, so that the binomial distribution can be written<br>$$<br>Bin(m|N,\mu)={N\choose m}\mu ^m(1-\mu)^{N-m}\tag{5}<br>$$</p><h3 id="1-2-Mean-and-Variance">1.2 Mean and Variance</h3><p>Thus, we have<br>$$<br>E[m]=\sum_{m=0}^N{mBin(m|N,\mu)}=N\mu \tag{6}<br>$$<br>$$<br>var[m]=\sum_{m=0}^N{(m-E[m])^2}Bin(m|N,\mu)=N\mu(1-\mu)  \tag{7}<br>$$</p><h2 id="2-Beta-Distribution">2. Beta Distribution</h2><h3 id="2-1">2.1</h3><p>In Binary Variables, we can see if the dataset is too small, it may lead to serious overfitting, so we should consider a form of prior distribution, which made me consider beta distribution as a probability’s probability or the density of the success rate of Bernoulli trials.<br>Let a = number of successes, b = number of failures (we are still tossing coins) and we can choose a prior, called the beta distribution, given by</p><p>$$<br>Beta( \mu | a , b ) = \frac{ \Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}=\frac{1}{B(a,b) } \mu ^ { a-1} (1- \mu )^{b-1}  \tag{8}<br>$$</p><p>B(a,b), also called Beta function, ensures that the beta distribution is normalized, so that<br>$$<br>\int_0^1Beta(\mu|a,b)d\mu=1 \tag{9}<br>$$</p><h3 id="2-2-Mean-and-Variance">2.2 Mean and Variance</h3><p>Then we can get the mean and the variance</p><p>$$<br>E[\mu]=\int_0^1Beta(x|a,b)dx=\int_0^1x\frac{x^{a-1}(1-x)^{b-1}}{Beta(a,b)}dx\\<br>=\frac{B(a+1,b)}{B(a,b)}\\<br>=\frac{\Gamma(a+1)\Gamma(b)\Gamma(a+b)}{\Gamma(a+b+1)\Gamma(a)\Gamma(b)}\\<br>=\frac{a}{a+b}<br>\tag{10}<br>$$</p><p>To calc $Var[\mu]$, we should calc $E[\mu^2]$ first beacuse $Var[\mu]=E[\mu^2]-E[\mu]^2$.</p><p>$$<br>E[\mu^2]=\int_{-\infty}^{+\infty}{x^2}{Beta(x)dx}\\<br>=\int_0^1{x^2}\frac{1}{B(a,b)}{x^{a-1}}{(1-x)^{b-1}}dx\\<br>=\frac{B(a+2,b)}{B(a,b)}\<br>=\frac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b+2)}\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\\<br>=\frac{(a+1)a}{(a+b+1)(a+b)}\tag{11}<br>$$</p><p>Then we can get $Var[\mu]$ readily<br>$$<br>Var[\mu]=\frac{(a+1)a}{(a+b+1)(a+b)}-(\frac{a}{a+b})^2\<br>=\frac{ab}{(a+b+1)(a+b)^2} \tag{12}<br>$$</p><p>If our target is to better predict next result of $x$, that’s equal to pretict<br>$$<br>p(x=1|D)=\int_0^1p(x=1|\mu)p(\mu|D)d\mu\<br>=\int_0^1\mu p(\mu|D)d\mu\<br>=E[\mu|D] \tag{13}<br>$$<br>So we can get<br>$$<br>p(x=1|D)=\frac{m+a}{m+a+l+b} \tag{14}<br>$$<br>It tell us when the number of tests ( m , l ) is big enough, the result is <strong>Maximum Likelihood Estimate</strong>.<br>For limited dataset, the estimate of $\mu$ is between prior and  Maximum Likelihood Estimate.</p><h2 id="3-The-Gaussian-Distribution">3. The Gaussian Distribution</h2><h3 id="3-1-The-Gaussian-Distribution">3.1 The Gaussian Distribution</h3><p>As we all know, the Gaussian distribution can be written in the form of<br>$$<br>N( x | \mu , \sigma^2 )=\frac{1} {(2\pi\sigma^2)^ {1/2} }exp{ {-\frac{1}{2\sigma^2}(x-\mu)^2} } \tag{15}<br>$$<br>where $\mu$ is the mean and $\sigma^2$ is the variane.<br>If x is $D$-dimensional vector x, it take the form<br>$$<br>N ( x | \mu , \Sigma ) = \frac{1}{(2 \pi)^ {D/2} } \frac {1} { |\Sigma| ^ {1/2} }exp{ {-\frac{1}{2}(x-\mu)^T\Sigma^{-1} (x-\mu) } }   \tag  {16}<br>$$<br>Let<br>$$<br>\Delta^2=(x-\mu)^T\Sigma^{-1}(x-\mu) \tag{17}<br>$$<br>and the quantity $\Delta$ is called the <strong>Mahalanobis distance</strong><br>from µ to x and reduces to the Euclidean distance when Σ is the identity matrix.</p><p>Usually, we assume $\Sigma$ is a <strong>symmetric matrix</strong>, so we can <strong>Singular Value Decomposition</strong> it.<br><strong>Geo expression of Gaussian Distribution</strong>:<br>Imagine an elliptical surface of constant proba<br>bility density for a Gaussian in<br>a two-dimensional space x =<br>($x_1,x_2$) on which the density<br>is exp(−1/2) of its value at<br>x = $\mu$. The major axes of<br>the ellipse are defined by the<br>eigenvectors $u_i$ of the covari-<br>ance matrix, with correspond-<br>ing eigenvalues $\lambda_i$ .</p><h3 id="3-2-Conditional-Gaussian-Distribution">3.2 Conditional Gaussian Distribution</h3><p>An important property of the multivariate Gaussian distribution is that if two<br>sets of variables are jointly Gaussian, then the conditional distribution of one set<br>conditioned on the other is again Gaussian.<br>Split $x$ in two</p><p>$$<br>x={x_a \choose x_b}<br>$$<br>$$<br>\mu = {\mu <em>{a} \choose  \mu</em>{b} }<br>$$</p><p>$$<br>\Sigma = {\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } }<br>$$<br>Where $\mu$ is mean and $\Sigma$ is covariance matrix.<br>Let<br>$$<br>\Lambda = \Sigma ^{-1 }<br>$$<br>so<br>$$<br>\Lambda = {\Lambda_{aa } \quad \Lambda_{ab } \choose \Lambda_{ba } \quad \Lambda_{bb } }<br>$$</p><p>We just need remember the mean and variance of conditional Gaussian distribution<br>$$<br>\mu_{a|b } = \mu _a + \Sigma _{ab } + \Sigma _{bb }^-1 (x_b-\mu _b )   \tag{18}<br>$$</p><p>$$<br>\Sigma_{a|b } = \Sigma_{aa}- \Sigma_{ab } \Sigma_{bb } ^{-1} \Sigma_{ba }  \tag{19}<br>$$</p><h3 id="3-3-Marginal-Gaussian-Distribution">3.3 Marginal Gaussian Distribution</h3><p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian, then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of<br>the marginal distribution given by</p><p>$$<br>p(x_a) = \int p(x_a,x_b)dx_b<br>$$<br>conclusion<br>$$<br>E[x_a] = \mu_a \tag{20}<br>$$</p><p>$$<br>cov[x_a]=\Sigma_{aa} \tag{21}<br>$$</p><h3 id="3-4-Bayes’-Theorem-for-Gaussian-Variables">3.4 Bayes’ Theorem for Gaussian Variables</h3><h3 id="3-5-Maximum-likelihood-for-the-Gaussian">3.5 Maximum likelihood for the Gaussian</h3><h3 id="3-6">3.6</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+            <tag> notes </tag>
+            
+            <tag> PRML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI Introduction Chapter1,2 Homework</title>
+      <link href="/2022/09/18/AI-Introduction-Chapter1-2-Homework/"/>
+      <url>/2022/09/18/AI-Introduction-Chapter1-2-Homework/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-1">1.1</h3><p>人工智能就是用人工的方法在计算机上实现的智能，也成为机器智能.<br>发展阶段：</p><ul><li>孕育：1956年之前</li><li>形成：1956-1969年</li><li>发展：1970年后</li></ul><h3 id="1-2">1.2</h3><ul><li>可形式化</li><li>存在算法</li><li>有限时间内可求解</li></ul><h3 id="1-3">1.3</h3><ul><li>知识表示: 包括符号表示法和连接机制表示法</li><li>机器感知: 以机器视觉和机器听觉为主</li><li>机器思维: 指对通过感知得来的外部信息及机器内部的各种工作信息进行有目的的处理</li><li>机器学习: 研究如何使计算机具有类似人类的学习能力，在学习中自动获取知识</li><li>机器行为: 指计算机的表达能力</li></ul><h3 id="1-4">1.4</h3><ul><li>自动定理证明</li><li>博弈</li><li>模式识别</li><li>机器视觉</li><li>自然语言理解</li><li>智能信息检索</li><li>数据挖掘与知识发现</li><li>专家系统</li><li>自动程序设计</li><li>机器人</li><li>组合优化问题</li><li>人工神经网络</li><li>分布式人工智能与多智能体</li><li>智能控制</li><li>智能仿真</li><li>智能CAD</li><li>智能CAI</li><li>智能管理与智能决策</li><li>智能多媒体系统</li><li>智能操作系统</li><li>智能通信</li><li>智能网络系统</li><li>人工生命</li></ul><h3 id="1-5">1.5</h3><p>“擅智”与“善智”，指利用人工智能增强国家治理能力和促使人工智能成为“良善的技术”</p><hr><h3 id="2-1">2.1</h3><p>在本题中，我们统一定义: x: 人</p><ol><li>定义谓词: like(x,y) 为x喜欢y.  f1: 梅花 f2: 菊花.<br>$\exists$ x (likes(x,f1)) $\vee$ ($\exists$ x)(likes(x,f2)) $\vee$ $\exists$ x(likes(x,f1) $\wedge$ likes(x,f2))</li><li>定义谓词: plays(l,m,n) 为 l在m的时候玩n<br>$\forall$ 下午(plays(他,足球,下午))</li><li>定义谓词: have(x,y) 为x有y eat(x,z) 为x吃z<br>$\forall$ x(have(x,饭) $\wedge$ eat(x,饭))</li><li>定义谓词: likes(x,y) 为x喜欢y play(x,z) 为x打z<br>$\forall$ x(like(x,(play(x,篮球))) $\rightarrow$ like(x,(play(x,排球))))</li><li>定义谓词: exam(x,l) 为x参加l科目的考试 pass(x,m) 为x通过m科目的考试 study(x,n) 为x到n地点学习<br>$\forall$ x(study(x,国外) $\rightarrow$ pass(x,exam(x,英语)))</li></ol><h3 id="2-2">2.2</h3><ol><li>$\forall$ x的辖域是P(x,y) $\vee$ $\exists$ y(Q(x,y) $\wedge$ R(x,y))<br>$\exists$ y 的辖域是(Q(x,y) $\wedge$ R(x,y))<br>谓词公式中x是约束变元<br>P(x,y)中y是自由变元<br>$\exists$ y (Q(x,y) $\wedge$ R(x,y)中的y是约束变元</li><li>$\exists$ z和 $\forall$ y 的辖域都是P(z,y) $\vee$ Q(z,x)<br>谓词公式中y,z是约束变元，x,u,v是自由变元</li><li>$\forall$ x的辖域是$\neg$ P(x,f(x)) $\vee$ $\exists$ z(Q(x,z) $\wedge$ $\neg$ R(z,y))<br>$\exists$ z的辖域是Q(x,z) $\wedge$ $\neg$ R(z,y)<br>谓词公式中x,z是约束变元，y是自由变元</li><li>$\forall$ z的辖域是 $\exists$ y( $\exists$ t(P(z,t) $\vee$ Q(y,t)) $\wedge$ R(z,y))<br>$\exists$ y的辖域是 $\exists$ t (P(z,t) $\vee$ Q(y,t))<br>$\exists$ t的辖域是P(z,t) $\vee$ Q(y,t)<br>谓词公式中z和t为约束变元<br>P(z,t) $\vee$ Q(y,t)中的y为约束变元<br>R(z,y)中的y为自由变元</li></ol><h3 id="2-3">2.3</h3><p>一个解释：<br>P(1,1)=T;P(1,2)=T;P(2,1)=T;P(2,2)=T;Q(1,1)=T;Q(1,2)=T;Q(2,1)=T;Q(2,2)=T;<br>{x,y}={1,1}时,P=T,Q=T,真值为T<br>{x,y}={2,1}时,P=T,Q=T,真值为T<br>{x,y}={1,2}时,P=T,Q=T,真值为T<br>{x,y}={2,2}时,P=T,Q=T,真值为T<br>故该谓词公式为永真式</p><h3 id="2-4">2.4</h3><ol><li>older(x,y): x的年龄比y大<br>older(张三,李四) $\rightarrow$ $\neg$ older(张三,李四)</li><li>marry(x,y): x和y结婚 male(x): x为男 $\neg$ male(x): x为女<br>marry(x,y) $\rightarrow$ (man(甲) $\wedge$ $\neg$ man(乙)) $\vee$ (man(乙) $\wedge$ $\neg$ man(甲))</li><li>honest(x): x是老实人 lie(x): x说谎了<br>honest(x) $\rightarrow$ $\neg$ lie(x);<br>lie(张三) $\rightarrow$ $\neg$ honest(张三);</li></ol><h3 id="2-5">2.5</h3><p>IF $X_1$=0 AND $X_2$=0 THEN $Y$=0;<br>IF $X_1$=0 AND $X_2$=1 THEN $Y$=1;<br>IF $X_1$=1 AND $X_2$=0 THEN $Y$=1;<br>IF $X_1$=1 AND $X_2$=1 THEN $Y$=0;</p><h3 id="2-6">2.6</h3><ul><li>框架名：地震<ul><li>地震属性<ul><li>地点：下斯洛文尼亚地区</li><li>强度：里氏8.5级</li><li>时间：今天</li></ul></li><li>后果<ul><li>25人死亡和5亿美元的财产损失</li></ul></li><li>事后总结<ul><li>发言人：下斯洛文尼亚地区的主席</li><li>发言内容：多年来，靠近萨迪壕金斯断层的重灾区一直是一个危险地区。这是本地区发生的第3号地震。</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> solutions </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> solutions </tag>
+            
+            <tag> AI Introduction </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CF1591C Solution</title>
+      <link href="/2022/09/16/CF1591C-Solution/"/>
+      <url>/2022/09/16/CF1591C-Solution/</url>
+      
+        <content type="html"><![CDATA[<p>  At first I thought the method is dp or classification discussion, but they are all very copmlex.<br>  So I found it can be solved in reverse. Notice that we can transport <strong>k</strong> goods each time and we don’t consider coming back first. <strong>The whole distance</strong> is equal to start from the endpoints on both sides respectively and each time the <strong>k</strong>th good as the end point of each sub-distance.<br>  It’s easy to find out that if we don’t do like this, the endpoint must be sent once, then the point closest to the endpoint also must be sent once. In this condition, the whole distance is definitely longer then the last one. I don’t want to prove it because it’s trivial.<br>  Then we consider how to back to the startpoint. We just need <strong>2</strong> <strong>*</strong> <strong>formeranswer</strong>  <strong>-</strong> <strong>the longset sub-distance</strong>.<br>  As for how to know the longset sub-distance, we just need to maintenance an array when we were calculating the sub-distance, or just sort it.<br>Here is the whole code.</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;bits/stdc++.h&gt;using namespace std; typedef long long ll;typedef double db;const ll mod=1e9+7; ll a[200050];ll b[200050];int main(){std::ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);//freopen("cfsb.out","w",stdout);int T;cin&gt;&gt;T;while(T--){ll n,k;cin&gt;&gt;n&gt;&gt;k;for(int i=1;i&lt;=n;i++)cin&gt;&gt;a[i];sort(a+1,a+1+n);ll num=0;for(ll i=1;i&lt;=n&amp;&amp;a[i]&lt;0;i+=k)b[++num]=-a[i];    for(ll i=n;i&gt;=1&amp;&amp;a[i]&gt;0;i-=k)b[++num]=a[i];sort(b+1,b+num+1);ll ans=0;for(int i=1;i&lt;=num;i++)ans+=2*b[i];ans-=b[num];cout&lt;&lt;ans&lt;&lt;endl;}    return 0;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> solutions </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> solutions </tag>
+            
+            <tag> codeforces </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to Solve Code Block Appearance Exception</title>
+      <link href="/2022/09/16/How-to-Solve-Code-Block-Appearance-Exception/"/>
+      <url>/2022/09/16/How-to-Solve-Code-Block-Appearance-Exception/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Error">Error</h2><p>When I insert code block to my articles, I found the code blocks could’t be rendered correctly.<br>They are quite <strong>ugly</strong> and all the functions, such as folding, copying and shrinking, don’t work.</p><h2 id="Reason">Reason</h2><p>The highlight function can’t work correctly.</p><h2 id="Solution">Solution</h2><ul><li>Open <strong>_config.yml</strong> and find <strong>highlight</strong> and <strong>prismjs</strong>, then config them like this:</li></ul><pre class="line-numbers language-none"><code class="language-none">highlight:  enable: false  line_number: true  auto_detect: false  tab_replace: ''  wrap: true  hljs: falseprismjs:  enable: true  preprocess: true  line_number: true  tab_replace: ''<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>Uninstall <strong>hexo-prism-plugin</strong></li></ul><pre class="line-numbers language-none"><code class="language-none">npm uninstall hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> matery </tag>
+            
+            <tag> debug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>About this Blog</title>
+      <link href="/2022/09/15/How-this-blog-is-built/"/>
+      <url>/2022/09/15/How-this-blog-is-built/</url>
+      
+        <content type="html"><![CDATA[<p>Inspired by <a href="https://baokker.github.io/">baokker</a>, I decided to bulid my own blog three days ago. Here is a brief introduction, which partly references <a href="https://letian.website/githubpageshexodajianjingtaiboke/">this</a> and <a href="https://hexo.io/zh-cn/docs/configuration">this</a>.</p><h2 id="Register-a-Github-account">Register a Github account</h2><p>This step is quite easy, and then creat a repository named your <strong>own username + .github.io</strong>, this repository will be the place where you will store your blog’s code in the future.</p><h2 id="Download-Git-and-Node-js-and-configure-SSH-Key">Download Git and Node.js and configure SSH-Key</h2><p><a href="https://www.cnblogs.com/mingyue5826/p/11141324.html">Tutorial</a></p><ol><li>Download Git from <a href="https://git-scm.com/downloads">here</a> and download Node.js from <a href="https://nodejs.org/en/">here</a></li><li>Check whether PATH is configured</li><li>If you can’t find “Git bash here” in the right-click menu, have a look at <a href="https://blog.51cto.com/u_15301254/3057144">this guide</a></li><li>Enter the following command to setup your <strong>username</strong> and <strong>email</strong></li></ol><pre class="line-numbers language-none"><code class="language-none">git config --global user.name git config --global user.email <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ol start="5"><li>Generate <strong>SSH-Key</strong> and name it as <strong>id_rsa_gitlab</strong></li></ol><pre class="line-numbers language-none"><code class="language-none">cd ~/.sshssh-keygen -t rsa -C "yourmail@glanway.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ol start="6"><li>Add private key</li></ol><pre class="line-numbers language-none"><code class="language-none">ssh-add ~/.ssh/id_rsa_githubssh-add ~/.ssh/id_rsa_gitlab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ol start="7"><li>If the Git error: <strong>Could not open a connection to your …</strong></li></ol><ul><li>enter <code>ps aux | grep ssh</code> to check the ssh-agent</li><li>the thread number is the first number of last command’s results, then enter <code>kill -9 "thread number"</code> to kill the thread</li><li>put the private key into <strong>/.ssh</strong></li></ul><pre class="line-numbers language-none"><code class="language-none">cd ~/.sshexec ssh-agent basheval ssh-agent -sssh-add ./id_rsa_githubssh-add ./id_rsa_gitlab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="8"><li>Create and modify <strong>config.txt</strong></li></ol><pre class="line-numbers language-none"><code class="language-none">Host github.comHostName github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsa_githubUser yenaibangbing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ol start="9"><li>Generate the single ssh-key</li></ol><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C "yourmail@xxxl.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="10"><li>Add the public key to github<br>Find <strong>SSH and GPG keys</strong> in the settings and put <strong>*.pub</strong> into it, which begins with <strong>ssh-rsa</strong></li><li>Test<br>If you see <strong>Hi!..</strong> after enter <code>ssh -T git@github.com</code>, that means you’ve successfully set up the SSH-Key. ^-^</li></ol><h2 id="Download-hexo-and-create-an-empty-fold">Download <strong>hexo</strong> and create an empty fold</h2><ul><li>You can download <strong>hexo</strong> from <a href="https://hexo.io/zh-cn/docs/">here</a></li><li>Create an <strong>empty</strong> fold and name it as “blog”, then <code>hexo init</code></li><li>Modify <strong>_config.yml</strong> under the guide of <a href="https://hexo.io/zh-cn/docs/configuration">this</a></li></ul><h2 id="Choose-a-theme-you-like">Choose a theme you like</h2><p>Different themes have different configs, so I suggest you google it or read the <a href="http://README.md">README.md</a> of your chosen theme.<br>My theme is called <strong>hexo-theme-matery</strong>, you can get it form <a href="https://github.com/blinkfox/hexo-theme-matery">github</a> or just click the link under my blog.</p><h2 id="Deploy-it-to-Github">Deploy it to Github</h2><p>Firstly, enter these two commands</p><pre class="line-numbers language-none"><code class="language-none">hexo cleanhexo g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>If you want to view it locally, just <code>hexo s</code> and open the link hexo returned.<br>Then enter <code>hexo d</code> to deploy the whole fold to Github.<br>Now, everyone is able to visit your blog.</p><h2 id="CDN-accerlerating">CDN accerlerating</h2><p>Just google it, there are many ways to implement it.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> hello world </tag>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

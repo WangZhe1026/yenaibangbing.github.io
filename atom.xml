@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Yenaibangbing&#39;s Blog</title>
+  
+  <subtitle>^_^</subtitle>
+  <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yenaibangbing.github.io/"/>
+  <updated>2022-09-22T08:28:07.405Z</updated>
+  <id>https://yenaibangbing.github.io/</id>
+  
+  <author>
+    <name>Yenaibangbing</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Insert Images to Your Blog</title>
+    <link href="https://yenaibangbing.github.io/2022/09/22/insert-images-to-your-blog/"/>
+    <id>https://yenaibangbing.github.io/2022/09/22/insert-images-to-your-blog/</id>
+    <published>2022-09-22T05:03:25.000Z</published>
+    <updated>2022-09-22T08:28:07.405Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Notice&quot;&gt;Notice:&lt;/h2&gt;
+&lt;p&gt;​		This article is only apply to those who store images locally.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
+    
+    
+    <category term="images" scheme="https://yenaibangbing.github.io/tags/images/"/>
+    
+    <category term="VSCode" scheme="https://yenaibangbing.github.io/tags/VSCode/"/>
+    
+    <category term="Typora" scheme="https://yenaibangbing.github.io/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSAPP Chapter2 Solution</title>
+    <link href="https://yenaibangbing.github.io/2022/09/20/CSAPP-Chapter2-Solution/"/>
+    <id>https://yenaibangbing.github.io/2022/09/20/CSAPP-Chapter2-Solution/</id>
+    <published>2022-09-20T08:16:49.000Z</published>
+    <updated>2022-09-22T05:04:24.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;2-7&quot;&gt;2.7&lt;/h3&gt;
+&lt;p&gt;it only print &lt;code&gt;61 62 63 64 65 66&lt;/code&gt; cause &lt;code&gt;strlen&lt;/code&gt; doesn’t print the last character</summary>
+        
+      
+    
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/categories/solutions/"/>
+    
+    
+    <category term="CSAPP" scheme="https://yenaibangbing.github.io/tags/CSAPP/"/>
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/tags/solutions/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PRML Probability Distributions</title>
+    <link href="https://yenaibangbing.github.io/2022/09/19/ML-Probability-Distributions/"/>
+    <id>https://yenaibangbing.github.io/2022/09/19/ML-Probability-Distributions/</id>
+    <published>2022-09-19T13:30:10.000Z</published>
+    <updated>2022-09-22T08:28:44.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Bernoulli-Distribution&quot;&gt;1. Bernoulli Distribution&lt;/h2&gt;
+&lt;h3 id=&quot;1-1&quot;&gt;1.1&lt;/h3&gt;
+&lt;p&gt;If we are tossing</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/categories/notes/"/>
+    
+    
+    <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
+    
+    <category term="PRML" scheme="https://yenaibangbing.github.io/tags/PRML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI Introduction Chapter1,2 Homework</title>
+    <link href="https://yenaibangbing.github.io/2022/09/18/AI-Introduction-Chapter1-2-Homework/"/>
+    <id>https://yenaibangbing.github.io/2022/09/18/AI-Introduction-Chapter1-2-Homework/</id>
+    <published>2022-09-18T15:17:55.000Z</published>
+    <updated>2022-09-22T08:32:38.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/categories/solutions/"/>
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/tags/solutions/"/>
+    
+    <category term="AI Introduction" scheme="https://yenaibangbing.github.io/tags/AI-Introduction/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CF1591C Solution</title>
+    <link href="https://yenaibangbing.github.io/2022/09/16/CF1591C-Solution/"/>
+    <id>https://yenaibangbing.github.io/2022/09/16/CF1591C-Solution/</id>
+    <published>2022-09-16T14:10:37.000Z</published>
+    <updated>2022-09-20T05:54:11.242Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;  At first I thought the method is dp or classification discussion, but they are all very copmlex.&lt;br&gt;
+  So I found it can be solved in</summary>
+        
+      
+    
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/categories/solutions/"/>
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/tags/solutions/"/>
+    
+    <category term="codeforces" scheme="https://yenaibangbing.github.io/tags/codeforces/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to Solve Code Block Appearance Exception</title>
+    <link href="https://yenaibangbing.github.io/2022/09/16/How-to-Solve-Code-Block-Appearance-Exception/"/>
+    <id>https://yenaibangbing.github.io/2022/09/16/How-to-Solve-Code-Block-Appearance-Exception/</id>
+    <published>2022-09-16T13:43:49.000Z</published>
+    <updated>2022-09-22T08:28:32.168Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Error&quot;&gt;Error&lt;/h2&gt;
+&lt;p&gt;When I insert code block to my articles, I found the code blocks could’t be rendered correctly.&lt;br&gt;
+They are</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
+    
+    
+    <category term="matery" scheme="https://yenaibangbing.github.io/tags/matery/"/>
+    
+    <category term="debug" scheme="https://yenaibangbing.github.io/tags/debug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>About this Blog</title>
+    <link href="https://yenaibangbing.github.io/2022/09/15/How-this-blog-is-built/"/>
+    <id>https://yenaibangbing.github.io/2022/09/15/How-this-blog-is-built/</id>
+    <published>2022-09-15T15:16:35.000Z</published>
+    <updated>2022-09-16T11:23:15.417Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Inspired by &lt;a href=&quot;https://baokker.github.io/&quot;&gt;baokker&lt;/a&gt;, I decided to bulid my own blog three days ago. Here is a brief</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
+    
+    
+    <category term="hexo" scheme="https://yenaibangbing.github.io/tags/hexo/"/>
+    
+    <category term="hello world" scheme="https://yenaibangbing.github.io/tags/hello-world/"/>
+    
+    <category term="blog" scheme="https://yenaibangbing.github.io/tags/blog/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,1067 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="PRML Probability Distributions, Yenaibangbing&#39;s Blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>PRML Probability Distributions | Yenaibangbing&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Yenaibangbing's Blog" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Yenaibangbing&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yenaibangbing&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">PRML Probability Distributions</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ML/">
+                                <span class="chip bg-color">ML</span>
+                            </a>
+                        
+                            <a href="/tags/notes/">
+                                <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                            <a href="/tags/PRML/">
+                                <span class="chip bg-color">PRML</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/notes/" class="post-category">
+                                notes
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-09-19
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="1-Bernoulli-Distribution">1. Bernoulli Distribution</h2>
+<h3 id="1-1">1.1</h3>
+<p>If we are tossing coins.<br>
+Let<br>
+$$<br>
+p(x=1|\mu )=\mu \\<br>
+p(x=0|\mu )=1-\mu \tag{1}<br>
+$$<br>
+Where 0 $\leq$ $\mu$ $\leq$ 1<br>
+So it’s easy to know<br>
+$$<br>
+E[x]= \mu \\<br>
+var[x]=\mu (1-\mu) \tag{2}<br>
+$$<br>
+Let<br>
+$D$ = {$x_1$ ,…,$x_N$} as  observed values of x, we can get the likelihood function and differentiate it<br>
+$$<br>
+ln(p(D|\mu))= \sum_{n=1}^Nln(p(x_n|\mu))= \sum_{n=1}^N{x_nln\mu+(1-x_n)ln(1-\mu)}\tag{3}<br>
+$$<br>
+set the derivative of $ln(p(D|\mu))=0$, we obtain the maximum likelihood estimator.<br>
+$$<br>
+\mu_{ML}=\frac{1}{N}\sum_{n=1}^Nx_n  \tag{4}<br>
+$$<br>
+In order to obtain thenormalization coefficient we note that out of N coin flips, we have to add up all of the possible ways of obtaining m heads, so that the binomial distribution can be written<br>
+$$<br>
+Bin(m|N,\mu)={N\choose m}\mu ^m(1-\mu)^{N-m}\tag{5}<br>
+$$</p>
+<h3 id="1-2-Mean-and-Variance">1.2 Mean and Variance</h3>
+<p>Thus, we have<br>
+$$<br>
+E[m]=\sum_{m=0}^N{mBin(m|N,\mu)}=N\mu \tag{6}<br>
+$$<br>
+$$<br>
+var[m]=\sum_{m=0}^N{(m-E[m])^2}Bin(m|N,\mu)=N\mu(1-\mu)  \tag{7}<br>
+$$</p>
+<h2 id="2-Beta-Distribution">2. Beta Distribution</h2>
+<h3 id="2-1">2.1</h3>
+<p>In Binary Variables, we can see if the dataset is too small, it may lead to serious overfitting, so we should consider a form of prior distribution, which made me consider beta distribution as a probability’s probability or the density of the success rate of Bernoulli trials.<br>
+Let a = number of successes, b = number of failures (we are still tossing coins) and we can choose a prior, called the beta distribution, given by</p>
+<p>$$<br>
+Beta( \mu | a , b ) = \frac{ \Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}=\frac{1}{B(a,b) } \mu ^ { a-1} (1- \mu )^{b-1}  \tag{8}<br>
+$$</p>
+<p>B(a,b), also called Beta function, ensures that the beta distribution is normalized, so that<br>
+$$<br>
+\int_0^1Beta(\mu|a,b)d\mu=1 \tag{9}<br>
+$$</p>
+<h3 id="2-2-Mean-and-Variance">2.2 Mean and Variance</h3>
+<p>Then we can get the mean and the variance</p>
+<p>$$<br>
+E[\mu]=\int_0^1Beta(x|a,b)dx=\int_0^1x\frac{x^{a-1}(1-x)^{b-1}}{Beta(a,b)}dx\\<br>
+=\frac{B(a+1,b)}{B(a,b)}\\<br>
+=\frac{\Gamma(a+1)\Gamma(b)\Gamma(a+b)}{\Gamma(a+b+1)\Gamma(a)\Gamma(b)}\\<br>
+=\frac{a}{a+b}<br>
+\tag{10}<br>
+$$</p>
+<p>To calc $Var[\mu]$, we should calc $E[\mu^2]$ first beacuse $Var[\mu]=E[\mu^2]-E[\mu]^2$.</p>
+<p>$$<br>
+E[\mu^2]=\int_{-\infty}^{+\infty}{x^2}{Beta(x)dx}\\<br>
+=\int_0^1{x^2}\frac{1}{B(a,b)}{x^{a-1}}{(1-x)^{b-1}}dx\\<br>
+=\frac{B(a+2,b)}{B(a,b)}\<br>
+=\frac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b+2)}\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\\<br>
+=\frac{(a+1)a}{(a+b+1)(a+b)}\tag{11}<br>
+$$</p>
+<p>Then we can get $Var[\mu]$ readily<br>
+$$<br>
+Var[\mu]=\frac{(a+1)a}{(a+b+1)(a+b)}-(\frac{a}{a+b})^2\<br>
+=\frac{ab}{(a+b+1)(a+b)^2} \tag{12}<br>
+$$</p>
+<p>If our target is to better predict next result of $x$, that’s equal to pretict<br>
+$$<br>
+p(x=1|D)=\int_0^1p(x=1|\mu)p(\mu|D)d\mu\<br>
+=\int_0^1\mu p(\mu|D)d\mu\<br>
+=E[\mu|D] \tag{13}<br>
+$$<br>
+So we can get<br>
+$$<br>
+p(x=1|D)=\frac{m+a}{m+a+l+b} \tag{14}<br>
+$$<br>
+It tell us when the number of tests ( m , l ) is big enough, the result is <strong>Maximum Likelihood Estimate</strong>.<br>
+For limited dataset, the estimate of $\mu$ is between prior and  Maximum Likelihood Estimate.</p>
+<h2 id="3-The-Gaussian-Distribution">3. The Gaussian Distribution</h2>
+<h3 id="3-1-The-Gaussian-Distribution">3.1 The Gaussian Distribution</h3>
+<p>As we all know, the Gaussian distribution can be written in the form of<br>
+$$<br>
+N( x | \mu , \sigma^2 )=\frac{1} {(2\pi\sigma^2)^ {1/2} }exp{ {-\frac{1}{2\sigma^2}(x-\mu)^2} } \tag{15}<br>
+$$<br>
+where $\mu$ is the mean and $\sigma^2$ is the variane.<br>
+If x is $D$-dimensional vector x, it take the form<br>
+$$<br>
+N ( x | \mu , \Sigma ) = \frac{1}{(2 \pi)^ {D/2} } \frac {1} { |\Sigma| ^ {1/2} }exp{ {-\frac{1}{2}(x-\mu)^T\Sigma^{-1} (x-\mu) } }   \tag  {16}<br>
+$$<br>
+Let<br>
+$$<br>
+\Delta^2=(x-\mu)^T\Sigma^{-1}(x-\mu) \tag{17}<br>
+$$<br>
+and the quantity $\Delta$ is called the <strong>Mahalanobis distance</strong><br>
+from µ to x and reduces to the Euclidean distance when Σ is the identity matrix.</p>
+<p>Usually, we assume $\Sigma$ is a <strong>symmetric matrix</strong>, so we can <strong>Singular Value Decomposition</strong> it.<br>
+<strong>Geo expression of Gaussian Distribution</strong>:<br>
+Imagine an elliptical surface of constant proba<br>
+bility density for a Gaussian in<br>
+a two-dimensional space x =<br>
+($x_1,x_2$) on which the density<br>
+is exp(−1/2) of its value at<br>
+x = $\mu$. The major axes of<br>
+the ellipse are defined by the<br>
+eigenvectors $u_i$ of the covari-<br>
+ance matrix, with correspond-<br>
+ing eigenvalues $\lambda_i$ .</p>
+<h3 id="3-2-Conditional-Gaussian-Distribution">3.2 Conditional Gaussian Distribution</h3>
+<p>An important property of the multivariate Gaussian distribution is that if two<br>
+sets of variables are jointly Gaussian, then the conditional distribution of one set<br>
+conditioned on the other is again Gaussian.<br>
+Split $x$ in two</p>
+<p>$$<br>
+x={x_a \choose x_b}<br>
+$$<br>
+$$<br>
+\mu = {\mu <em>{a} \choose  \mu</em>{b} }<br>
+$$</p>
+<p>$$<br>
+\Sigma = {\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } }<br>
+$$<br>
+Where $\mu$ is mean and $\Sigma$ is covariance matrix.<br>
+Let<br>
+$$<br>
+\Lambda = \Sigma ^{-1 }<br>
+$$<br>
+so<br>
+$$<br>
+\Lambda = {\Lambda_{aa } \quad \Lambda_{ab } \choose \Lambda_{ba } \quad \Lambda_{bb } }<br>
+$$</p>
+<p>We just need remember the mean and variance of conditional Gaussian distribution<br>
+$$<br>
+\mu_{a|b } = \mu _a + \Sigma _{ab } + \Sigma _{bb }^-1 (x_b-\mu _b )   \tag{18}<br>
+$$</p>
+<p>$$<br>
+\Sigma_{a|b } = \Sigma_{aa}- \Sigma_{ab } \Sigma_{bb } ^{-1} \Sigma_{ba }  \tag{19}<br>
+$$</p>
+<h3 id="3-3-Marginal-Gaussian-Distribution">3.3 Marginal Gaussian Distribution</h3>
+<p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian, then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of<br>
+the marginal distribution given by</p>
+<p>$$<br>
+p(x_a) = \int p(x_a,x_b)dx_b<br>
+$$<br>
+conclusion<br>
+$$<br>
+E[x_a] = \mu_a \tag{20}<br>
+$$</p>
+<p>$$<br>
+cov[x_a]=\Sigma_{aa} \tag{21}<br>
+$$</p>
+<h3 id="3-4-Bayes’-Theorem-for-Gaussian-Variables">3.4 Bayes’ Theorem for Gaussian Variables</h3>
+<h3 id="3-5-Maximum-likelihood-for-the-Gaussian">3.5 Maximum likelihood for the Gaussian</h3>
+<h3 id="3-6">3.6</h3>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ML/">
+                                    <span class="chip bg-color">ML</span>
+                                </a>
+                            
+                                <a href="/tags/notes/">
+                                    <span class="chip bg-color">notes</span>
+                                </a>
+                            
+                                <a href="/tags/PRML/">
+                                    <span class="chip bg-color">PRML</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/09/20/CSAPP-Chapter2-Solution/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSAPP Chapter2 Solution">
+                        
+                        <span class="card-title">CSAPP Chapter2 Solution</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            CSAPP Chapter2 Solution
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-20
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/solutions/" class="post-category">
+                                    solutions
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CSAPP/">
+                        <span class="chip bg-color">CSAPP</span>
+                    </a>
+                    
+                    <a href="/tags/solutions/">
+                        <span class="chip bg-color">solutions</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/09/18/AI-Introduction-Chapter1-2-Homework/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="AI Introduction Chapter1,2 Homework">
+                        
+                        <span class="card-title">AI Introduction Chapter1,2 Homework</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            AI Introduction Chapter1,2 Homework
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/solutions/" class="post-category">
+                                    solutions
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/solutions/">
+                        <span class="chip bg-color">solutions</span>
+                    </a>
+                    
+                    <a href="/tags/AI-Introduction/">
+                        <span class="chip bg-color">AI Introduction</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">Yenaibangbing</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/yenaibangbing" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2698118175@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/yenaibangbing" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/yenaibangbing" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
