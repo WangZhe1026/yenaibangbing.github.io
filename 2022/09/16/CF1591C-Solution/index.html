@@ -384,7 +384,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>&amp;emsp;&amp;emsp;At first I thought the method is dp or classification discussion, but they are all very copmlex.<br>&amp;emsp;&amp;emsp;So I found it can be solved in reverse. Notice that we can transport <strong>k</strong> goods each time and we don’t consider coming back first. <strong>The whole distance</strong> is equal to start from the endpoints on both sides respectively and each time the <strong>k</strong>th good as the end point of each sub-distance.<br>&amp;emsp;&amp;emsp;It’s easy to find out that if we don’t do like this, the endpoint must be sent once, then the point closest to the endpoint also must be sent once. In this condition, the whole distance is definitely longer then the last one. I don’t want to prove it because it’s trivial.<br>&amp;emsp;&amp;emsp;Then we consider how to back to the startpoint. We just need <strong>2</strong> <strong>*</strong> <strong>formeranswer</strong>  <strong>-</strong> <strong>the longset sub-distance</strong>.<br>&amp;emsp;&amp;emsp;As for how to know the longset sub-distance, we just need to maintenance an array when we were calculating the sub-distance, or just sort it.<br>Here is the whole code.  </p>
+                <p>  At first I thought the method is dp or classification discussion, but they are all very copmlex.<br>
+  So I found it can be solved in reverse. Notice that we can transport <strong>k</strong> goods each time and we don’t consider coming back first. <strong>The whole distance</strong> is equal to start from the endpoints on both sides respectively and each time the <strong>k</strong>th good as the end point of each sub-distance.<br>
+  It’s easy to find out that if we don’t do like this, the endpoint must be sent once, then the point closest to the endpoint also must be sent once. In this condition, the whole distance is definitely longer then the last one. I don’t want to prove it because it’s trivial.<br>
+  Then we consider how to back to the startpoint. We just need <strong>2</strong> <strong>*</strong> <strong>formeranswer</strong>  <strong>-</strong> <strong>the longset sub-distance</strong>.<br>
+  As for how to know the longset sub-distance, we just need to maintenance an array when we were calculating the sub-distance, or just sort it.<br>
+Here is the whole code.</p>
 <pre class="line-numbers language-none"><code class="language-none">#include &lt;bits/stdc++.h&gt;
 using namespace std; 
 typedef long long ll;
