@@ -507,6 +507,7 @@ Let<br>
 $$<br>
 \Lambda = \Sigma ^{-1 }<br>
 $$<br>
+which is known as the <strong>precision matrix</strong><br>
 so<br>
 $$<br>
 \Lambda = {\Lambda_{aa } \quad \Lambda_{ab } \choose \Lambda_{ba } \quad \Lambda_{bb } }<br>
@@ -517,22 +518,93 @@ $$<br>
 $$</p>
 <p>$$<br>
 \Sigma_{a|b } = \Sigma_{aa}- \Sigma_{ab } \Sigma_{bb } ^{-1} \Sigma_{ba }  \tag{19}<br>
+$$<br>
+Prove:<br>
+We don’t use the method in PRML but another constructive method raised by <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aE411o7qd">shuhuai008</a><br>
+Let<br>
+$$<br>
+x_{b·a}=x_b-\Sigma_{ba}\Sigma_{aa}^{-1}x_a \tag{20}<br>
+$$<br>
+$$<br>
+\mu_{b·a}=\mu_b-\Sigma_{ba}\Sigma_{aa}^{-1}\mu_a \tag{21}<br>
+$$<br>
+$$<br>
+\Sigma_{bb·a } = \Sigma_{bb } - \Sigma_{ba } \Sigma_{aa } ^ {-1 } \Sigma_{ab } \tag{22}<br>
+$$<br>
+We call $\Sigma_{bb·a }$ is $\Sigma_{aa }$'s <strong>Schur Complementary</strong><br>
+Rewrite <code>(20)</code><br>
+$$<br>
+x_{b·a } = (-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){x_a \choose x_b} \tag{23}<br>
+$$<br>
+As we all know, if $x$~$N(\mu,\Sigma)$, $y=Ax+b$, then $y$~$N(A\mu +B,A\Sigma A^{-1 })$<br>
+So $-\Sigma_{ba}\Sigma_{aa}^{-1 }$ is $A$ we are finding.<br>
+Then we can calc<br>
+$$<br>
+E[x_{b·a }] = (-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){\mu_a \choose \mu_b } = \mu_{b·a} \tag{24}<br>
+$$<br>
+$$<br>
+Var[x_{b·a } ]=(-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } } { {-\Sigma_{ba } \Sigma_{aa}^{-1 } } \choose {I_m } } = \Sigma_{bb·a} \tag{25}<br>
 $$</p>
 <h3 id="3-3-Marginal-Gaussian-Distribution">3.3 Marginal Gaussian Distribution</h3>
 <p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian,then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of the marginal distribution given by</p>
 <p>$$<br>
 p(x_a) = \int p(x_a,x_b)dx_b<br>
 $$<br>
-conclusion<br>
+we can get<br>
 $$<br>
-E[x_a] = \mu_a \tag{20}<br>
+E[x_a] = \mu_a \tag{26}<br>
 $$</p>
 <p>$$<br>
-cov[x_a]=\Sigma_{aa} \tag{21}<br>
+cov[x_a]=\Sigma_{aa} \tag{27}<br>
 $$</p>
-<h3 id="3-4-Bayes’-Theorem-for-Gaussian-Variables">3.4 Bayes’ Theorem for Gaussian Variables</h3>
-<h3 id="3-5-Maximum-likelihood-for-the-Gaussian">3.5 Maximum likelihood for the Gaussian</h3>
-<h3 id="3-6">3.6</h3>
+<p>prove:<br>
+target:  value of  $p(y)$ $p(x|y)$<br>
+for $p(y)$<br>
+let<br>
+$$<br>
+y=Ax+b+\epsilon<br>
+$$<br>
+and $\epsilon$~$N(0,L^{-1 } )$,so<br>
+$$<br>
+E[y]=E[Ax+b+\epsilon ]=E[Ax+b]+E[\epsilon]=A\mu+b<br>
+$$<br>
+$$<br>
+Var[y]=Var[Ax+b+\epsilon]=Var[Ax+b]+Var[\epsilon]<br>
+$$<br>
+$$<br>
+=A·\Lambda^{-1 } ·A^{T } +L^{-1 } \tag{28}<br>
+$$<br>
+so $y$~$N(A\mu+b,A·\Lambda^{-1 } ·A^{T } + L^{-1 } )$<br>
+for $p(x|y)$<br>
+let<br>
+$$<br>
+z={x \choose y } \sim N({\mu \choose A\mu +b},{\Lambda^{-1 } \quad \Lambda^{-1 }A^{T }  \choose A^{T }\Lambda^{-1 } \quad A·\Lambda^{-1 } ·A^{T } + L^{-1 }} )<br>
+$$<br>
+so the result is<br>
+$$<br>
+E[x|y] = \mu + \Lambda^{-1 }A^{T }(A·\Lambda^{-1 } ·A^{T } + L^{-1 } )^{-1 } (y-A\mu-b)<br>
+$$<br>
+$$<br>
+Var[x|y]=\Lambda^{-1} - \Lambda^{-1 }A^{T }(A·\Lambda^{-1 } ·A^{T } + L^{-1 } )^{-1 } A\Lambda^{-1} \tag{29}<br>
+$$</p>
+<h3 id="3-4-Student’s-t-distribution">3.4 Student’s t-distribution</h3>
+<p>It equal to combined by many Gaussian distribution with same mean and diffenert variance.</p>
+<h2 id="4-The-Exponential-Family">4 The Exponential Family</h2>
+<p>The probability distributions that we have studied so far in this chapter (with the<br>
+exception of the Gaussian mixture) are specific examples of a broad class of distri-<br>
+butions called <strong>the exponential family</strong><br>
+The exponential family of distributions over x, given parameters η, is defined to<br>
+be the set of distributions of <strong>normal form</strong><br>
+$$<br>
+p(x|\eta) = h(x)exp[\eta(\theta)^TT(x)-A(\eta)] \tag{30}<br>
+$$<br>
+$T(x)$ is called <strong>sufficient statistic</strong>, which store all of the message of the whole dataset.<br>
+$\eta$ is called <strong>natural parameter</strong>, when $p(x|\theta)$ is limited,  the set of $\eta$ is called <strong>natural parameter space</strong>.<br>
+$A(\eta)$ is called <strong>log-partition function</strong>, which function is to normalize the int.<br>
+Three key points:</p>
+<ol>
+<li>the first and second derivative of $A(\eta)$</li>
+</ol>
 
                 
             </div>
