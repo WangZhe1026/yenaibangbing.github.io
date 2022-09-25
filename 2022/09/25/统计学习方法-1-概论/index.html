@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Insert Images to Your Blog, Yenaibangbing&#39;s Blog">
+    <meta name="keywords" content="统计学习方法 1 概论, Yenaibangbing&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Insert Images to Your Blog | Yenaibangbing&#39;s Blog</title>
+    <title>统计学习方法 1 概论 | Yenaibangbing&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -210,12 +210,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Insert Images to Your Blog</h1>
+                    <h1 class="description center-align post-title">统计学习方法 1 概论</h1>
                 </div>
             </div>
         </div>
@@ -331,16 +331,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/images/">
-                                <span class="chip bg-color">images</span>
+                            <a href="/tags/ML/">
+                                <span class="chip bg-color">ML</span>
                             </a>
                         
-                            <a href="/tags/VSCode/">
-                                <span class="chip bg-color">VSCode</span>
+                            <a href="/tags/notes/">
+                                <span class="chip bg-color">notes</span>
                             </a>
                         
-                            <a href="/tags/Typora/">
-                                <span class="chip bg-color">Typora</span>
+                            <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                                <span class="chip bg-color">统计学习方法</span>
                             </a>
                         
                     </div>
@@ -351,8 +351,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/tech/" class="post-category">
-                                tech
+                            <a href="/categories/notes/" class="post-category">
+                                notes
                             </a>
                         
                     </div>
@@ -364,7 +364,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-09-22
+                    2022-09-25
                 </div>
                 
 
@@ -388,16 +388,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Notice"><a href="#Notice" class="headerlink" title="Notice:"></a>Notice:</h2><p>This article is only apply to those who store images locally.</p>
-<h2 id="Principle-of-inserting-images-in-hexo"><a href="#Principle-of-inserting-images-in-hexo" class="headerlink" title="Principle of inserting images in hexo"></a>Principle of inserting images in hexo</h2><p>Firstly, you should turn on <code>post_asset_folder</code> and <code>Hexo</code> will generate a folder with the same name as each article, then <code>Hexo</code> will link the images in the folder to the corresponding article. For example, you create an article called <strong>lbwnb.md</strong> and <code>Hexo</code> will create a folder called <strong>lbwnb</strong> automatically. Then you put <strong>17killandeatchicken.jpg</strong> in the folder and write <code>!(p1)[17killsandeatchicken.jpg]</code> in <strong>lbwnb.md</strong>, <code>Hexo</code> will just show the image in your blog instead of this line of code.<br>However, it’s inconvenient for us to do these steps, you should put the images in the folder, copy the name of the image and write the code like <code>!(p1)[17killsandeatchicken.jpg]</code>. Here I will show you 2 ways to insert images.</p>
-<h2 id="Insert-images-via-Typora-recommend"><a href="#Insert-images-via-Typora-recommend" class="headerlink" title="Insert images via Typora (recommend)"></a>Insert images via Typora (recommend)</h2><p>It’s quite simple in Typora to do that.<br>You just need to open the image setting and set <code>copy image to custom folder</code> to <code>/$(filename)$</code>, then when you paste images to your articles, it will automatically store it in the  corresponding folder.</p>
-<p><img src="image-20220922160233295.png" alt="image 1"></p>
-<h3 id="Insert-images-via-VSCode-not-recommend"><a href="#Insert-images-via-VSCode-not-recommend" class="headerlink" title="Insert images via VSCode (not recommend)"></a>Insert images via VSCode (not recommend)</h3><p>However, it’s difficult to insert images in VSCode.</p>
-<p>First, you should open the whole folder in VSCode.</p>
-<p><img src="image-20220922160851370.png" alt="image 2"><br>Then, because of VSCode plugins don’t support set variables in storage path (default path is /images ), so you have to move the images in <code>/images</code> to the corresponding folder. </p>
-<p><img src="image-20220922160549159.png" alt="image 3"></p>
-<p>Finally, delete <code>/images</code> in the reference path, such as replacing <code>![iamge 13](images/2022_09_22_04_17_08.png)  </code> with <code>![iamge 13](2022_09_22_04_17_08.png)</code> </p>
-<p>​		</p>
+                <h2 id="1-基本分类"><a href="#1-基本分类" class="headerlink" title="1 基本分类"></a>1 基本分类</h2><h3 id="1-1-监督学习"><a href="#1-1-监督学习" class="headerlink" title="1.1 监督学习"></a>1.1 监督学习</h3><ul>
+<li>监督学习从training data中学习模型，对test data进行预测，训练数据由输入输出对组成. </li>
+<li>联合概率分布：假设输入输出的随机变量$X$和$Y$遵循联合概率分布$P(X,Y)$.</li>
+<li>监督学习的模型是概率模型或非概率模型.由条件概率分布$P(Y|X)$或decision function $Y=f(x)$表示.</li>
+<li>其实就是<strong>分类问题</strong></li>
+</ul>
+<h3 id="1-2-无监督学习"><a href="#1-2-无监督学习" class="headerlink" title="1.2 无监督学习"></a>1.2 无监督学习</h3><p>从无标注数据中学习预测模型  </p>
+<ul>
+<li>假设$X$是输入空间，$Z$是隐式结构空间，要学习的模型表示为$z=g(x)$或$P(z|x)$的形式.</li>
+<li>每一个样本是一个实例.</li>
+<li>就是学习之后获得一个模型，which try to find 数据内在的联系，典型的例子是聚类分析.</li>
+</ul>
+<h3 id="1-3-强化学习"><a href="#1-3-强化学习" class="headerlink" title="1.3 强化学习"></a>1.3 强化学习</h3><ul>
+<li>指智能系统在和环境的连续互动中学习最优策略的问题  </li>
+<li>本质是学习最优的序贯策略  </li>
+<li>强化学习的马尔可夫决策过程是状态，奖励，动作序列上的随机过程$[S,A,P,r,\gamma]$，下一个状态$P(s’|s,a)$只依赖于前一个状态和动作,下一个奖励$r(s,a)$只依赖于前一个状态和动作<ul>
+<li>$S$ 是有限状态 state 的集合</li>
+<li>$A$ 是有限动作 action 的集合</li>
+<li>$P$ 是状态转移概率 transition probability 函数$P(s’|s,a)=P(s_{t+1}=s’|s_t=s,a_t=a)$</li>
+<li>$r$ 是奖励函数 reward function $r(s,a)=E(r_{t+1}|s_t=s,a_t=a)$</li>
+<li>$\gamma$ 是衰减系数 discount factor $\gamma \in [0,1]$</li>
+</ul>
+</li>
+<li>价值函数 value function 是策略 $\pi$ 从某一个状态 $s$ 开始的长期积累奖励的数学期望</li>
+<li>动作价值函数 action value function 定义和价值函数差不多</li>
+<li>强化学习的目标是在所有策略中选择出价值函数最大的策略 $\pi^*$.</li>
+</ul>
+<h2 id="2-按模型分类"><a href="#2-按模型分类" class="headerlink" title="2 按模型分类"></a>2 按模型分类</h2><ul>
+<li>概率与非概率：这个前面讲过了，其中概率模型一定可以用最基本的加法规则和乘法规则进行概率推理.</li>
+<li>线性与非线性：取决于使用的函数性质</li>
+</ul>
+<h2 id="3-按算法分类"><a href="#3-按算法分类" class="headerlink" title="3 按算法分类"></a>3 按算法分类</h2><ul>
+<li>在线学习：一次输入一个样本后进行一次预测，比如利用随机梯度下降的感知机算法</li>
+<li>批量学习：一次学完并预测模型</li>
+</ul>
+<h2 id="4-按技巧分类"><a href="#4-按技巧分类" class="headerlink" title="4 按技巧分类"></a>4 按技巧分类</h2><ol>
+<li>贝叶斯学习</li>
+</ol>
+<ul>
+<li>特点是使用模型的先验分布计算后验概率<br>  $$<br>P(\theta|D)=\frac{P(\theta)P(D|\theta)}{P(D)}<br>  $$</li>
+<li>估计时，估计整个后验概率$P(\theta | D)$, 给出的模型往往是后验概率最大的模型</li>
+<li>预测时，计算数据对后验概率分布的期望值<br>$$<br>P(x|D)=\int P(x|\theta,D)P(\theta | D)d\theta<br>$$</li>
+<li>和频率派的联系：假设先验分布是均匀分布，取后验概率最大，就能从贝叶斯估计得到极大似然估计</li>
+</ul>
+<ol start="2">
+<li>核方法</li>
+</ol>
+<ul>
+<li>定义一个函数，使得能够把线性模型扩展到非线性模型，在高维特征空间中进行内积计算，从而简化计算.</li>
+</ul>
+<h2 id="5-三要素"><a href="#5-三要素" class="headerlink" title="5 三要素"></a>5 三要素</h2><p>$$<br>方法 = 模型 + 策略 + 算法<br>$$</p>
+<ul>
+<li>模型：决策函数表示的叫非概率模型，条件概率表示的叫概率模型</li>
+<li>策略：<ul>
+<li>损失函数和风险函数 0-1，平方，绝对，对数等损失函数，值越小模型越好，即学习的目标</li>
+<li>经验风险最小化和结构风险最小化：（未完待续）</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -412,16 +461,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/images/">
-                                    <span class="chip bg-color">images</span>
+                                <a href="/tags/ML/">
+                                    <span class="chip bg-color">ML</span>
                                 </a>
                             
-                                <a href="/tags/VSCode/">
-                                    <span class="chip bg-color">VSCode</span>
+                                <a href="/tags/notes/">
+                                    <span class="chip bg-color">notes</span>
                                 </a>
                             
-                                <a href="/tags/Typora/">
-                                    <span class="chip bg-color">Typora</span>
+                                <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                                    <span class="chip bg-color">统计学习方法</span>
                                 </a>
                             
                         </div>
@@ -462,9 +511,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/09/25/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-1-%E6%A6%82%E8%AE%BA/">
                     <div class="card-image">
@@ -482,9 +532,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -497,6 +547,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -523,31 +574,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/20/CSAPP-Chapter2-Solution/">
+                <a href="/2022/09/22/insert-images-to-your-blog/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSAPP Chapter2 Solution">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Insert Images to Your Blog">
                         
-                        <span class="card-title">CSAPP Chapter2 Solution</span>
+                        <span class="card-title">Insert Images to Your Blog</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSAPP Chapter2 Solution
+                            Insert Images to Your Blog
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/solutions/" class="post-category">
-                                    solutions
+                            <a href="/categories/tech/" class="post-category">
+                                    tech
                                 </a>
                             
                             
@@ -557,12 +608,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/solutions/">
-                        <span class="chip bg-color">solutions</span>
+                    <a href="/tags/images/">
+                        <span class="chip bg-color">images</span>
                     </a>
                     
-                    <a href="/tags/CSAPP/">
-                        <span class="chip bg-color">CSAPP</span>
+                    <a href="/tags/VSCode/">
+                        <span class="chip bg-color">VSCode</span>
+                    </a>
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
                     </a>
                     
                 </div>
