@@ -384,10 +384,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="2-7">2.7</h3>
-<p>it only print <code>61 62 63 64 65 66</code> cause <code>strlen</code> doesn’t print the last character <code>\</code></p>
-<h3 id="2-10">2.10</h3>
-<table>
+                <h3 id="2-7"><a href="#2-7" class="headerlink" title="2.7"></a>2.7</h3><p>it only print <code>61 62 63 64 65 66</code> cause <code>strlen</code> doesn’t print the last character <code>\</code>  </p>
+<h3 id="2-10"><a href="#2-10" class="headerlink" title="2.10"></a>2.10</h3><table>
 <thead>
 <tr>
 <th>step</th>
@@ -395,8 +393,7 @@
 <th>*y</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>start</td>
 <td>a</td>
 <td>b</td>
@@ -416,55 +413,39 @@
 <td>b</td>
 <td>a</td>
 </tr>
-</tbody>
-</table>
-<h3 id="2-11">2.11</h3>
-<p>    A. <code>first = last = k</code>, it’s obvious.<br>
-    B. That’s because the swap function we call is based on bitwise XOR operation, however, we get <code>0</code> when we calculate <code>a^a</code>, so it’s unsuitable to use that function.<br>
-    C. Just replace <code>first&lt;=last</code> with <code>first&lt;last</code> .</p>
-<h3 id="2-12">2.12</h3>
-<p>    A. <code>x &amp; 0xFF</code><br>
-    B. <code>~x ^ 0xFF</code> or <code>x ^ ~0xFF</code><br>
-    C. <code>x | 0xFF</code></p>
-<h3 id="2-13">2.13</h3>
-<ul>
-<li><code>bis(x,y)</code></li>
-<li><code>bis(bic(x,y),bic(y,x))</code></li>
+</tbody></table>
+<h3 id="2-11"><a href="#2-11" class="headerlink" title="2.11"></a>2.11</h3><p>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;A. <code>first = last = k</code>, it’s obvious.<br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B. That’s because the swap function we call is based on bitwise XOR operation, however, we get <code>0</code> when we calculate <code>a^a</code>, so it’s unsuitable to use that function.<br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;C. Just replace <code>first&lt;=last</code> with <code>first&lt;last</code> .</p>
+<h3 id="2-12"><a href="#2-12" class="headerlink" title="2.12"></a>2.12</h3><p>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;A. <code>x &amp; 0xFF</code><br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B. <code>~x ^ 0xFF</code> or <code>x ^ ~0xFF</code><br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;C. <code>x | 0xFF</code>  </p>
+<h3 id="2-13"><a href="#2-13" class="headerlink" title="2.13"></a>2.13</h3><ul>
+<li><code>bis(x,y)</code>  </li>
+<li><code>bis(bic(x,y),bic(y,x))</code>  </li>
 <li>It’s obvious that <code>bix(x,y)</code> is equal to OR operation and <code>bic(x,y)</code> is equal to <code>x + ~y</code>  .</li>
 </ul>
-<h3 id="2-1-9-notes">2.1.9 notes:</h3>
-<ul>
-<li>shift logical right:   fill <code>k</code> zeros on the left</li>
+<h3 id="2-1-9-notes"><a href="#2-1-9-notes" class="headerlink" title="2.1.9 notes:"></a>2.1.9 notes:</h3><ul>
+<li>shift logical right:   fill <code>k</code> zeros on the left  </li>
 <li>arithmetic shift right: fill <code>k</code> highest order number on the left</li>
 </ul>
-<h3 id="2-15">2.15</h3>
-<p><code>!(x^y)</code></p>
-<h3 id="2-25">2.25</h3>
-<p><code>length</code> is <code>unsigned int</code> so <code>length - 1 == MAXINT</code><br>
-how to modity:</p>
+<h3 id="2-15"><a href="#2-15" class="headerlink" title="2.15"></a>2.15</h3><p><code>!(x^y)</code>  </p>
+<h3 id="2-25"><a href="#2-25" class="headerlink" title="2.25"></a>2.25</h3><p><code>length</code> is <code>unsigned int</code> so <code>length - 1 == MAXINT</code><br>how to modity:  </p>
 <ul>
-<li>replace <code>unsighed int</code> with <code>int</code><br>
-or</li>
+<li>replace <code>unsighed int</code> with <code>int</code><br>or  </li>
 <li>replace <code>i &lt;= length - 1</code> with <code>i &lt; length</code></li>
 </ul>
-<h3 id="2-26">2.26</h3>
-<ul>
+<h3 id="2-26"><a href="#2-26" class="headerlink" title="2.26"></a>2.26</h3><ul>
 <li>when: when <code>strlen(s) &lt; strlen(t)</code></li>
-<li>why: because <code>strlen</code> is <code>unsighed</code> and it will return a very big positive number if  <code>strlen(s) &lt; strlen(t)</code></li>
+<li>why: because <code>strlen</code> is <code>unsighed</code> and it will return a very big positive number if  <code>strlen(s) &lt; strlen(t)</code>  </li>
 <li>how: change the return code to <code>return strlen(s) &gt; strlen(t)</code></li>
 </ul>
-<h3 id="2-27">2.27</h3>
-<pre class="line-numbers language-none"><code class="language-none">int uadd_ok(unsigned x, unsigned y){
+<h3 id="2-27"><a href="#2-27" class="headerlink" title="2.27"></a>2.27</h3><pre class="line-numbers language-none"><code class="language-none">int uadd_ok(unsigned x, unsigned y){
   unsighed sum = x+y;
   return sum &gt;= x;
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-30">2.30</h3>
-<pre class="line-numbers language-none"><code class="language-none">int tadd_ok(int x,int y){
+
+<h3 id="2-30"><a href="#2-30" class="headerlink" title="2.30"></a>2.30</h3><pre class="line-numbers language-none"><code class="language-none">int tadd_ok(int x,int y){
   if((x&gt;0 &amp;&amp; y&gt;0 &amp;&amp; x+y&lt;=0)+(x&lt;0 &amp;&amp; y&lt;0 &amp;&amp; x+y&gt;=0)==1)return 0;
   return 1;
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-31">2.31</h3>
-<p>Whether <code>x + y</code> overflows or not doesn’t affect the result because <code>complementary code addition</code> forms an <code>abelian group</code> so the answer is fixed 0.</p>
+<h3 id="2-31"><a href="#2-31" class="headerlink" title="2.31"></a>2.31</h3><p>Whether <code>x + y</code> overflows or not doesn’t affect the result because <code>complementary code addition</code> forms an <code>abelian group</code> so the answer is fixed 0. </p>
 
                 
             </div>

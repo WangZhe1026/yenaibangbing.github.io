@@ -389,77 +389,53 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>Inspired by <a target="_blank" rel="noopener" href="https://baokker.github.io/">baokker</a>, I decided to bulid my own blog three days ago. Here is a brief introduction, which partly references <a target="_blank" rel="noopener" href="https://letian.website/githubpageshexodajianjingtaiboke/">this</a> and <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">this</a>.</p>
-<h2 id="Register-a-Github-account">Register a Github account</h2>
-<p>This step is quite easy, and then creat a repository named your <strong>own username + .github.io</strong>, this repository will be the place where you will store your blog’s code in the future.</p>
-<h2 id="Download-Git-and-Node-js-and-configure-SSH-Key">Download Git and Node.js and configure SSH-Key</h2>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mingyue5826/p/11141324.html">Tutorial</a></p>
+<h2 id="Register-a-Github-account"><a href="#Register-a-Github-account" class="headerlink" title="Register a Github account"></a>Register a Github account</h2><p>This step is quite easy, and then creat a repository named your <strong>own username + .github.io</strong>, this repository will be the place where you will store your blog’s code in the future. </p>
+<h2 id="Download-Git-and-Node-js-and-configure-SSH-Key"><a href="#Download-Git-and-Node-js-and-configure-SSH-Key" class="headerlink" title="Download Git and Node.js and configure SSH-Key"></a>Download Git and Node.js and configure SSH-Key</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/mingyue5826/p/11141324.html">Tutorial</a></p>
 <ol>
 <li>Download Git from <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">here</a> and download Node.js from <a target="_blank" rel="noopener" href="https://nodejs.org/en/">here</a></li>
 <li>Check whether PATH is configured</li>
 <li>If you can’t find “Git bash here” in the right-click menu, have a look at <a target="_blank" rel="noopener" href="https://blog.51cto.com/u_15301254/3057144">this guide</a></li>
-<li>Enter the following command to setup your <strong>username</strong> and <strong>email</strong></li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">git config --global user.name 
-git config --global user.email <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ol start="5">
-<li>Generate <strong>SSH-Key</strong> and name it as <strong>id_rsa_gitlab</strong></li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">cd ~/.ssh
-ssh-keygen -t rsa -C "yourmail@glanway.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ol start="6">
-<li>Add private key</li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">ssh-add ~/.ssh/id_rsa_github
-ssh-add ~/.ssh/id_rsa_gitlab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ol start="7">
+<li>Enter the following command to setup your <strong>username</strong> and <strong>email</strong><pre class="line-numbers language-none"><code class="language-none">git config --global user.name 
+git config --global user.email <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>Generate <strong>SSH-Key</strong> and name it as <strong>id_rsa_gitlab</strong><pre class="line-numbers language-none"><code class="language-none">cd ~/.ssh
+ssh-keygen -t rsa -C "yourmail@glanway.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>Add private key  <pre class="line-numbers language-none"><code class="language-none">ssh-add ~/.ssh/id_rsa_github
+ssh-add ~/.ssh/id_rsa_gitlab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li>If the Git error: <strong>Could not open a connection to your …</strong></li>
 </ol>
 <ul>
 <li>enter <code>ps aux | grep ssh</code> to check the ssh-agent</li>
-<li>the thread number is the first number of last command’s results, then enter <code>kill -9 "thread number"</code> to kill the thread</li>
-<li>put the private key into <strong>/.ssh</strong></li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">cd ~/.ssh
+<li>the thread number is the first number of last command’s results, then enter <code>kill -9 "thread number"</code> to kill the thread  </li>
+<li>put the private key into <strong>/.ssh</strong><pre class="line-numbers language-none"><code class="language-none">cd ~/.ssh
 exec ssh-agent bash
 eval ssh-agent -s
 ssh-add ./id_rsa_github
-ssh-add ./id_rsa_gitlab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ssh-add ./id_rsa_gitlab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
 <ol start="8">
-<li>Create and modify <strong>config.txt</strong></li>
-</ol>
-<pre class="line-numbers language-none"><code class="language-none">Host github.com
+<li>Create and modify <strong>config.txt</strong><pre class="line-numbers language-none"><code class="language-none">Host github.com
 HostName github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa_github
-User yenaibangbing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ol start="9">
+User yenaibangbing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>Generate the single ssh-key</li>
 </ol>
 <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C "yourmail@xxxl.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ol start="10">
-<li>Add the public key to github<br>
-Find <strong>SSH and GPG keys</strong> in the settings and put <strong>*.pub</strong> into it, which begins with <strong>ssh-rsa</strong></li>
-<li>Test<br>
-If you see <strong>Hi!..</strong> after enter <code>ssh -T git@github.com</code>, that means you’ve successfully set up the SSH-Key. ^-^</li>
+<li>Add the public key to github<br>Find <strong>SSH and GPG keys</strong> in the settings and put <strong>*.pub</strong> into it, which begins with <strong>ssh-rsa</strong>  </li>
+<li>Test<br>If you see <strong>Hi!…</strong> after enter <code>ssh -T git@github.com</code>, that means you’ve successfully set up the SSH-Key. ^-^</li>
 </ol>
-<h2 id="Download-hexo-and-create-an-empty-fold">Download <strong>hexo</strong> and create an empty fold</h2>
-<ul>
-<li>You can download <strong>hexo</strong> from <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">here</a></li>
-<li>Create an <strong>empty</strong> fold and name it as “blog”, then <code>hexo init</code></li>
+<h2 id="Download-hexo-and-create-an-empty-fold"><a href="#Download-hexo-and-create-an-empty-fold" class="headerlink" title="Download hexo and create an empty fold"></a>Download <strong>hexo</strong> and create an empty fold</h2><ul>
+<li>You can download <strong>hexo</strong> from <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">here</a> </li>
+<li>Create an <strong>empty</strong> fold and name it as “blog”, then <code>hexo init</code>  </li>
 <li>Modify <strong>_config.yml</strong> under the guide of <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">this</a></li>
 </ul>
-<h2 id="Choose-a-theme-you-like">Choose a theme you like</h2>
-<p>Different themes have different configs, so I suggest you google it or read the <a target="_blank" rel="noopener" href="http://README.md">README.md</a> of your chosen theme.<br>
-My theme is called <strong>hexo-theme-matery</strong>, you can get it form <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">github</a> or just click the link under my blog.</p>
-<h2 id="Deploy-it-to-Github">Deploy it to Github</h2>
-<p>Firstly, enter these two commands</p>
+<h2 id="Choose-a-theme-you-like"><a href="#Choose-a-theme-you-like" class="headerlink" title="Choose a theme you like"></a>Choose a theme you like</h2><p>Different themes have different configs, so I suggest you google it or read the README.md of your chosen theme.<br>My theme is called <strong>hexo-theme-matery</strong>, you can get it form <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">github</a> or just click the link under my blog.  </p>
+<h2 id="Deploy-it-to-Github"><a href="#Deploy-it-to-Github" class="headerlink" title="Deploy it to Github"></a>Deploy it to Github</h2><p>Firstly, enter these two commands  </p>
 <pre class="line-numbers language-none"><code class="language-none">hexo clean
 hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>If you want to view it locally, just <code>hexo s</code> and open the link hexo returned.<br>
-Then enter <code>hexo d</code> to deploy the whole fold to Github.<br>
-Now, everyone is able to visit your blog.</p>
-<h2 id="CDN-accerlerating">CDN accerlerating</h2>
-<p>Just google it, there are many ways to implement it.</p>
+<p>If you want to view it locally, just <code>hexo s</code> and open the link hexo returned.<br>Then enter <code>hexo d</code> to deploy the whole fold to Github.<br>Now, everyone is able to visit your blog.</p>
+<h2 id="CDN-accerlerating"><a href="#CDN-accerlerating" class="headerlink" title="CDN accerlerating"></a>CDN accerlerating</h2><p>Just google it, there are many ways to implement it.</p>
 
                 
             </div>

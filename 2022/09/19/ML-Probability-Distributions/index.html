@@ -388,223 +388,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-Bernoulli-Distribution">1. Bernoulli Distribution</h2>
-<h3 id="1-1">1.1</h3>
-<p>If we are tossing coins.<br>
-Let<br>
-$$<br>
-p(x=1|\mu )=\mu \\<br>
-p(x=0|\mu )=1-\mu \tag{1}<br>
-$$<br>
-Where 0 $\leq$ $\mu$ $\leq$ 1<br>
-So it’s easy to know<br>
-$$<br>
-E[x]= \mu \\<br>
-var[x]=\mu (1-\mu) \tag{2}<br>
-$$<br>
-Let<br>
-$D$ = {$x_1$ ,…,$x_N$} as  observed values of x, we can get the likelihood function and differentiate it<br>
-$$<br>
-ln(p(D|\mu))= \sum_{n=1}^Nln(p(x_n|\mu))= \sum_{n=1}^N{x_nln\mu+(1-x_n)ln(1-\mu)}\tag{3}<br>
-$$<br>
-set the derivative of $ln(p(D|\mu))=0$, we obtain the maximum likelihood estimator.<br>
-$$<br>
-\mu_{ML}=\frac{1}{N}\sum_{n=1}^Nx_n  \tag{4}<br>
-$$<br>
-In order to obtain thenormalization coefficient we note that out of N coin flips, we have to add up all of the possible ways of obtaining m heads, so that the binomial distribution can be written<br>
-$$<br>
-Bin(m|N,\mu)={N\choose m}\mu ^m(1-\mu)^{N-m}\tag{5}<br>
-$$</p>
-<h3 id="1-2-Mean-and-Variance">1.2 Mean and Variance</h3>
-<p>Thus, we have<br>
-$$<br>
-E[m]=\sum_{m=0}^N{mBin(m|N,\mu)}=N\mu \tag{6}<br>
-$$<br>
-$$<br>
-var[m]=\sum_{m=0}^N{(m-E[m])^2}Bin(m|N,\mu)=N\mu(1-\mu)  \tag{7}<br>
-$$</p>
-<h2 id="2-Beta-Distribution">2. Beta Distribution</h2>
-<h3 id="2-1">2.1</h3>
-<p>In Binary Variables, we can see if the dataset is too small, it may lead to serious overfitting, so we should consider a form of prior distribution, which made me consider beta distribution as a probability’s probability or the density of the success rate of Bernoulli trials.<br>
-Let a = number of successes, b = number of failures (we are still tossing coins) and we can choose a prior, called the beta distribution, given by</p>
-<p>$$<br>
-Beta( \mu | a , b ) = \frac{ \Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}=\frac{1}{B(a,b) } \mu ^ { a-1} (1- \mu )^{b-1}  \tag{8}<br>
-$$</p>
-<p>B(a,b), also called Beta function, ensures that the beta distribution is normalized, so that<br>
-$$<br>
-\int_0^1Beta(\mu|a,b)d\mu=1 \tag{9}<br>
-$$</p>
-<h3 id="2-2-Mean-and-Variance">2.2 Mean and Variance</h3>
-<p>Then we can get the mean and the variance</p>
-<p>$$<br>
-E[\mu]=\int_0^1Beta(x|a,b)dx=\int_0^1x\frac{x^{a-1}(1-x)^{b-1}}{Beta(a,b)}dx\\<br>
-=\frac{B(a+1,b)}{B(a,b)}\\<br>
-=\frac{\Gamma(a+1)\Gamma(b)\Gamma(a+b)}{\Gamma(a+b+1)\Gamma(a)\Gamma(b)}\\<br>
-=\frac{a}{a+b}<br>
-\tag{10}<br>
-$$</p>
+                <h2 id="1-Bernoulli-Distribution"><a href="#1-Bernoulli-Distribution" class="headerlink" title="1. Bernoulli Distribution"></a>1. Bernoulli Distribution</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1.1"></a>1.1</h3><p>If we are tossing coins.<br>Let<br>$$<br>p(x=1|\mu )=\mu \\<br>p(x=0|\mu )=1-\mu \tag{1}<br>$$<br>Where 0 $\leq$ $\mu$ $\leq$ 1<br>So it’s easy to know<br>$$<br>E[x]= \mu \\<br>var[x]=\mu (1-\mu) \tag{2}<br>$$<br>Let<br>$D$ = {$x_1$ ,…,$x_N$} as  observed values of x, we can get the likelihood function and differentiate it<br>$$<br>ln(p(D|\mu))= \sum_{n=1}^Nln(p(x_n|\mu))= \sum_{n=1}^N{x_nln\mu+(1-x_n)ln(1-\mu)}\tag{3}<br>$$<br>set the derivative of $ln(p(D|\mu))=0$, we obtain the maximum likelihood estimator.<br>$$<br>\mu_{ML}=\frac{1}{N}\sum_{n=1}^Nx_n  \tag{4}<br>$$<br>In order to obtain thenormalization coefficient we note that out of N coin flips, we have to add up all of the possible ways of obtaining m heads, so that the binomial distribution can be written<br>$$<br>Bin(m|N,\mu)={N\choose m}\mu ^m(1-\mu)^{N-m}\tag{5}<br>$$</p>
+<h3 id="1-2-Mean-and-Variance"><a href="#1-2-Mean-and-Variance" class="headerlink" title="1.2 Mean and Variance"></a>1.2 Mean and Variance</h3><p>Thus, we have<br>$$<br>E[m]=\sum_{m=0}^N{mBin(m|N,\mu)}=N\mu \tag{6}<br>$$<br>$$<br>var[m]=\sum_{m=0}^N{(m-E[m])^2}Bin(m|N,\mu)=N\mu(1-\mu)  \tag{7}<br>$$  </p>
+<h2 id="2-Beta-Distribution"><a href="#2-Beta-Distribution" class="headerlink" title="2. Beta Distribution"></a>2. Beta Distribution</h2><h3 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h3><p>In Binary Variables, we can see if the dataset is too small, it may lead to serious overfitting, so we should consider a form of prior distribution, which made me consider beta distribution as a probability’s probability or the density of the success rate of Bernoulli trials.<br>Let a = number of successes, b = number of failures (we are still tossing coins) and we can choose a prior, called the beta distribution, given by  </p>
+<p>$$<br>Beta( \mu | a , b ) = \frac{ \Gamma(a+b)}{\Gamma(a)\Gamma(b)}\mu^{a-1}(1-\mu)^{b-1}=\frac{1}{B(a,b) } \mu ^ { a-1} (1- \mu )^{b-1}  \tag{8}<br>$$</p>
+<p>B(a,b), also called Beta function, ensures that the beta distribution is normalized, so that<br>$$<br>    \int_0^1Beta(\mu|a,b)d\mu=1 \tag{9}<br>$$</p>
+<h3 id="2-2-Mean-and-Variance"><a href="#2-2-Mean-and-Variance" class="headerlink" title="2.2 Mean and Variance"></a>2.2 Mean and Variance</h3><p>Then we can get the mean and the variance</p>
+<p>$$<br>    E[\mu]=\int_0^1Beta(x|a,b)dx=\int_0^1x\frac{x^{a-1}(1-x)^{b-1}}{Beta(a,b)}dx\\<br>    =\frac{B(a+1,b)}{B(a,b)}\\<br>    =\frac{\Gamma(a+1)\Gamma(b)\Gamma(a+b)}{\Gamma(a+b+1)\Gamma(a)\Gamma(b)}\\<br>    =\frac{a}{a+b}<br>\tag{10}<br>$$</p>
 <p>To calc $Var[\mu]$, we should calc $E[\mu^2]$ first beacuse $Var[\mu]=E[\mu^2]-E[\mu]^2$.</p>
-<p>$$<br>
-E[\mu^2]=\int_{-\infty}^{+\infty}{x^2}{Beta(x)dx}\\<br>
-=\int_0^1{x^2}\frac{1}{B(a,b)}{x^{a-1}}{(1-x)^{b-1}}dx\\<br>
-=\frac{B(a+2,b)}{B(a,b)}\<br>
-=\frac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b+2)}\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\\<br>
-=\frac{(a+1)a}{(a+b+1)(a+b)}\tag{11}<br>
-$$</p>
-<p>Then we can get $Var[\mu]$ readily<br>
-$$<br>
-Var[\mu]=\frac{(a+1)a}{(a+b+1)(a+b)}-(\frac{a}{a+b})^2\<br>
-=\frac{ab}{(a+b+1)(a+b)^2} \tag{12}<br>
-$$</p>
-<p>If our target is to better predict next result of $x$, that’s equal to pretict<br>
-$$<br>
-p(x=1|D)=\int_0^1p(x=1|\mu)p(\mu|D)d\mu\<br>
-=\int_0^1\mu p(\mu|D)d\mu\<br>
-=E[\mu|D] \tag{13}<br>
-$$<br>
-So we can get<br>
-$$<br>
-p(x=1|D)=\frac{m+a}{m+a+l+b} \tag{14}<br>
-$$<br>
-It tell us when the number of tests ( m , l ) is big enough, the result is <strong>Maximum Likelihood Estimate</strong>.<br>
-For limited dataset, the estimate of $\mu$ is between prior and  Maximum Likelihood Estimate.</p>
-<h2 id="3-The-Gaussian-Distribution">3. The Gaussian Distribution</h2>
-<h3 id="3-1-The-Gaussian-Distribution">3.1 The Gaussian Distribution</h3>
-<p>As we all know, the Gaussian distribution can be written in the form of<br>
-$$<br>
-N( x | \mu , \sigma^2 )=\frac{1} {(2\pi\sigma^2)^ {1/2} }exp{ {-\frac{1}{2\sigma^2}(x-\mu)^2} } \tag{15}<br>
-$$<br>
-where $\mu$ is the mean and $\sigma^2$ is the variane.<br>
-If x is $D$-dimensional vector x, it take the form<br>
-$$<br>
-N ( x | \mu , \Sigma ) = \frac{1}{(2 \pi)^ {D/2} } \frac {1} { |\Sigma| ^ {1/2} }exp{ {-\frac{1}{2}(x-\mu)^T\Sigma^{-1} (x-\mu) } }   \tag  {16}<br>
-$$<br>
-Let<br>
-$$<br>
-\Delta^2=(x-\mu)^T\Sigma^{-1}(x-\mu) \tag{17}<br>
-$$<br>
-and the quantity $\Delta$ is called the <strong>Mahalanobis distance</strong><br>
-from µ to x and reduces to the Euclidean distance when Σ is the identity matrix.</p>
-<p>Usually, we assume $\Sigma$ is a <strong>symmetric matrix</strong>, so we can <strong>Singular Value Decomposition</strong> it.<br>
-<strong>Geo expression of Gaussian Distribution</strong>:<br>
-Imagine an elliptical surface of constant probability density for a Gaussian in a two-dimensional space x = ($x_1,x_2$) on which the density is exp(−1/2) of its value at x = $\mu$. The major axes of the ellipse are defined by the eigenvectors $u_i$ of the covariance matrix, with corresponding eigenvalues $\lambda_i$ .</p>
-<h3 id="3-2-Conditional-Gaussian-Distribution">3.2 Conditional Gaussian Distribution</h3>
-<p>An important property of the multivariate Gaussian distribution is that if two<br>
-sets of variables are jointly Gaussian, then the conditional distribution of one set<br>
-conditioned on the other is again Gaussian.<br>
-Split $x$ in two</p>
-<p>$$<br>
-x={x_a \choose x_b}<br>
-$$</p>
-<p>$$<br>
-\mu= {\mu_{a }\choose\mu_{b } }<br>
-$$</p>
-<p>$$<br>
-\Sigma = {\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } }<br>
-$$<br>
-Where $\mu$ is mean and $\Sigma$ is covariance matrix.<br>
-Let<br>
-$$<br>
-\Lambda = \Sigma ^{-1 }<br>
-$$<br>
-which is known as the <strong>precision matrix</strong><br>
-so<br>
-$$<br>
-\Lambda = {\Lambda_{aa } \quad \Lambda_{ab } \choose \Lambda_{ba } \quad \Lambda_{bb } }<br>
-$$</p>
-<p>We just need remember the mean and variance of conditional Gaussian distribution<br>
-$$<br>
-\mu_{a|b } = \mu _a + \Sigma _{ab } + \Sigma _{bb }^{-1} (x_b-\mu _b )   \tag{18}<br>
-$$</p>
-<p>$$<br>
-\Sigma_{a|b } = \Sigma_{aa}- \Sigma_{ab } \Sigma_{bb } ^{-1} \Sigma_{ba }  \tag{19}<br>
-$$<br>
-Prove:<br>
-We don’t use the method in PRML but another constructive method raised by <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aE411o7qd">shuhuai008</a><br>
-Let<br>
-$$<br>
-x_{b·a}=x_b-\Sigma_{ba}\Sigma_{aa}^{-1}x_a \tag{20}<br>
-$$<br>
-$$<br>
-\mu_{b·a}=\mu_b-\Sigma_{ba}\Sigma_{aa}^{-1}\mu_a \tag{21}<br>
-$$<br>
-$$<br>
-\Sigma_{bb·a } = \Sigma_{bb } - \Sigma_{ba } \Sigma_{aa } ^ {-1 } \Sigma_{ab } \tag{22}<br>
-$$<br>
-We call $\Sigma_{bb·a }$ is $\Sigma_{aa }$'s <strong>Schur Complementary</strong><br>
-Rewrite <code>(20)</code><br>
-$$<br>
-x_{b·a } = (-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){x_a \choose x_b} \tag{23}<br>
-$$<br>
-As we all know, if $x$~$N(\mu,\Sigma)$, $y=Ax+b$, then $y$~$N(A\mu +B,A\Sigma A^{-1 })$<br>
-So $-\Sigma_{ba}\Sigma_{aa}^{-1 }$ is $A$ we are finding.<br>
-Then we can calc<br>
-$$<br>
-E[x_{b·a }] = (-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){\mu_a \choose \mu_b } = \mu_{b·a} \tag{24}<br>
-$$<br>
-$$<br>
-Var[x_{b·a } ]=(-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } } { {-\Sigma_{ba } \Sigma_{aa}^{-1 } } \choose {I_m } } = \Sigma_{bb·a} \tag{25}<br>
-$$</p>
-<h3 id="3-3-Marginal-Gaussian-Distribution">3.3 Marginal Gaussian Distribution</h3>
-<p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian,then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of the marginal distribution given by</p>
-<p>$$<br>
-p(x_a) = \int p(x_a,x_b)dx_b<br>
-$$<br>
-we can get<br>
-$$<br>
-E[x_a] = \mu_a \tag{26}<br>
-$$</p>
-<p>$$<br>
-cov[x_a]=\Sigma_{aa} \tag{27}<br>
-$$</p>
-<p>prove:<br>
-target:  value of  $p(y)$ $p(x|y)$<br>
-for $p(y)$<br>
-let<br>
-$$<br>
-y=Ax+b+\epsilon<br>
-$$<br>
-and $\epsilon$~$N(0,L^{-1 } )$,so<br>
-$$<br>
-E[y]=E[Ax+b+\epsilon ]=E[Ax+b]+E[\epsilon]=A\mu+b<br>
-$$<br>
-$$<br>
-Var[y]=Var[Ax+b+\epsilon]=Var[Ax+b]+Var[\epsilon]<br>
-$$<br>
-$$<br>
-=A·\Lambda^{-1 } ·A^{T } +L^{-1 } \tag{28}<br>
-$$<br>
-so $y$~$N(A\mu+b,A·\Lambda^{-1 } ·A^{T } + L^{-1 } )$<br>
-for $p(x|y)$<br>
-let<br>
-$$<br>
-z={x \choose y } \sim N({\mu \choose A\mu +b},{\Lambda^{-1 } \quad \Lambda^{-1 }A^{T }  \choose A^{T }\Lambda^{-1 } \quad A·\Lambda^{-1 } ·A^{T } + L^{-1 }} )<br>
-$$<br>
-so the result is<br>
-$$<br>
-E[x|y] = \mu + \Lambda^{-1 }A^{T }(A·\Lambda^{-1 } ·A^{T } + L^{-1 } )^{-1 } (y-A\mu-b)<br>
-$$<br>
-$$<br>
-Var[x|y]=\Lambda^{-1} - \Lambda^{-1 }A^{T }(A·\Lambda^{-1 } ·A^{T } + L^{-1 } )^{-1 } A\Lambda^{-1} \tag{29}<br>
-$$</p>
-<h3 id="3-4-Student’s-t-distribution">3.4 Student’s t-distribution</h3>
-<p>It equal to combined by many Gaussian distribution with same mean and diffenert variance.</p>
-<h2 id="4-The-Exponential-Family">4 The Exponential Family</h2>
-<p>The probability distributions that we have studied so far in this chapter (with the<br>
-exception of the Gaussian mixture) are specific examples of a broad class of distri-<br>
-butions called <strong>the exponential family</strong><br>
-The exponential family of distributions over x, given parameters η, is defined to<br>
-be the set of distributions of <strong>normal form</strong><br>
-$$<br>
-p(x|\eta) = h(x)exp[\eta(\theta)^TT(x)-A(\eta)] \tag{30}<br>
-$$<br>
-$T(x)$ is called <strong>sufficient statistic</strong>, which store all of the message of the whole dataset.<br>
-$\eta$ is called <strong>natural parameter</strong>, when $p(x|\theta)$ is limited,  the set of $\eta$ is called <strong>natural parameter space</strong>.<br>
-$A(\eta)$ is called <strong>log-partition function</strong>, which function is to normalize the int.<br>
-Three key points:</p>
-<ol>
-<li>the first and second derivative of $A(\eta)$</li>
-</ol>
+<p>$$<br>E[\mu^2]=\int_{-\infty}^{+\infty}{x^2}{Beta(x)dx}\\<br>=\int_0^1{x^2}\frac{1}{B(a,b)}{x^{a-1}}{(1-x)^{b-1}}dx\\<br>=\frac{B(a+2,b)}{B(a,b)}\<br>=\frac{\Gamma(a+2)\Gamma(b)}{\Gamma(a+b+2)}\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}\\<br>=\frac{(a+1)a}{(a+b+1)(a+b)}\tag{11}<br>$$  </p>
+<p>Then we can get $Var[\mu]$ readily<br>$$<br>Var[\mu]=\frac{(a+1)a}{(a+b+1)(a+b)}-(\frac{a}{a+b})^2\<br>=\frac{ab}{(a+b+1)(a+b)^2} \tag{12}<br>$$</p>
+<p>If our target is to better predict next result of $x$, that’s equal to pretict<br>$$<br>p(x=1|D)=\int_0^1p(x=1|\mu)p(\mu|D)d\mu\<br>=\int_0^1\mu p(\mu|D)d\mu\<br>=E[\mu|D] \tag{13}<br>$$<br>So we can get<br>$$<br>p(x=1|D)=\frac{m+a}{m+a+l+b} \tag{14}<br>$$<br>It tell us when the number of tests ( m , l ) is big enough, the result is <strong>Maximum Likelihood Estimate</strong>.<br>For limited dataset, the estimate of $\mu$ is between prior and  Maximum Likelihood Estimate.</p>
+<h2 id="3-The-Gaussian-Distribution"><a href="#3-The-Gaussian-Distribution" class="headerlink" title="3. The Gaussian Distribution"></a>3. The Gaussian Distribution</h2><h3 id="3-1-The-Gaussian-Distribution"><a href="#3-1-The-Gaussian-Distribution" class="headerlink" title="3.1 The Gaussian Distribution"></a>3.1 The Gaussian Distribution</h3><p>As we all know, the Gaussian distribution can be written in the form of<br>$$<br>N( x | \mu , \sigma^2 )=\frac{1} {(2\pi\sigma^2)^ {1/2} }exp{ {-\frac{1}{2\sigma^2}(x-\mu)^2} } \tag{15}<br>$$<br>where $\mu$ is the mean and $\sigma^2$ is the variane.<br>If x is $D$-dimensional vector x, it take the form<br>$$<br>N ( x | \mu , \Sigma ) = \frac{1}{(2 \pi)^ {D/2} } \frac {1} { |\Sigma| ^ {1/2} }exp{ {-\frac{1}{2}(x-\mu)^T\Sigma^{-1} (x-\mu) } }   \tag  {16}<br>$$<br>Let<br>$$<br>\Delta^2=(x-\mu)^T\Sigma^{-1}(x-\mu) \tag{17}<br>$$<br>and the quantity $\Delta$ is called the <strong>Mahalanobis distance</strong><br>from µ to x and reduces to the Euclidean distance when Σ is the identity matrix.   </p>
+<p>Usually, we assume $\Sigma$ is a <strong>symmetric matrix</strong>, so we can <strong>Singular Value Decomposition</strong> it.<br><strong>Geo expression of Gaussian Distribution</strong>:<br>Imagine an elliptical surface of constant probability density for a Gaussian in a two-dimensional space x = ($x_1,x_2$) on which the density is exp(−1/2) of its value at x = $\mu$. The major axes of the ellipse are defined by the eigenvectors $u_i$ of the covariance matrix, with corresponding eigenvalues $\lambda_i$ .</p>
+<h3 id="3-2-Conditional-Gaussian-Distribution"><a href="#3-2-Conditional-Gaussian-Distribution" class="headerlink" title="3.2 Conditional Gaussian Distribution"></a>3.2 Conditional Gaussian Distribution</h3><p>An important property of the multivariate Gaussian distribution is that if two<br>sets of variables are jointly Gaussian, then the conditional distribution of one set<br>conditioned on the other is again Gaussian.<br>Split $x$ in two  </p>
+<p>$$<br>x={x_a \choose x_b}<br>$$</p>
+<p>$$<br>\mu= {\mu_{a }\choose\mu_{b } }<br>$$</p>
+<p>$$<br>\Sigma = {\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } }<br>$$<br>Where $\mu$ is mean and $\Sigma$ is covariance matrix.<br>Let<br>$$<br>\Lambda = \Sigma ^{-1 }<br>$$<br>which is known as the <strong>precision matrix</strong><br>so<br>$$<br>\Lambda = {\Lambda_{aa } \quad \Lambda_{ab } \choose \Lambda_{ba } \quad \Lambda_{bb } }<br>$$</p>
+<p>We just need remember the mean and variance of conditional Gaussian distribution<br>$$<br>\mu_{a|b } = \mu _a + \Sigma _{ab } + \Sigma _{bb }^{-1} (x_b-\mu _b )   \tag{18}<br>$$</p>
+<p>$$<br>\Sigma_{a|b } = \Sigma_{aa}- \Sigma_{ab } \Sigma_{bb } ^{-1} \Sigma_{ba }  \tag{19}<br>$$<br>Prove:<br>We don’t use the method in PRML but another constructive method raised by <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aE411o7qd">shuhuai008</a><br>Let<br>$$<br>x_{b·a}=x_b-\Sigma_{ba}\Sigma_{aa}^{-1}x_a \tag{20}<br>$$<br>$$<br>\mu_{b·a}=\mu_b-\Sigma_{ba}\Sigma_{aa}^{-1}\mu_a \tag{21}<br>$$<br>$$<br>\Sigma_{bb·a } = \Sigma_{bb } - \Sigma_{ba } \Sigma_{aa } ^ {-1 } \Sigma_{ab } \tag{22}<br>$$<br>We call $\Sigma_{bb·a }$ is $\Sigma_{aa }$’s <strong>Schur Complementary</strong><br>Rewrite <code>(20)</code><br>$$<br>x_{b·a } = (-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){x_a \choose x_b} \tag{23}<br>$$<br>As we all know, if $x$<del>$N(\mu,\Sigma)$, $y=Ax+b$, then $y$</del>$N(A\mu +B,A\Sigma A^{-1 })$<br>So $-\Sigma_{ba}\Sigma_{aa}^{-1 }$ is $A$ we are finding.<br>Then we can calc<br>$$<br>E[x_{b·a }] = (-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){\mu_a \choose \mu_b } = \mu_{b·a} \tag{24}<br>$$<br>$$<br>Var[x_{b·a } ]=(-\Sigma_{ba }\Sigma_{aa }^{-1 } \quad I_m){\Sigma_{aa } \quad \Sigma_{ab } \choose \Sigma_{ba } \quad \Sigma_{bb } } { {-\Sigma_{ba } \Sigma_{aa}^{-1 } } \choose {I_m } } = \Sigma_{bb·a} \tag{25}<br>$$</p>
+<h3 id="3-3-Marginal-Gaussian-Distribution"><a href="#3-3-Marginal-Gaussian-Distribution" class="headerlink" title="3.3 Marginal Gaussian Distribution"></a>3.3 Marginal Gaussian Distribution</h3><p>We have seen that if a joint distribution $p(x_a,x_b)$ is Gaussian,then the conditional distribution $p(x_a|x_b)$ will again be Gaussian. Now we turn to a discussion of the marginal distribution given by</p>
+<p>$$<br> p(x_a) = \int p(x_a,x_b)dx_b<br>$$<br>we can get<br>$$<br>E[x_a] = \mu_a \tag{26}<br>$$</p>
+<p>$$<br>cov[x_a]=\Sigma_{aa} \tag{27}<br>$$</p>
+<p>prove:<br>target:  value of  $p(y)$ $p(x|y)$<br>for $p(y)$<br>let<br>$$<br>y=Ax+b+\epsilon<br>$$<br>and $\epsilon$<del>$N(0,L^{-1 } )$,so<br>$$<br>E[y]=E[Ax+b+\epsilon ]=E[Ax+b]+E[\epsilon]=A\mu+b<br>$$<br>$$<br>Var[y]=Var[Ax+b+\epsilon]=Var[Ax+b]+Var[\epsilon]<br>$$<br>$$<br>=A·\Lambda^{-1 } ·A^{T } +L^{-1 } \tag{28}<br>$$<br>so $y$</del>$N(A\mu+b,A·\Lambda^{-1 } ·A^{T } + L^{-1 } )$<br>for $p(x|y)$<br>let<br>$$<br>z={x \choose y } \sim N({\mu \choose A\mu +b},{\Lambda^{-1 } \quad \Lambda^{-1 }A^{T }  \choose A^{T }\Lambda^{-1 } \quad A·\Lambda^{-1 } ·A^{T } + L^{-1 }} )<br>$$<br>so the result is<br>$$<br>E[x|y] = \mu + \Lambda^{-1 }A^{T }(A·\Lambda^{-1 } ·A^{T } + L^{-1 } )^{-1 } (y-A\mu-b)<br>$$<br>$$<br>Var[x|y]=\Lambda^{-1 } - \Lambda^{-1 }A^{T }(A·\Lambda^{-1 } ·A^{T } + L^{-1 } )^{-1 } A\Lambda^{-1 } \tag{29}<br>$$</p>
+<h3 id="3-4-Student’s-t-distribution"><a href="#3-4-Student’s-t-distribution" class="headerlink" title="3.4 Student’s t-distribution"></a>3.4 Student’s t-distribution</h3><p>It equal to combined by many Gaussian distribution with same mean and diffenert variance.</p>
+<h2 id="4-The-Exponential-Family"><a href="#4-The-Exponential-Family" class="headerlink" title="4 The Exponential Family"></a>4 The Exponential Family</h2><p>The probability distributions that we have studied so far in this chapter (with the<br>exception of the Gaussian mixture) are specific examples of a broad class of distri-<br>butions called <strong>the exponential family</strong><br>The exponential family of distributions over x, given parameters η, is defined to<br>be the set of distributions of <strong>normal form</strong><br>$$<br>p(x|\eta) = h(x)g(\eta)exp(\eta^Tu(x)) \tag{30}<br>$$<br>$u(x)$ is called <strong>sufficient statistic</strong>, which store all of the message of the whole dataset.<br>$\eta$ is called <strong>natural parameter</strong> of the distribution, when $p(x|\theta)$ is limited,  the set of $\eta$ is called <strong>natural parameter space</strong>.<br>$g(\eta)$ is called <strong>log-partition function</strong>, which function is to normalize the int.<br>Where<br>$$<br>g( \eta ) \int h(x) exp[ \eta^T u(x) ]dx = 1<br>$$<br>The target of ExpFamily is rearrangement different distributions into <strong>normal forms</strong>.  </p>
+<h3 id="4-1-Bernoulli-distribution"><a href="#4-1-Bernoulli-distribution" class="headerlink" title="4.1  Bernoulli distribution"></a>4.1  Bernoulli distribution</h3><p>$$<br>p(x|\mu) = Bern(x|\mu) = \mu^x(1-\mu)^{1-x }<br>$$<br>$$<br>=(1-\mu)exp[ln(\frac{\mu } {1-\mu })x]<br>$$<br>let<br>$$<br>\eta = ln(\frac{\mu }{1-\mu } )<br>$$<br>rearrangement it and let $\mu = \sigma(\eta)$<br>$$<br>\sigma(\eta)=\frac{1 } {1+exp(-\eta) }<br>$$<br>which is called <strong>logistic sigmoid function</strong><br>Thus we can write the Bernoulli distribution using the standard representation in the form<br>$$<br>p(x|\eta)=\sigma(-\eta)exp(\eta x)<br>$$</p>
+<h3 id="4-2-Gaussian-distribution"><a href="#4-2-Gaussian-distribution" class="headerlink" title="4.2  Gaussian distribution"></a>4.2  Gaussian distribution</h3><p>$$<br>p( x | \mu , \sigma^2 )=\frac{1} {(2\pi\sigma^2)^ {1/2} }exp{ {-\frac{1}{2\sigma^2}(x-\mu)^2} }<br>$$<br>$$<br>=\frac{1}{(2\pi \sigma^2)^{1/2}}exp(-\frac{1}{2\sigma^2}(-2\mu \quad 1){x \choose x^2} -\frac{\mu^2}{2\sigma^2})<br>$$<br>So comparing to <code>30</code><br>$$<br>\eta = {\frac{\mu }{ \sigma^2 } \choose -\frac{1 } {2\sigma^2 } } = {\eta_1 \choose \eta_2 }<br>$$<br>$$<br>u(x)={x \choose x^2}<br>$$<br>$$<br>h(x)=(2\pi)^{-1/2}<br>$$<br>$$<br>g(\eta)=(-2\eta_2)^{1/2}exp(\frac{\eta_1^2}{4\eta_2})<br>$$</p>
 
                 
             </div>
