@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学习方法 1 概论, Yenaibangbing&#39;s Blog">
+    <meta name="keywords" content="王说新语 0x00 椰奶棒冰锐评越战金曲Orange Crush, Yenaibangbing&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>统计学习方法 1 概论 | Yenaibangbing&#39;s Blog</title>
+    <title>王说新语 0x00 椰奶棒冰锐评越战金曲Orange Crush | Yenaibangbing&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -210,12 +210,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">统计学习方法 1 概论</h1>
+                    <h1 class="description center-align post-title">王说新语 0x00 椰奶棒冰锐评越战金曲Orange Crush</h1>
                 </div>
             </div>
         </div>
@@ -331,16 +331,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ML/">
-                                <span class="chip bg-color">ML</span>
+                            <a href="/tags/Vietnam-War/">
+                                <span class="chip bg-color">Vietnam War</span>
                             </a>
                         
-                            <a href="/tags/notes/">
-                                <span class="chip bg-color">notes</span>
-                            </a>
-                        
-                            <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
-                                <span class="chip bg-color">统计学习方法</span>
+                            <a href="/tags/rock-and-roll/">
+                                <span class="chip bg-color">rock and roll</span>
                             </a>
                         
                     </div>
@@ -351,8 +347,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/notes/" class="post-category">
-                                notes
+                            <a href="/categories/Wang-s-New-Talk/" class="post-category">
+                                Wang's New Talk
                             </a>
                         
                     </div>
@@ -364,7 +360,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-09-25
+                    2022-09-26
                 </div>
                 
 
@@ -388,65 +384,90 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-基本分类"><a href="#1-基本分类" class="headerlink" title="1 基本分类"></a>1 基本分类</h2><h3 id="1-1-监督学习"><a href="#1-1-监督学习" class="headerlink" title="1.1 监督学习"></a>1.1 监督学习</h3><ul>
-<li>监督学习从training data中学习模型，对test data进行预测，训练数据由输入输出对组成. </li>
-<li>联合概率分布：假设输入输出的随机变量$X$和$Y$遵循联合概率分布$P(X,Y)$.</li>
-<li>监督学习的模型是概率模型或非概率模型.由条件概率分布$P(Y|X)$或decision function $Y=f(x)$表示.</li>
-<li>其实就是<strong>分类问题</strong></li>
-</ul>
-<h3 id="1-2-无监督学习"><a href="#1-2-无监督学习" class="headerlink" title="1.2 无监督学习"></a>1.2 无监督学习</h3><p>从无标注数据中学习预测模型  </p>
-<ul>
-<li>假设$X$是输入空间，$Z$是隐式结构空间，要学习的模型表示为$z=g(x)$或$P(z|x)$的形式.</li>
-<li>每一个样本是一个实例.</li>
-<li>就是学习之后获得一个模型，which try to find 数据内在的联系，典型的例子是聚类分析.</li>
-</ul>
-<h3 id="1-3-强化学习"><a href="#1-3-强化学习" class="headerlink" title="1.3 强化学习"></a>1.3 强化学习</h3><ul>
-<li>指智能系统在和环境的连续互动中学习最优策略的问题  </li>
-<li>本质是学习最优的序贯策略  </li>
-<li>强化学习的马尔可夫决策过程是状态，奖励，动作序列上的随机过程$[S,A,P,r,\gamma]$，下一个状态$P(s’|s,a)$只依赖于前一个状态和动作,下一个奖励$r(s,a)$只依赖于前一个状态和动作<ul>
-<li>$S$ 是有限状态 state 的集合</li>
-<li>$A$ 是有限动作 action 的集合</li>
-<li>$P$ 是状态转移概率 transition probability 函数$P(s’|s,a)=P(s_{t+1}=s’|s_t=s,a_t=a)$</li>
-<li>$r$ 是奖励函数 reward function $r(s,a)=E(r_{t+1}|s_t=s,a_t=a)$</li>
-<li>$\gamma$ 是衰减系数 discount factor $\gamma \in [0,1]$</li>
-</ul>
-</li>
-<li>价值函数 value function 是策略 $\pi$ 从某一个状态 $s$ 开始的长期积累奖励的数学期望</li>
-<li>动作价值函数 action value function 定义和价值函数差不多</li>
-<li>强化学习的目标是在所有策略中选择出价值函数最大的策略 $\pi^*$.</li>
-</ul>
-<h2 id="2-按模型分类"><a href="#2-按模型分类" class="headerlink" title="2 按模型分类"></a>2 按模型分类</h2><ul>
-<li>概率与非概率：这个前面讲过了，其中概率模型一定可以用最基本的加法规则和乘法规则进行概率推理.</li>
-<li>线性与非线性：取决于使用的函数性质</li>
-</ul>
-<h2 id="3-按算法分类"><a href="#3-按算法分类" class="headerlink" title="3 按算法分类"></a>3 按算法分类</h2><ul>
-<li>在线学习：一次输入一个样本后进行一次预测，比如利用随机梯度下降的感知机算法</li>
-<li>批量学习：一次学完并预测模型</li>
-</ul>
-<h2 id="4-按技巧分类"><a href="#4-按技巧分类" class="headerlink" title="4 按技巧分类"></a>4 按技巧分类</h2><ol>
-<li>贝叶斯学习</li>
-</ol>
-<ul>
-<li>特点是使用模型的先验分布计算后验概率<br>  $$<br>P(\theta|D)=\frac{P(\theta)P(D|\theta)}{P(D)}<br>  $$</li>
-<li>估计时，估计整个后验概率$P(\theta | D)$, 给出的模型往往是后验概率最大的模型</li>
-<li>预测时，计算数据对后验概率分布的期望值<br>$$<br>P(x|D)=\int P(x|\theta,D)P(\theta | D)d\theta<br>$$</li>
-<li>和频率派的联系：假设先验分布是均匀分布，取后验概率最大，就能从贝叶斯估计得到极大似然估计</li>
-</ul>
-<ol start="2">
-<li>核方法</li>
-</ol>
-<ul>
-<li>定义一个函数，使得能够把线性模型扩展到非线性模型，在高维特征空间中进行内积计算，从而简化计算.</li>
-</ul>
-<h2 id="5-三要素"><a href="#5-三要素" class="headerlink" title="5 三要素"></a>5 三要素</h2><p>$$<br>方法 = 模型 + 策略 + 算法<br>$$</p>
-<ul>
-<li>模型：决策函数表示的叫非概率模型，条件概率表示的叫概率模型</li>
-<li>策略：<ul>
-<li>损失函数和风险函数 0-1，平方，绝对，对数等损失函数，值越小模型越好，即学习的目标</li>
-<li>经验风险最小化和结构风险最小化：（未完待续）</li>
-</ul>
-</li>
-</ul>
+                <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>本文是对R.E.M乐队著名的反战歌曲Orange Crush的分析，如果你还没有听过，我建议你从<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_mSmOcmk7uQ">这里</a>听一听，或者在<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=2BvXBwtrs_k">这里</a>欣赏一个优秀的live版本（可以看到主唱性感的光头），当然，边听边看本文也未尝不可。</p>
+<p>前置知识：越战相关历史。</p>
+<h3 id="完整歌词"><a href="#完整歌词" class="headerlink" title="完整歌词"></a>完整歌词</h3><blockquote>
+<p>(Follow me, don’t follow me)<br>I’ve got my spine, I’ve got my orange crush<br>(Collar me, don’t collar me)<br>I’ve got my spine, I’ve got my orange crush<br>(We are agents of the free)<br>I’ve had my fun and now it’s time to serve your conscience overseas<br>(Over me, not over me)<br>Coming in fast, over me (oh, oh)</p>
+</blockquote>
+<blockquote>
+<p>I’ve got my spine, I’ve got my orange crush<br>(Collar me, don’t collar me)<br>I’ve got my spine, I’ve got my orange crush<br>(We are agents of the free)<br>I’ve had my fun and now it’s time to serve your conscience overseas<br>(Over me, not over me)<br>Coming in fast, over me (oh, oh)</p>
+</blockquote>
+<blockquote>
+<p>High on the roof, thin the blood<br>Another one came on the waves tonight<br>Comin’ in, you’re home</p>
+</blockquote>
+<blockquote>
+<p>We would circle and we’d circle and we’d circle to stop and consider and centered on the pavement stacked up all the trucks jacked up and our wheels in slush and orange crush in pocket and all this here county, hell, any county, it’s just like heaven here, and I was remembering and I was just in a different county and all then this whirlybird that I headed for I had my goggles pulled off; I knew it all, I knew every back road and every truck stop</p>
+</blockquote>
+<blockquote>
+<p>(Follow me, don’t follow me)<br>I’ve got my spine, I’ve got my orange crush<br>(Collar me, don’t collar me)<br>I’ve got my spine, I’ve got my orange crush<br>(We are agents of the free)<br>I’ve had my fun and now it’s time to serve your conscience overseas<br>(Over me, not over me)<br>Coming in fast, over me (oh, oh)</p>
+</blockquote>
+<blockquote>
+<p>High on the roof, thin the blood<br>Another one climbs on the waves tonight<br>Comin’ in, you’re home</p>
+</blockquote>
+<blockquote>
+<p>High on the roof, thin the blood<br>Another one climbs on the waves tonight<br>Comin’ in, you’re home</p>
+</blockquote>
+<p>注：（）内的是贝斯手的伴唱，中间长长一坨意义不明的话是主场拿扩音器喊话的部分</p>
+<h3 id="对于歌曲的分析"><a href="#对于歌曲的分析" class="headerlink" title="对于歌曲的分析"></a>对于歌曲的分析</h3><blockquote>
+<p>That didn’t mean you had to necessarily figure it out, you could just listen for pure enjoyment. But if you wanted to dig a little deeper there was always something there. That’s always been the case with my favorite songs.</p>
+</blockquote>
+<p>对于音乐性的部分没有什么好分析的，不是因为不值得分析，而是我觉得亲自听一听感受一下就足够了，单纯的技巧在rock and roll有重要性，但绝对不是最重要的部分。</p>
+<p>如果一定要写一些，那我引用从 <strong>Classic Rock</strong>第185期里抄来的话</p>
+<blockquote>
+<p>The jangling rush of Peter Buck’s artful guitar, the wordless moan of their Mills-led harmonies, drummer Bill Berry’s deft rhythms and the delicious pull of Stipe’s cryptic vocals. <em>Orange Crush</em> had all these things, plus a killer punch and added sparkle. </p>
+</blockquote>
+<p>以及提一嘴歌中使用的模仿颚骨的打击乐器</p>
+<blockquote>
+<p>This features the rattle of a vibraslap in the mix. The percussion instrument was created to mimic the sound of a jawbone, an instrument made from the dried jawbone of a donkey, horse, or similar animal, whose teeth would produce a rattling sound when shaken. The modern version uses a stiff wire to connect a wooden ball to a box of metal teeth.</p>
+</blockquote>
+<h3 id="对于歌词的分析"><a href="#对于歌词的分析" class="headerlink" title="对于歌词的分析"></a>对于歌词的分析</h3><blockquote>
+<p>The ironic juxtaposition of those two terms was no accident.</p>
+</blockquote>
+<p>前文已经提过了，这是一首反战歌曲，标题中的Orange Crush指代的是Agent Orange，即<strong>橙剂</strong>，一种在<strong>越战</strong>中被美军滥用的落叶剂（用于找出隐藏于树林中越共），美军对自己的士兵称橙剂对人是无害的，然而几年后却发现实质上是一种致癌物。对于Orange Crush这个标题本身的分析我并没有找到什么靠谱的说法，个人认为可以理解为Orange Crush的另一个意思：一种当时流行的橙味汽水 与 橙剂 形成强烈的讽刺对比</p>
+<p><img src="637ef30b1424183947f70ed7ee7dfafc.355x355x1.jpg" alt="crush 橙汁"></p>
+<p>接下来我们看对于每一句歌词的考证（没写的代表我没找到或者没想出来）<br>本歌曲的口吻主要是一名越战美军士兵的第一视角</p>
+<pre class="line-numbers language-none"><code class="language-none">(Follow me, don't follow me)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在越南冲突中，经常有一名士兵被派往部队前方检查危险或伏击的情况。<br><code>Follow me</code>是他的部队在他的位置上前进的暗示<br>而<code>Don't follow me</code>是停止运动和观察的以下指示。当然这句话随时间也有了一些别的意思：越战进行期间，彻底失败的美国士兵们讽刺“Don’t Follow Me… I’m Lost too.”意为对战争的不满。</p>
+<pre class="line-numbers language-none"><code class="language-none">I've got my spine<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>对于这一句的<code>spine</code>有两种理解，一种是士兵说他有他的<code>spine</code>，即他不受橙剂的影响，同时相信他的孩子也会没事（当然，实际上橙剂导致多种癌症，并且会遗传给后代，比如导致子女的<strong>脊柱裂</strong>等疾病；另一种理解是指LSD和amphetamine的混合（就是吸毒）。</p>
+<pre class="line-numbers language-none"><code class="language-none">I've got my orange crush<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>关于橙剂已经在前文分析过了，至于<code>我获得了橙剂</code>，应该是士兵做好了发动空袭的准备（因为橙剂的使用方式是空投）。</p>
+<pre class="line-numbers language-none"><code class="language-none">(Collar me, don't collar me)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><code>collar</code>指的是用来固定脊柱裂患者的支架和项圈，这里指的是脊柱裂发生的不确定性，以及士兵不确定负面影响的真相。</p>
+<p><img src="58b032bf3ca331b7201d964e8eb57cbb.257x320x1.jpg" alt="collar"></p>
+<pre class="line-numbers language-none"><code class="language-none">(We are agents of the free)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这里指的是美国士兵相信自己是自由的代言人，相信美国在越南的战争是为了当地带来自由的，</p>
+<pre class="line-numbers language-none"><code class="language-none">I've had my fun and now it's time to serve your conscience overseas<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>同上一句。越南战争的开始，是因为美国政客的<code>conscience </code>说，美国需要干预共产主义在亚洲的蔓延。这一句应该是对美国政客说的，至于<code>I've had my fun</code>，可能是对于参加越战的一种反讽。</p>
+<pre class="line-numbers language-none"><code class="language-none">(Over me, not over me)
+Coming in fast, over me<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>伴唱对主唱<code>now it's time to serve your conscience overseas</code>的回答<code>在我身上，而不是在海外</code>，所以伴唱有点与既定的爱国主义观点相矛盾。</p>
+<pre class="line-numbers language-none"><code class="language-none">High on the roof, thin the blood
+Another one came on the waves tonight
+Comin'in, you're home<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>很明显是指越南很糟糕，士兵们对战争理由的怀疑，恐惧，士兵们只想回家，祈祷一架直升机来拯救他们离开这个地狱。</p>
+<pre class="line-numbers language-none"><code class="language-none">We would circle and we'd circle and we'd circle 
+to stop and consider and centered on the pavement 
+stacked up all the trucks jacked up and our wheels 
+in slush and orange crush in pocket and all this here county, hell, any county, 
+it's just like heaven here, and I was remembering and I was just in a different county and all
+then this whirlybird that I headed for I had my goggles pulled off; 
+I knew it all, I knew every back road and every truck stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这是中间主唱拿扩音器喊的一坨意义不明的话，同时周围还环绕着直升机的声音，内容主要是对于战场的描述，<br>在主题上，类似于《现代启示录》中“我喜欢早上凝固汽油弹的味道”独白。插曲和独白都描述了说话者对暴力战时环境的愉悦，特别强调他们使用致命化学武器对付敌人的乐趣。</p>
+<pre class="line-numbers language-none"><code class="language-none">Another one came on the waves tonight
+Comin' in, you're home<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在越南冲突期间，从战区撤离伤亡人员（CASEVAC）是通过带有呼号“Dustoff”的直升机进行的。<br>当然<code>Another one came on the waves tonight</code>也有另外一层含义，指的是将一名士兵的尸体运回美国。</p>
+<h3 id="写在后面"><a href="#写在后面" class="headerlink" title="写在后面"></a>写在后面</h3><p>至于为什么有些能分析出士兵对战争的厌恶而有些能表现出战争的决心，而且这两者在歌曲中是交错出现的，我还没能想出一个合理的解释，总不至于说是以此来表达内心的矛盾吧（因为歌曲总体是反战的）。</p>
 
                 
             </div>
@@ -461,16 +482,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ML/">
-                                    <span class="chip bg-color">ML</span>
+                                <a href="/tags/Vietnam-War/">
+                                    <span class="chip bg-color">Vietnam War</span>
                                 </a>
                             
-                                <a href="/tags/notes/">
-                                    <span class="chip bg-color">notes</span>
-                                </a>
-                            
-                                <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
-                                    <span class="chip bg-color">统计学习方法</span>
+                                <a href="/tags/rock-and-roll/">
+                                    <span class="chip bg-color">rock and roll</span>
                                 </a>
                             
                         </div>
@@ -511,9 +528,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/09/26/%E7%8E%8B%E8%AF%B4%E6%96%B0%E8%AF%AD-0x00-%E6%A4%B0%E5%A5%B6%E6%A3%92%E5%86%B0%E9%94%90%E8%AF%84%E8%B6%8A%E6%88%98%E9%87%91%E6%9B%B2Orange-Crus/">
                     <div class="card-image">
@@ -531,9 +549,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -546,6 +564,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -568,31 +587,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/22/insert-images-to-your-blog/">
+                <a href="/2022/09/25/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-1-%E6%A6%82%E8%AE%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Insert Images to Your Blog">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="统计学习方法 1 概论">
                         
-                        <span class="card-title">Insert Images to Your Blog</span>
+                        <span class="card-title">统计学习方法 1 概论</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Insert Images to Your Blog
+                            统计学习方法 1 概论
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/tech/" class="post-category">
-                                    tech
+                            <a href="/categories/notes/" class="post-category">
+                                    notes
                                 </a>
                             
                             
@@ -602,16 +621,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/images/">
-                        <span class="chip bg-color">images</span>
+                    <a href="/tags/ML/">
+                        <span class="chip bg-color">ML</span>
                     </a>
                     
-                    <a href="/tags/VSCode/">
-                        <span class="chip bg-color">VSCode</span>
+                    <a href="/tags/notes/">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
+                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                        <span class="chip bg-color">统计学习方法</span>
                     </a>
                     
                 </div>
@@ -742,13 +761,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
