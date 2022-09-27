@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-09-27T14:43:36.413Z</updated>
+  <updated>2022-09-27T14:52:34.304Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计学习方法 4 朴素贝叶斯法</title>
+    <link href="https://yenaibangbing.github.io/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-4-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%B3%95/"/>
+    <id>https://yenaibangbing.github.io/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-4-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%B3%95/</id>
+    <published>2022-09-27T14:45:33.000Z</published>
+    <updated>2022-09-27T14:52:34.304Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;naive Bayes</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/categories/notes/"/>
+    
+    
+    <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
+    
+    <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>统计学习方法 2 感知机</title>

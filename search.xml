@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>统计学习方法 4 朴素贝叶斯法</title>
+      <link href="/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-4-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%B3%95/"/>
+      <url>/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-4-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>naive Bayes 是基于贝叶斯定理和特征条件独立假设的分类方法<br>对于给定的训练数据集</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+            <tag> notes </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>统计学习方法 2 感知机</title>
       <link href="/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-2-%E6%84%9F%E7%9F%A5%E6%9C%BA/"/>
       <url>/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-2-%E6%84%9F%E7%9F%A5%E6%9C%BA/</url>
