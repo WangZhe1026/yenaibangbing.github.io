@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-09-26T09:56:34.383Z</updated>
+  <updated>2022-09-27T11:18:41.534Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI Introduction Chapter 3 Homework</title>
+    <link href="https://yenaibangbing.github.io/2022/09/26/AI-Introduction-Chapter-3-Homework/"/>
+    <id>https://yenaibangbing.github.io/2022/09/26/AI-Introduction-Chapter-3-Homework/</id>
+    <published>2022-09-26T14:47:46.000Z</published>
+    <updated>2022-09-27T11:18:41.534Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;3-2&quot;&gt;&lt;a href=&quot;#3-2&quot; class=&quot;headerlink&quot; title=&quot;3.2&quot;&gt;&lt;/a&gt;3.2&lt;/h3&gt;&lt;p&gt;消去存在量词，化为skolem标准型后略去全称量词&lt;br&gt;$\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/categories/solutions/"/>
+    
+    
+    <category term="solutions" scheme="https://yenaibangbing.github.io/tags/solutions/"/>
+    
+    <category term="AI Introduction" scheme="https://yenaibangbing.github.io/tags/AI-Introduction/"/>
+    
+  </entry>
   
   <entry>
     <title>王说新语 0x00 椰奶棒冰锐评越战金曲Orange Crush</title>
@@ -48,7 +76,7 @@
     <link href="https://yenaibangbing.github.io/2022/09/25/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-1-%E6%A6%82%E8%AE%BA/"/>
     <id>https://yenaibangbing.github.io/2022/09/25/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-1-%E6%A6%82%E8%AE%BA/</id>
     <published>2022-09-25T14:40:49.000Z</published>
-    <updated>2022-09-25T15:36:03.726Z</updated>
+    <updated>2022-09-27T09:16:03.903Z</updated>
     
     
       
