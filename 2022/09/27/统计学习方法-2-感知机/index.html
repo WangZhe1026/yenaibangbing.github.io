@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="AI Introduction Chapter 3 Homework, Yenaibangbing&#39;s Blog">
+    <meta name="keywords" content="统计学习方法 2 感知机, Yenaibangbing&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>AI Introduction Chapter 3 Homework | Yenaibangbing&#39;s Blog</title>
+    <title>统计学习方法 2 感知机 | Yenaibangbing&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -215,7 +215,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">AI Introduction Chapter 3 Homework</h1>
+                    <h1 class="description center-align post-title">统计学习方法 2 感知机</h1>
                 </div>
             </div>
         </div>
@@ -331,12 +331,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/solutions/">
-                                <span class="chip bg-color">solutions</span>
+                            <a href="/tags/ML/">
+                                <span class="chip bg-color">ML</span>
                             </a>
                         
-                            <a href="/tags/AI-Introduction/">
-                                <span class="chip bg-color">AI Introduction</span>
+                            <a href="/tags/notes/">
+                                <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                                <span class="chip bg-color">统计学习方法</span>
                             </a>
                         
                     </div>
@@ -347,8 +351,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/solutions/" class="post-category">
-                                solutions
+                            <a href="/categories/notes/" class="post-category">
+                                notes
                             </a>
                         
                     </div>
@@ -360,7 +364,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-09-26
+                    2022-09-27
                 </div>
                 
 
@@ -384,13 +388,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="3-2"><a href="#3-2" class="headerlink" title="3.2"></a>3.2</h3><p>消去存在量词，化为skolem标准型后略去全称量词<br>$\neg P(x,f(x),z,g(x,z))$</p>
-<h3 id="3-3"><a href="#3-3" class="headerlink" title="3.3"></a>3.3</h3><p>先去掉$\rightarrow$<br>$(\exists x)(\forall y)[\neg (\forall z)P(x,z) \vee R(x,y,f(a))]$<br>变量标准化后消去存在量词<br>$(\forall y)(\neg P(z,g(y)) \vee R(z,y,f(a)))$</p>
-<h3 id="3-4"><a href="#3-4" class="headerlink" title="3.4"></a>3.4</h3><h4 id="3-4-1"><a href="#3-4-1" class="headerlink" title="3.4.1"></a>3.4.1</h4><p>直接消去全称量词和合取符号即可<br>$ {P(a,b),Q(c,d) } $</p>
-<h4 id="3-4-3"><a href="#3-4-3" class="headerlink" title="3.4.3"></a>3.4.3</h4><p>先去掉$\rightarrow$<br>$(\forall x)(\exists y)(\neg (P(x,y) \vee Q(x,y) ) \vee R(x,y))$<br>移动否定符号到量词前面<br>$(\forall x)(\exists y)((\neg P(x,y) \wedge \neg Q(x,y) ) \vee R(x,y))$<br>利用分配律<br>$(\forall x)(\exists y)(\neg (P(x,y) \vee R(x,y) \wedge \neg Q(x,y) ) \vee R(x,y))$<br>去掉量词并使用skolem化<br>${ \neg (P(x,f(x)) \vee R(x,f(x)) \wedge \neg Q(y,f(y)) ) \vee R(y,f(y))  }$</p>
-<h4 id="3-4-5"><a href="#3-4-5" class="headerlink" title="3.4.5"></a>3.4.5</h4><p>同第三问<br>${\neg P(x,y) \vee Q(x,y) \vee R(x,f(x,y)) }$</p>
-<h4 id="3-4-7"><a href="#3-4-7" class="headerlink" title="3.4.7"></a>3.4.7</h4><p>同第三问<br>${\neg P(x,f(x)) \vee Q(x,g(x)),\neg P(y,f(y)) \vee \neg R(y,g(y)) }$</p>
-<h3 id="3-7"><a href="#3-7" class="headerlink" title="3.7"></a>3.7</h3><p>定义谓词：A(x) 为 x 能够阅读；B(x) 为 x 有文化；C(x) 为 x 是海豚；D(x) 为 x 有智能<br>前提：$( \forall x)(A(x)\rightarrow B(x));(\forall y)(C(y) \rightarrow \neg B(y));(\exists z)(C(x) \wedge D(x))$<br>结论：$(\exists w)(D(w) \wedge \neg A(w))$<br>证明：<br>1 $\neg A(x)\vee B(x)$<br>2 $\neg C(y) \vee \neg B(y)$<br>3 $C(z)$<br>4 $D(z)$<br>5 $\neg D(w) \vee A(w)$<br>6 $A(m) \quad 4和5归纳$<br>7 $B(m) \quad 1和6归纳$<br>8 $\neg C(m) \quad 2和7归纳$<br>9 $(\exists w)(D(w) \wedge \neg A(w))\quad 3和8归纳得到结论$</p>
+                <h2 id="2-1-感知机模型"><a href="#2-1-感知机模型" class="headerlink" title="2.1 感知机模型"></a>2.1 感知机模型</h2><p>二类分类的线性分类模型，输出为$+1 -1$<br>定义：<br>$$<br>f(x)=sign(w^T · x + b)<br>$$<br>$w$为weight vector,b为bias  </p>
+<h2 id="2-2-感知机学习策略"><a href="#2-2-感知机学习策略" class="headerlink" title="2.2 感知机学习策略"></a>2.2 感知机学习策略</h2><p>给定数据集的正实例点和负实例点能被超平面$S$:<br>$$<br>w^T · x + b = 0<br>$$<br>完全正确划分到超平面，则数据集是linearly separable data set<br>接下来讲学习策略:<br>先写出输入空间$R^n$任意一点$x_0$到超平面S的距离：<br>$$<br>\frac{1}{\Vert x \Vert_2}|w^T·x_0+b|<br>$$  </p>
+<h3 id="2-2-1-几何意义的推导"><a href="#2-2-1-几何意义的推导" class="headerlink" title="2.2.1 几何意义的推导"></a>2.2.1 几何意义的推导</h3><p><img src="2022_09_27_09_17_18.png" alt="几何意义"><br>我们知道余弦夹角公式：<br>$$<br>cos\theta= \frac{w^Tx}{\Vert w \Vert \Vert x \Vert}<br>$$<br>从图中可以看出 $cos\theta \Vert x \Vert$ 是向量 $x$ 在$w$ 上的投影，即OA<br>也就是说，$w^Tx$ 是 $x$ 在 $w$ 上的投影 times w的长度 $\Vert w \Vert$.<br>$$<br>w^Tx=cos\theta \Vert x \Vert  \Vert w \Vert =-b<br>$$<br>$$<br>\Downarrow<br>$$<br>$$<br>cos\theta \Vert x\Vert = \frac{-b}{\Vert w \Vert}<br>$$<br>也就是说，投影长度OA=$\frac{-b}{\Vert w \Vert}$ 意味着：<br>$w^T · x + b=0$ 的几何意义：所有在w上投影长度为OA的向量集合，即图中的超平面<br>接下来推导平面上任意一点 $x’$ 到超平面S的距离d：<br>通过$d=BA=OA-OB$可知<br>$$<br>d=\frac{-b-w^Tx’}{\Vert w \Vert}<br>$$<br>最后，$b$ 可以理解为超平面的截距 </p>
+<h3 id="2-2-2-损失函数"><a href="#2-2-2-损失函数" class="headerlink" title="2.2.2 损失函数"></a>2.2.2 损失函数</h3><p>因此，忽略1/$\Vert w \Vert$即可得到所有误分类点到超平面S的总距离,即损失函数的定义<br>$$<br>\sum_{x_i\in M}{y_i(w^Tx_i+b)}<br>$$ </p>
+<h2 id="2-3-感知机学习算法"><a href="#2-3-感知机学习算法" class="headerlink" title="2.3 感知机学习算法"></a>2.3 感知机学习算法</h2><p>即求参数 $w,b$ ,使其为损失函数极小化问题的解<br>$$<br>min_{w,b}L(w,b)=-\sum_{x_i\in M}{y_i(w^Tx_i+b)} \tag{1}<br>$$<br>先选取一个超平面 $w_0,b_0$ 然后用梯度下降法极小化目标函数<code>(1)</code>（一次随机选取一个误分类点使其梯度下降）<br>损失函数的梯度由<br>$$<br>\nabla_w{L(w,b)}=-\sum_{x_i\in M}y_ix_i<br>$$<br>$$<br>\nabla_b{L(w,b)}=-\sum_{x_i\in M}y_i<br>$$</p>
+<h2 id="2-4-感知机算法的对偶形式"><a href="#2-4-感知机算法的对偶形式" class="headerlink" title="2.4 感知机算法的对偶形式"></a>2.4 感知机算法的对偶形式</h2><p>学习的目标从 $w,b$ 变成了 $n_i$, $n_i$ 是第 $i$ 个样本点的更新次数<br>误分条件<br>$$<br>y_i(\sum^N_{j=1}\alpha_jy_jx_j·x_j+b)\leq 0<br>$$</p>
 
                 
             </div>
@@ -405,12 +408,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/solutions/">
-                                    <span class="chip bg-color">solutions</span>
+                                <a href="/tags/ML/">
+                                    <span class="chip bg-color">ML</span>
                                 </a>
                             
-                                <a href="/tags/AI-Introduction/">
-                                    <span class="chip bg-color">AI Introduction</span>
+                                <a href="/tags/notes/">
+                                    <span class="chip bg-color">notes</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                                    <span class="chip bg-color">统计学习方法</span>
                                 </a>
                             
                         </div>
@@ -451,9 +458,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/09/27/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-2-%E6%84%9F%E7%9F%A5%E6%9C%BA/">
                     <div class="card-image">
@@ -471,9 +479,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -486,6 +494,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -512,19 +521,19 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/26/%E7%8E%8B%E8%AF%B4%E6%96%B0%E8%AF%AD-0x00-%E6%A4%B0%E5%A5%B6%E6%A3%92%E5%86%B0%E9%94%90%E8%AF%84%E8%B6%8A%E6%88%98%E9%87%91%E6%9B%B2Orange-Crus/">
+                <a href="/2022/09/26/AI-Introduction-Chapter-3-Homework/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="王说新语 0x00 椰奶棒冰锐评越战金曲Orange Crush">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="AI Introduction Chapter 3 Homework">
                         
-                        <span class="card-title">王说新语 0x00 椰奶棒冰锐评越战金曲Orange Crush</span>
+                        <span class="card-title">AI Introduction Chapter 3 Homework</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对R.E.M的歌曲Orange Crush的解析
+                            AI Introduction Chapter1,2 Homework
                         
                     </div>
                     <div class="publish-info">
@@ -535,8 +544,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Wang-s-New-Talk/" class="post-category">
-                                    Wang's New Talk
+                            <a href="/categories/solutions/" class="post-category">
+                                    solutions
                                 </a>
                             
                             
@@ -546,12 +555,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vietnam-War/">
-                        <span class="chip bg-color">Vietnam War</span>
+                    <a href="/tags/solutions/">
+                        <span class="chip bg-color">solutions</span>
                     </a>
                     
-                    <a href="/tags/rock-and-roll/">
-                        <span class="chip bg-color">rock and roll</span>
+                    <a href="/tags/AI-Introduction/">
+                        <span class="chip bg-color">AI Introduction</span>
                     </a>
                     
                 </div>
