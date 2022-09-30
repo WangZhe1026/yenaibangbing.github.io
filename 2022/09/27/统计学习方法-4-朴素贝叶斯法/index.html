@@ -388,7 +388,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>naive Bayes 是基于贝叶斯定理和特征条件独立假设的分类方法<br>对于给定的训练数据集</p>
+                <p>naive Bayes 是基于贝叶斯定理和特征条件独立假设的分类方法<br>对于给定的训练数据集，先基于特征条件独立假设学习输入输出的联合概率分布，然后基于此模型，对给定的输入x，利用贝叶斯求出后验概率最大的输出y,即：通过样本数据学习特征基于类别的条件概率分布，然后求类别基于特征的概率<br>naive：指用于分类的特征在类确定的条件下是条件独立的，这样参数就对数级减少了。<br>即：<br>$$<br>P(X=x|Y=c_k)=P(X^{(1)}=x^{(1)},···,X^{(n)}=x^{(n)}|Y=c_k)<br>$$<br>$$<br>=\prod ^n_{j=1}(X^{(j)}=x^{(j)}|Y=c_k)<br>$$<br>将后验概率最大的类作为x的类输出，等价于<br>$$<br>y=argmax_{c_k}P(Y=c_k) \prod <em>j{P(X^{(j) } =x^{(j) } |Y=c_k) }<br>$$<br>求后验概率最大，等价于期望风险最小化，Loss function选择0-1函数<br>$$<br>f(x)=argmax</em>{y\in Y}P(y=c_k|X=x)<br>$$<br>这样就得到了后验概率最大化准则<br>$$<br>f(x)=argmax_{c_k}P(c_k|X=x)<br>$$</p>
+<h3 id="naive-Bayes-algorithm-："><a href="#naive-Bayes-algorithm-：" class="headerlink" title="naive Bayes algorithm ："></a>naive Bayes algorithm ：</h3><p>先验概率的极大似然估计：<br>$$<br>P(Y=c_k)=\frac{\sum^N_{i=1}I(y_i=c_k)}{N},\quad k=1,2,\dots,K<br>$$<br>$$<br>P(X^{(j)}=a_{jl}|Y=c_k)=\frac{\sum^N_{i=1}I(x_i^{(j)}=a_{jl},y_i=c_k)}{<br>sum^N_{i=1}I(y_i=c_k)}<br>$$<br>对于给定的实例x，计算<br>$$<br>P(Y=c_k)\prod^n_{j=1}P(X^{(j)}=x^{(j)}|Y=c_k)<br>$$<br>确定实例x的类<br>$$<br>y=argmax_{c_k}P(Y=c_k)\prod ^n_{j=1}{j=1}P(X^{(j)}=x^{(j)}|Y=c_k)<br>$$</p>
+<h3 id="贝叶斯估计："><a href="#贝叶斯估计：" class="headerlink" title="贝叶斯估计："></a>贝叶斯估计：</h3><p>极大似然估计会产生概率为0，影响后验概率的计算结果，使分类产生偏差<br>采用贝叶斯估计：<br>即在分子上$+\lambda$,在分母上$+S_j\lambda<br>$</p>
 
                 
             </div>
