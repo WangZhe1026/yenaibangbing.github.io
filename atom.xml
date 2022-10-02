@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-09-30T03:40:44.462Z</updated>
+  <updated>2022-10-02T15:26:06.148Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>王说新语 0x01 椰奶棒冰锐评原神第一定律</title>
+    <link href="https://yenaibangbing.github.io/2022/10/01/%E7%8E%8B%E8%AF%B4%E6%96%B0%E8%AF%AD-0x01-%E6%A4%B0%E5%A5%B6%E6%A3%92%E5%86%B0%E9%94%90%E8%AF%84%E5%8E%9F%E7%A5%9E%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/"/>
+    <id>https://yenaibangbing.github.io/2022/10/01/%E7%8E%8B%E8%AF%B4%E6%96%B0%E8%AF%AD-0x01-%E6%A4%B0%E5%A5%B6%E6%A3%92%E5%86%B0%E9%94%90%E8%AF%84%E5%8E%9F%E7%A5%9E%E7%AC%AC%E4%B8%80%E5%AE%9A%E5%BE%8B/</id>
+    <published>2022-10-01T13:52:43.000Z</published>
+    <updated>2022-10-02T15:26:06.148Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么是原神第一定律&quot;&gt;&lt;a href=&quot;#什么是原神第一定律&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Wang&#39;s New Talk" scheme="https://yenaibangbing.github.io/categories/Wang-s-New-Talk/"/>
+    
+    
+    <category term="原神" scheme="https://yenaibangbing.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="Bayes theorem" scheme="https://yenaibangbing.github.io/tags/Bayes-theorem/"/>
+    
+    <category term="probability" scheme="https://yenaibangbing.github.io/tags/probability/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学习方法 5 决策树</title>
+    <link href="https://yenaibangbing.github.io/2022/09/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-5-%E5%86%B3%E7%AD%96%E6%A0%91/"/>
+    <id>https://yenaibangbing.github.io/2022/09/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-5-%E5%86%B3%E7%AD%96%E6%A0%91/</id>
+    <published>2022-09-30T03:45:35.000Z</published>
+    <updated>2022-09-30T13:55:31.117Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/categories/notes/"/>
+    
+    
+    <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
+    
+    <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>统计学习方法 4 朴素贝叶斯法</title>
