@@ -427,11 +427,15 @@
 <h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p>频率学派的观点是对总体分布做适当的假定，结合样本信息对参数进行统计推断，这里涉及总体信息和样本信息。而贝叶斯的核心思想，就是在此基础上引入了先验，即来源于人们常识和经验的信息。也就是说，和完全客观的频率派相比，贝叶斯派是有一丝主观的偏见在其中的。</p>
 <p>于是我们便可得到贝叶斯公式<br>$$<br>后验=\frac{似然*先验}{证据}<br>$$<br>也就是<br>$$<br>P(A|B)=\frac{P(B|A)*P(A)}{P(B)}<br>$$<br>其中，$P(A|B)$代表在$B$发生的情况下$A$发生的概率，比如$P(我后选了鳄鱼|对面先选了亚索)$就代表对面选亚索的情况下我会选择玩鳄鱼的概率。</p>
 <p>后验是我们要求的值，也是根据观察到的样本修正之后的概率值；似然相当于模型的参数，在贝叶斯的思想中模型也像所求的参数一样是不固定拥有变量的；证据则是前提$B$发生的概率。</p>
-<h4 id="建立模型及对模型的分析"><a href="#建立模型及对模型的分析" class="headerlink" title="建立模型及对模型的分析"></a>建立模型及对模型的分析</h4><p>我们假定在接下来的讨论中，数据集是全体b站用户；同时，我们把玩原神的人称为<strong>原</strong>，把发表逆天言论的人称为<strong>逆</strong>，那么，根据贝叶斯公式我们可以得出：<br>$$<br>P(原|逆)=\frac{P(逆|原)*P(原)}{P(逆)}<br>$$<br>这么看其实并不是非常make sense，因为右边的多数参数并不能很好的比较大小。</p>
-<p>这时我们注意到，全体b站用户这个群体可以简单分为玩原神的和不玩原神的，也就是<br>$$<br>b站全体用户=原+非原<br>$$<br>这样，我们使用全概率公式对上述式子进行改写，可以得到：<br>$$<br>P(原|逆)=\frac{P(逆|原)*P(原)}{P(原)*P(逆|原)+P(非原)*P(逆|非原)}<br>$$<br>这样看来就直观很多了，我们首先看分子：</p>
+<h4 id="建立模型及对模型的分析"><a href="#建立模型及对模型的分析" class="headerlink" title="建立模型及对模型的分析"></a>建立模型及对模型的分析</h4><p>我们假定在接下来的讨论中，数据集是全体b站用户；同时，我们把玩原神的人称为<strong>原</strong>，把发表逆天言论的人称为<strong>逆</strong>，那么，根据贝叶斯公式我们可以得出：</p>
+<p>$$<br>P(原|逆)=\frac{P(逆|原)*P(原) } {P(逆) }<br>$$</p>
+<p>这么看其实并不是非常make sense，因为右边的多数参数并不能很好的比较大小。</p>
+<p>这时我们注意到，全体b站用户这个群体可以简单分为玩原神的和不玩原神的，也就是</p>
+<p>$$<br>b站全体用户=原+非原<br>$$<br>这样，我们使用全概率公式对上述式子进行改写，可以得到：</p>
+<p>$$<br>P(原|逆)=\frac{ P(逆|原)*P(原) } { P(原)*P(逆|原)+P(非原)*P(逆|非原) }<br>$$<br>这样看来就直观很多了，我们首先看分子：</p>
 <p>$P(逆|原)$的值是很大的，因为通过前文的描述，我们相信由于种种的原因（年龄小，米忽悠的宣传等等），原神玩家中逆天的比例是相当高的；$P(原)$的值也是很大的，因为在b站中，原神玩家本身的比例相对还是高的（玩家群体本身确实多，b站作为所谓的二次元圣地有大量的小鬼用户，b站作为原神的服务器之一带来了很多原本不玩b站的用户）。</p>
 <p>我们再来看分母：</p>
-<p>$P(非原)$是较小的，因为我们已经证明了$P(原)$是比较大的，这么比较大小虽然不严谨，但问题不大，就算是五五开甚至是$P(非原)$更大一些也不会特别影响结果；而$P(逆|非原)$，也就是不玩原神的人中逆天的概率，笔者承认这种逆天的人也确实不少，但只凭原神大多数玩家都是undergraduate的以及因为许多人玩这个游戏变得paranoid，我们相信：$P(逆|非原)$的比例和$P(逆|原)$相比还是比较小的。</p>
+<p>$P(非原)$是较小的，因为我们已经证明了 $P(原)$ 是比较大的，这么比较大小虽然不严谨，但问题不大，就算是五五开甚至是 $P(非原)$ 更大一些也不会特别影响结果；而 $P(逆|非原)$ ，也就是不玩原神的人中逆天的概率，笔者承认这种逆天的人也确实不少，但只凭原神大多数玩家都是undergraduate的以及因为许多人玩这个游戏变得paranoid，我们相信：$P(逆|非原)$的比例和 $P(逆|原)$ 相比还是比较小的。</p>
 <p>$Q.E.D$.</p>
 <h3 id="第一定律的应用以及与对证明的反思"><a href="#第一定律的应用以及与对证明的反思" class="headerlink" title="第一定律的应用以及与对证明的反思"></a>第一定律的应用以及与对证明的反思</h3><p>由于第一定律相当高的准确率，它被广泛运用于各种鉴定逆天的场景中，这一点我们暂且不提。</p>
 <p>值得一提的是：由于第一定律的使用者有时缺乏足够的证据或者自身知识不足，会出现鉴定的人并不是逆天反而自己是逆天的情况，这往往出现在鉴定OP是否缺乏常识的时候。此时，我们将这种人称为：<strong>你和OP的最大区别就是你不玩原神</strong>。</p>
@@ -742,6 +746,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -762,12 +773,24 @@
             
             
             
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
             <br>
             
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link ">
+        <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/yenaibangbing" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -945,6 +968,8 @@ $(function () {
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
