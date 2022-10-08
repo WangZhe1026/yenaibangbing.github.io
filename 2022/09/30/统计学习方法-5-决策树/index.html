@@ -388,8 +388,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h2><p>包含三个步骤：特征选择，决策树的生成，决策树的修剪<br>决策树本质是从训练数据集中归纳出一组分类规则，需要找的是一个与训练数据矛盾小的决策树<br>用损失函数表示这一目标，通常是正则化的极大似然函数，决策树的学习策略是损失函数最小化<br>损失函数确定后，学习问题就变为在损失函数意义下选择最优决策树的问题<br>通常是递归地选择一个最优特征，并根据特征对训练数据分割<br>决策树生成考虑局部最优<br>决策树剪枝考虑全局最优  </p>
-<h2 id="5-2-特征选择"><a href="#5-2-特征选择" class="headerlink" title="5.2 特征选择"></a>5.2 特征选择</h2>
+                <h2 id="5-1-概述">5.1 概述</h2>
+<p>包含三个步骤：特征选择，决策树的生成，决策树的修剪<br>
+决策树本质是从训练数据集中归纳出一组分类规则，需要找的是一个与训练数据矛盾小的决策树<br>
+用损失函数表示这一目标，通常是正则化的极大似然函数，决策树的学习策略是损失函数最小化<br>
+损失函数确定后，学习问题就变为在损失函数意义下选择最优决策树的问题<br>
+通常是递归地选择一个最优特征，并根据特征对训练数据分割<br>
+决策树生成考虑局部最优<br>
+决策树剪枝考虑全局最优</p>
+<h2 id="5-2-特征选择">5.2 特征选择</h2>
+<p>指决定用哪个特征来划分特征空间<br>
+而选择哪个，应该选择有最好分类的，用information gain来描述</p>
+<h3 id="5-2-1-information-gain-and-entropy">5.2.1 information gain and entropy</h3>
+<p>设$X$是表示随机变量不确定性的度量，概率分布为<br>
+$$<br>
+P(X=x_i)=p_i,i=1,2,\dots,n<br>
+$$<br>
+则$X$的entropy定义为<br>
+$$<br>
+H(X)=-\sum^n_{i=1}{p_ilogp_i}<br>
+$$<br>
+由此可见，entropy只依赖于X的分布，与取值无关<br>
+entropy越大，随机变量的不确定性越大<br>
+且<br>
+$$<br>
+0\leq H§ \leq logn<br>
+$$<br>
+同样类比可得conditional entropy的定义<br>
+$$<br>
+H(Y|X)=\sum _{i=1}^n{p_iH(Y|X=x_i)}<br>
+$$<br>
+当entropy由数据估计，如极大似然估计得到时，称为emprical entropy和empirical conditional entropy<br>
+information gain描述了得知$X$的信息而使得$Y$的信息不确定性减少的程度</p>
+<h3 id="5-2-2-def-information-gain">5.2.2 def: information gain</h3>
+<p>特征$A$对训练数据集$D$的信息增益$g(D,A)$为<br>
+$$<br>
+g(D,A)=H(D)-H(D|A)<br>
+$$<br>
+称为mutual information</p>
+<h3 id="5-2-3-algorithm-information-gain">5.2.3 algorithm: information gain</h3>
+<ul>
+<li>计算$D$的emprical entropy$H(D)$</li>
+<li>计算特征$A$对数据集$D$的empirical conditional entropy $H(D|A)$.<br>
+$$<br>
+H(D|A)=\sum ^n_{i=1}\frac{|D_i|}{|D|}H(D_i)=-\sum ^n_{i=1}\frac{|D_i|}{|D|}\sum ^K_{k=1}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}<br>
+$$</li>
+<li>计算information gain</li>
+<li>例题，见《统计学习方法》P75</li>
+</ul>
+<h3 id="5-2-4-information-gain-ratio">5.2.4 information gain ratio</h3>
+<p>由于上述方法倾向于选择特征多的，可用information gain ratio进行校准<br>
+即：<br>
+$$<br>
+g_R(D,A)=\frac{g(D,A)}{H_A(D)}<br>
+$$<br>
+其中，$H_A(D)=-\sum ^n_{i=1}\frac{|D_i|}{|D|}log_2\frac{|D_i|}{|D|}$,n<br>
+是特征$A$取值的个数</p>
+<h2 id="5-3-决策树的生成">5.3 决策树的生成</h2>
+<h3 id="5-3-1-ID3">5.3.1 ID3</h3>
+
                 
             </div>
             <hr/>
