@@ -388,152 +388,64 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="5-1-概述">5.1 概述</h2>
-<p>包含三个步骤：特征选择，决策树的生成，决策树的修剪<br>
-决策树本质是从训练数据集中归纳出一组分类规则，需要找的是一个与训练数据矛盾小的决策树<br>
-用损失函数表示这一目标，通常是正则化的极大似然函数，决策树的学习策略是损失函数最小化<br>
-损失函数确定后，学习问题就变为在损失函数意义下选择最优决策树的问题<br>
-通常是递归地选择一个最优特征，并根据特征对训练数据分割<br>
-决策树生成考虑局部最优<br>
-决策树剪枝考虑全局最优</p>
-<h2 id="5-2-特征选择">5.2 特征选择</h2>
-<p>指决定用哪个特征来划分特征空间<br>
-而选择哪个，应该选择有最好分类的，用information gain来描述</p>
-<h3 id="5-2-1-information-gain-and-entropy">5.2.1 information gain and entropy</h3>
-<p>设$X$是表示随机变量不确定性的度量，概率分布为<br>
-$$<br>
-P(X=x_i)=p_i,i=1,2,\dots,n<br>
-$$<br>
-则$X$的entropy定义为<br>
-$$<br>
-H(X)=-\sum^n_{i=1}{p_ilogp_i}<br>
-$$<br>
-由此可见，entropy只依赖于X的分布，与取值无关<br>
-entropy越大，随机变量的不确定性越大<br>
-且<br>
-$$<br>
-0\leq H§ \leq logn<br>
-$$<br>
-同样类比可得conditional entropy的定义<br>
-$$<br>
-H(Y|X)=\sum _{i=1}^n{p_iH(Y|X=x_i)}<br>
-$$<br>
-当entropy由数据估计，如极大似然估计得到时，称为emprical entropy和empirical conditional entropy<br>
-information gain描述了得知$X$的信息而使得$Y$的信息不确定性减少的程度</p>
-<h3 id="5-2-2-def-information-gain">5.2.2 def: information gain</h3>
-<p>特征$A$对训练数据集$D$的信息增益$g(D,A)$为<br>
-$$<br>
-g(D,A)=H(D)-H(D|A)<br>
-$$<br>
-称为mutual information</p>
-<h3 id="5-2-3-algorithm-information-gain">5.2.3 algorithm: information gain</h3>
-<ul>
+                <h2 id="5-1-概述"><a href="#5-1-概述" class="headerlink" title="5.1 概述"></a>5.1 概述</h2><p>包含三个步骤：特征选择，决策树的生成，决策树的修剪<br>决策树本质是从训练数据集中归纳出一组分类规则，需要找的是一个与训练数据矛盾小的决策树<br>用损失函数表示这一目标，通常是正则化的极大似然函数，决策树的学习策略是损失函数最小化<br>损失函数确定后，学习问题就变为在损失函数意义下选择最优决策树的问题<br>通常是递归地选择一个最优特征，并根据特征对训练数据分割<br>决策树生成考虑局部最优<br>决策树剪枝考虑全局最优  </p>
+<h2 id="5-2-特征选择"><a href="#5-2-特征选择" class="headerlink" title="5.2 特征选择"></a>5.2 特征选择</h2><p>指决定用哪个特征来划分特征空间<br>而选择哪个，应该选择有最好分类的，用information gain来描述 </p>
+<h3 id="5-2-1-information-gain-and-entropy"><a href="#5-2-1-information-gain-and-entropy" class="headerlink" title="5.2.1 information gain and entropy"></a>5.2.1 information gain and entropy</h3><p>设$X$是表示随机变量不确定性的度量，概率分布为<br>$$<br>P(X=x_i)=p_i,i=1,2,\dots,n<br>$$<br>则$X$的entropy定义为<br>$$<br>H(X)=-\sum^n_{i=1}{p_ilogp_i}<br>$$<br>由此可见，entropy只依赖于X的分布，与取值无关<br>entropy越大，随机变量的不确定性越大<br>且<br>$$<br>0\leq H(p) \leq logn<br>$$<br>同样类比可得conditional entropy的定义<br>$$<br>H(Y|X)=\sum _{i=1}^n{p_iH(Y|X=x_i)}<br>$$<br>当entropy由数据估计，如极大似然估计得到时，称为emprical entropy和empirical conditional entropy<br>information gain描述了得知$X$的信息而使得$Y$的信息不确定性减少的程度  </p>
+<h3 id="5-2-2-def-information-gain"><a href="#5-2-2-def-information-gain" class="headerlink" title="5.2.2 def: information gain"></a>5.2.2 def: information gain</h3><p>特征$A$对训练数据集$D$的信息增益$g(D,A)$为<br>$$<br>g(D,A)=H(D)-H(D|A)<br>$$<br>称为mutual information  </p>
+<h3 id="5-2-3-algorithm-information-gain"><a href="#5-2-3-algorithm-information-gain" class="headerlink" title="5.2.3 algorithm: information gain"></a>5.2.3 algorithm: information gain</h3><ul>
 <li>计算$D$的emprical entropy$H(D)$</li>
-<li>计算特征$A$对数据集$D$的empirical conditional entropy $H(D|A)$.<br>
-$$<br>
-H(D|A)=\sum ^n_{i=1}\frac{|D_i|}{|D|}H(D_i)=-\sum ^n_{i=1}\frac{|D_i|}{|D|}\sum ^K_{k=1}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}<br>
-$$</li>
-<li>计算information gain</li>
+<li>计算特征$A$对数据集$D$的empirical conditional entropy $H(D|A)$.<br>$$<br>H(D|A)=\sum ^n_{i=1}\frac{|D_i|}{|D|}H(D_i)=-\sum ^n_{i=1}\frac{|D_i|}{|D|}\sum ^K_{k=1}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}<br>$$</li>
+<li>计算information gain </li>
 <li>例题，见《统计学习方法》P75</li>
 </ul>
-<h3 id="5-2-4-information-gain-ratio">5.2.4 information gain ratio</h3>
-<p>由于上述方法倾向于选择特征多的，可用information gain ratio进行校准<br>
-即：<br>
-$$<br>
-g_R(D,A)=\frac{g(D,A)}{H_A(D)}<br>
-$$<br>
-其中，$H_A(D)=-\sum ^n_{i=1}\frac{|D_i|}{|D|}log_2\frac{|D_i|}{|D|}$,n<br>
-是特征$A$取值的个数</p>
-<h2 id="5-3-决策树的生成">5.3 决策树的生成</h2>
-<h3 id="5-3-1-ID3">5.3.1 ID3</h3>
-<ul>
+<h3 id="5-2-4-information-gain-ratio"><a href="#5-2-4-information-gain-ratio" class="headerlink" title="5.2.4 information gain ratio"></a>5.2.4 information gain ratio</h3><p>由于上述方法倾向于选择特征多的，可用information gain ratio进行校准<br>即：<br>$$<br>g_R(D,A)=\frac{g(D,A)}{H_A(D)}<br>$$<br>其中，$H_A(D)=-\sum ^n_{i=1}\frac{|D_i|}{|D|}log_2\frac{|D_i|}{|D|}$,n<br>是特征$A$取值的个数</p>
+<h2 id="5-3-决策树的生成"><a href="#5-3-决策树的生成" class="headerlink" title="5.3 决策树的生成"></a>5.3 决策树的生成</h2><h3 id="5-3-1-ID3"><a href="#5-3-1-ID3" class="headerlink" title="5.3.1 ID3"></a>5.3.1 ID3</h3><ul>
 <li>input: 训练集$D$,特征集$A$,阈值$\epsilon$</li>
 <li>output: 决策树$T$</li>
 <li>IF $D$中所有实例属于同一类$C_k$，THEN $T$为单节点树，并将类$C_k$作为该节点的类标记，返回$T$</li>
-<li>IF $A=\empty$,THEN $T$为单节点树，并将$D$中实例数最大的类$C_k$作为该节点的类标记，返回$T$
-<ul>
+<li>IF $A=\empty$,THEN $T$为单节点树，并将$D$中实例数最大的类$C_k$作为该节点的类标记，返回$T$<ul>
 <li>ELSE， 计算并选择信息增益最大的特征$A_g$</li>
 </ul>
 </li>
-<li>IF $A_g$的信息增益 $&lt;$ 阈值$\epsilon$ THEN 置$T$为单结点树，并将$D$中实例数最大的类$C_k$作为该节点的类标记，返回$T$
-<ul>
+<li>IF $A_g$的信息增益 $&lt;$ 阈值$\epsilon$ THEN 置$T$为单结点树，并将$D$中实例数最大的类$C_k$作为该节点的类标记，返回$T$<ul>
 <li>ELSE 对$A_g$的每一可能值$a_i$，依$A_g=a_i$将$D$分割为若干非空子集$D_i$，将$D_i$中实例数最大的类作为标记，构建子结点，由结点及其子结点构成树$T$，返回$T$</li>
 </ul>
 </li>
-<li>对第$i$个子结点，以$D_i$为训练集，以$A-(A_g)$为特征集，递归地调用前$5$个步骤，得到子树$T_i$,返回$T_i$<br>
-该算法只有树的生成，故易过拟合</li>
+<li>对第$i$个子结点，以$D_i$为训练集，以$A-(A_g)$为特征集，递归地调用前$5$个步骤，得到子树$T_i$,返回$T_i$<br>该算法只有树的生成，故易过拟合</li>
 </ul>
-<h3 id="5-3-2-C4-5">5.3.2 C4.5</h3>
-<p>与$ID3$算法类似，把信息增益换成信息增益比即可</p>
-<h2 id="5-4-决策树的剪枝">5.4 决策树的剪枝</h2>
-<p>即简化生成树<br>
-往往通过极小化决策树整体的loss function或cost function实现，设树$T$的叶子节点为$|T|$个，$t$是$T$的叶结点，叶上有$N_t$个样本点，其中$k$类的样本点有$N_{tk}$个，$H_t(T)$为叶结点$t$上的经验熵，$\alpha &gt;0$为参数，则决策树学习的损失函数可以定义为：<br>
-$$<br>
-C_\alpha(T) = \sum <em>{t=1}^{|T|}N_tH_t(T)+\alpha |T|<br>
-$$<br>
-其中经验熵为<br>
-$$<br>
-H_t(T) = -\sum <em>k \frac{N</em>{tk}}{N_t}log\frac{N</em>{tk}}{N_t}<br>
-$$<br>
-前者为模型对训练数据的预测误差，即模型与训练数据的拟合程度，$|T|$表示模型复杂度<br>
-剪枝，就是当$\alpha$确定时，选择损失函数最小的模型，即损失函数最小的子树<br>
-上述的损失函数极小化等价于正则化的极大似然估计<br>
-剪枝算法：</p>
+<h3 id="5-3-2-C4-5"><a href="#5-3-2-C4-5" class="headerlink" title="5.3.2 C4.5"></a>5.3.2 C4.5</h3><p>与$ID3$算法类似，把信息增益换成信息增益比即可  </p>
+<h2 id="5-4-决策树的剪枝"><a href="#5-4-决策树的剪枝" class="headerlink" title="5.4 决策树的剪枝"></a>5.4 决策树的剪枝</h2><p>即简化生成树<br>往往通过极小化决策树整体的loss function或cost function实现，设树$T$的叶子节点为$|T|$个，$t$是$T$的叶结点，叶上有$N_t$个样本点，其中$k$类的样本点有$N_{tk}$个，$H_t(T)$为叶结点$t$上的经验熵，$\alpha &gt;0$为参数，则决策树学习的损失函数可以定义为：</p>
+<p>$$<br>C_\alpha(T) = \sum _{t=1}^{|T|}N_tH_t(T)+\alpha |T|<br>$$</p>
+<p>其中经验熵为  </p>
+<p>$$<br>H_t(T) = -\sum <em>k \frac{N</em>{tk}}{N_t}log\frac{N_{tk}}{N_t}<br>$$</p>
+<p>前者为模型对训练数据的预测误差，即模型与训练数据的拟合程度，$|T|$表示模型复杂度<br>剪枝，就是当$\alpha$确定时，选择损失函数最小的模型，即损失函数最小的子树<br>上述的损失函数极小化等价于正则化的极大似然估计<br>剪枝算法：</p>
 <ul>
 <li>计算每个结点的经验熵</li>
 <li>递归地从树的叶结点往上回缩</li>
 <li>如果某叶结点回缩到父节点后损失函数小了，就进行剪枝</li>
 </ul>
-<h2 id="5-5-CART-算法">5.5 CART 算法</h2>
-<p>CART = classification and regression tree</p>
-<h3 id="5-5-1-CART-生成">5.5.1 CART 生成</h3>
-<p>即递归构建二叉决策树的过程，对回归树用平方误差最小化准则，对分类树用Gini index最小化准则进行特征选择，生成二叉树</p>
-<h4 id="回归树生成">回归树生成</h4>
-<p>一棵回归树对应输入空间的一个划分以及在划分的单元熵的输出值。假设已将输入空间划分为M个单元，并在每个单元$R_m$上有一个固定的输出值$c_m$,故回归树模型为<br>
-$$<br>
-f(x) = \sum ^m_{m=1}c_mI(x\in R_m)<br>
-$$<br>
-输入空间划分确定时，用平方误差$\sum _{x_i\in R_m}(y_i-f(x_i))^2$来表示回归树的预测误差，用平方误差最小求解每个单元上的最优输出值。</p>
-<h5 id="最小二乘回归树生成算法">最小二乘回归树生成算法</h5>
-<ul>
-<li>选择最优切分变量$j$和切分点$s$,求解<br>
-$$<br>
-min_{j,s}[min_{c_1} \sum _{x_i\in R_1(j,s)}(y_i-c_1)^2 +min _{c_2} \sum _{x_i\in R_2(j,s)}(y_i-c_2)^2]<br>
-$$<br>
-遍历j</li>
-<li>用选定的对$(j,s)$划分区域并决定相应的输出值</li>
+<h2 id="5-5-CART-算法"><a href="#5-5-CART-算法" class="headerlink" title="5.5 CART 算法"></a>5.5 CART 算法</h2><p>CART = classification and regression tree</p>
+<h3 id="5-5-1-CART-生成"><a href="#5-5-1-CART-生成" class="headerlink" title="5.5.1 CART 生成"></a>5.5.1 CART 生成</h3><p>即递归构建二叉决策树的过程，对回归树用平方误差最小化准则，对分类树用Gini index最小化准则进行特征选择，生成二叉树 </p>
+<h4 id="回归树生成"><a href="#回归树生成" class="headerlink" title="回归树生成"></a>回归树生成</h4><p>一棵回归树对应输入空间的一个划分以及在划分的单元熵的输出值。假设已将输入空间划分为M个单元，并在每个单元$R_m$上有一个固定的输出值$c_m$,故回归树模型为<br>$$<br>f(x) = \sum ^m_{m=1}c_mI(x\in R_m)<br>$$<br>输入空间划分确定时，用平方误差$\sum _{x_i\in R_m}(y_i-f(x_i))^2$来表示回归树的预测误差，用平方误差最小求解每个单元上的最优输出值。  </p>
+<h5 id="最小二乘回归树生成算法"><a href="#最小二乘回归树生成算法" class="headerlink" title="最小二乘回归树生成算法"></a>最小二乘回归树生成算法</h5><ul>
+<li>选择最优切分变量$j$和切分点$s$,求解<br>$$<br>min_{j,s}[min_{c_1} \sum _{x_i\in R_1(j,s)}(y_i-c_1)^2 +min _{c_2} \sum _{x_i\in R_2(j,s)}(y_i-c_2)^2]<br>$$<br>遍历j  </li>
+<li>用选定的对$(j,s)$划分区域并决定相应的输出值  </li>
 <li>重复直到停止</li>
 <li>将输入空间划分为M个区域生成决策树</li>
 </ul>
-<h4 id="分类树的生成">分类树的生成</h4>
-<p>用基尼指数选择最优特征，同时决定最优二值切分点<br>
-定义：<br>
-$$<br>
-Gini§=\sum ^K_{k=1}p_k(1-p_k)=1-\sum ^K_{k=1}p_k^2<br>
-$$<br>
-样本$D$根据特征$A$划分成$D_1$和$D_2$两部分，集合$D$的基尼系数定义为<br>
-$$<br>
-Gini(D,A)=\frac{|D_1|}{|D|}Gini(D_1)+\frac{|D_2|}{|D|}Gini(D_2)<br>
-$$</p>
-<h3 id="CART-生成算法">CART 生成算法</h3>
-<ul>
+<h4 id="分类树的生成"><a href="#分类树的生成" class="headerlink" title="分类树的生成"></a>分类树的生成</h4><p>用基尼指数选择最优特征，同时决定最优二值切分点<br>定义：<br>$$<br>Gini(p)=\sum ^K_{k=1}p_k(1-p_k)=1-\sum ^K_{k=1}p_k^2<br>$$<br>样本$D$根据特征$A$划分成$D_1$和$D_2$两部分，集合$D$的基尼系数定义为<br>$$<br>Gini(D,A)=\frac{|D_1|}{|D|}Gini(D_1)+\frac{|D_2|}{|D|}Gini(D_2)<br>$$  </p>
+<h3 id="CART-生成算法"><a href="#CART-生成算法" class="headerlink" title="CART 生成算法"></a>CART 生成算法</h3><ul>
 <li>计算现有特征对该数据集的基尼指数</li>
 <li>在所有可能的特征$A$及其所有可能的切分点$a$中选择基尼指数最小的特征及其对应切分点，依次生成子节点</li>
 <li>递归</li>
-<li>生成CART决策树<br>
-例：见P84</li>
+<li>生成CART决策树<br>例：见P84</li>
 </ul>
-<h3 id="5-5-2-CART-剪枝">5.5.2 CART 剪枝</h3>
-<ul>
+<h3 id="5-5-2-CART-剪枝"><a href="#5-5-2-CART-剪枝" class="headerlink" title="5.5.2 CART 剪枝"></a>5.5.2 CART 剪枝</h3><ul>
 <li>input: CART算法生成的决策树$T_0$</li>
 <li>output: 最优决策树$T_\alpha$</li>
 <li>$k=0,T=T_0$</li>
 <li>$\alpha = +\infty$</li>
-<li>从下而上对内部结点$t$计算$C(T_t),|T_t|$以及<br>
-$$<br>
-g(t)=\frac{C(t)-C(T_t)}{|T_t|-1},\alpha = min(\alpha,g(t))<br>
-$$<br>
-这里，$T_t$是$t$为根结点的子树，$C(T_t)$是对训练数据的预测误差</li>
+<li>从下而上对内部结点$t$计算$C(T_t),|T_t|$以及<br>$$<br>g(t)=\frac{C(t)-C(T_t)}{|T_t|-1},\alpha = min(\alpha,g(t))<br>$$<br>这里，$T_t$是$t$为根结点的子树，$C(T_t)$是对训练数据的预测误差</li>
 <li>对$g(t)=\alpha$ 的内部节点$t$进行剪枝，并对叶结点$t$以多数表决法决定其类，得到树$T$</li>
 <li>$k=k+1,\alpha _k=\alpha,T_k=T$</li>
 <li>如果$T_k$不是根结点及两个叶结点构成的树，回到<code>2</code>,否则$T_k=T_n$</li>

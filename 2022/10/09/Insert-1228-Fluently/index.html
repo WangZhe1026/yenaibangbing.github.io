@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSAPP Chapter2 Solution, Yenaibangbing&#39;s Blog">
+    <meta name="keywords" content="Insert $$ Smoothly, Yenaibangbing&#39;s Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSAPP Chapter2 Solution | Yenaibangbing&#39;s Blog</title>
+    <title>Insert $$ Smoothly | Yenaibangbing&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -210,12 +210,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSAPP Chapter2 Solution</h1>
+                    <h1 class="description center-align post-title">Insert $$ Smoothly</h1>
                 </div>
             </div>
         </div>
@@ -331,12 +331,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/solutions/">
-                                <span class="chip bg-color">solutions</span>
+                            <a href="/tags/markdown/">
+                                <span class="chip bg-color">markdown</span>
                             </a>
                         
-                            <a href="/tags/CSAPP/">
-                                <span class="chip bg-color">CSAPP</span>
+                            <a href="/tags/VSCode/">
+                                <span class="chip bg-color">VSCode</span>
+                            </a>
+                        
+                            <a href="/tags/latex/">
+                                <span class="chip bg-color">latex</span>
                             </a>
                         
                     </div>
@@ -347,8 +351,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/solutions/" class="post-category">
-                                solutions
+                            <a href="/categories/tech/" class="post-category">
+                                tech
                             </a>
                         
                     </div>
@@ -360,7 +364,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-09-20
+                    2022-10-09
                 </div>
                 
 
@@ -384,68 +388,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="2-7"><a href="#2-7" class="headerlink" title="2.7"></a>2.7</h3><p>it only print <code>61 62 63 64 65 66</code> cause <code>strlen</code> doesn’t print the last character <code>\</code>  </p>
-<h3 id="2-10"><a href="#2-10" class="headerlink" title="2.10"></a>2.10</h3><table>
-<thead>
-<tr>
-<th>step</th>
-<th>*x</th>
-<th>*y</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>start</td>
-<td>a</td>
-<td>b</td>
-</tr>
-<tr>
-<td>step1</td>
-<td>a</td>
-<td>a^b</td>
-</tr>
-<tr>
-<td>step2</td>
-<td>b</td>
-<td>a^b</td>
-</tr>
-<tr>
-<td>step3</td>
-<td>b</td>
-<td>a</td>
-</tr>
-</tbody></table>
-<h3 id="2-11"><a href="#2-11" class="headerlink" title="2.11"></a>2.11</h3><p>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;A. <code>first = last = k</code>, it’s obvious.<br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B. That’s because the swap function we call is based on bitwise XOR operation, however, we get <code>0</code> when we calculate <code>a^a</code>, so it’s unsuitable to use that function.<br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;C. Just replace <code>first&lt;=last</code> with <code>first&lt;last</code> .</p>
-<h3 id="2-12"><a href="#2-12" class="headerlink" title="2.12"></a>2.12</h3><p>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;A. <code>x &amp; 0xFF</code><br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;B. <code>~x ^ 0xFF</code> or <code>x ^ ~0xFF</code><br>&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;C. <code>x | 0xFF</code>  </p>
-<h3 id="2-13"><a href="#2-13" class="headerlink" title="2.13"></a>2.13</h3><ul>
-<li><code>bis(x,y)</code>  </li>
-<li><code>bis(bic(x,y),bic(y,x))</code>  </li>
-<li>It’s obvious that <code>bix(x,y)</code> is equal to OR operation and <code>bic(x,y)</code> is equal to <code>x + ~y</code>  .</li>
+                <p>We always type <code>$$</code> to inform the editor that we will edit formula in the next in put, but it’s quite complex cause we should type a <code>$</code> firstly then input some formulas and type another <code>$</code> finally.<br>However, in almost every editors, you can insert <code>()</code> readily, just press <code>(</code> and the editor will help you complete a <code>)</code> and move the cursor to the middle of them intimately.<br>So, how to config your VSCode to insert <code>$$</code> as smoothly as insert <code>()</code>?  </p>
+<h2 id="Firstly"><a href="#Firstly" class="headerlink" title="Firstly"></a>Firstly</h2><p>Make sure you have download <code>LaTeX Workshop</code> in VSCode</p>
+<h2 id="If-you-are-editing-tex"><a href="#If-you-are-editing-tex" class="headerlink" title="If you are editing *.tex"></a>If you are editing *.tex</h2><p>It’s simple, you just need to open <code>latex-language-configuration.json</code> and find <code>autoClosingPairs</code> then add <code>["$","$"]</code>  </p>
+<h2 id="If-you-are-editing-md"><a href="#If-you-are-editing-md" class="headerlink" title="If you are editing *.md"></a>If you are editing *.md</h2><ul>
+<li>press <code>ctrl+shift+p</code> and input <code>snippet</code> to open <code>Preferences: Configure User Snippets</code></li>
+<li>choose <code>markdown.json</code></li>
+<li>input <pre class="line-numbers language-none"><code class="language-none">"$$":{  
+	"prefix": "$",
+	"body": "$$0$",
+	"description": "$$"
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<h3 id="2-1-9-notes"><a href="#2-1-9-notes" class="headerlink" title="2.1.9 notes:"></a>2.1.9 notes:</h3><ul>
-<li>shift logical right:   fill <code>k</code> zeros on the left  </li>
-<li>arithmetic shift right: fill <code>k</code> highest order number on the left</li>
-</ul>
-<h3 id="2-15"><a href="#2-15" class="headerlink" title="2.15"></a>2.15</h3><p><code>!(x^y)</code>  </p>
-<h3 id="2-25"><a href="#2-25" class="headerlink" title="2.25"></a>2.25</h3><p><code>length</code> is <code>unsigned int</code> so <code>length - 1 == MAXINT</code><br>how to modity:  </p>
-<ul>
-<li>replace <code>unsighed int</code> with <code>int</code><br>or  </li>
-<li>replace <code>i &lt;= length - 1</code> with <code>i &lt; length</code></li>
-</ul>
-<h3 id="2-26"><a href="#2-26" class="headerlink" title="2.26"></a>2.26</h3><ul>
-<li>when: when <code>strlen(s) &lt; strlen(t)</code></li>
-<li>why: because <code>strlen</code> is <code>unsighed</code> and it will return a very big positive number if  <code>strlen(s) &lt; strlen(t)</code>  </li>
-<li>how: change the return code to <code>return strlen(s) &gt; strlen(t)</code></li>
-</ul>
-<h3 id="2-27"><a href="#2-27" class="headerlink" title="2.27"></a>2.27</h3><pre class="line-numbers language-none"><code class="language-none">int uadd_ok(unsigned x, unsigned y){
-  unsighed sum = x+y;
-  return sum &gt;= x;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-30"><a href="#2-30" class="headerlink" title="2.30"></a>2.30</h3><pre class="line-numbers language-none"><code class="language-none">int tadd_ok(int x,int y){
-  if((x&gt;0 &amp;&amp; y&gt;0 &amp;&amp; x+y&lt;=0)+(x&lt;0 &amp;&amp; y&lt;0 &amp;&amp; x+y&gt;=0)==1)return 0;
-  return 1;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-31"><a href="#2-31" class="headerlink" title="2.31"></a>2.31</h3><p>Whether <code>x + y</code> overflows or not doesn’t affect the result because <code>complementary code addition</code> forms an <code>abelian group</code> so the answer is fixed 0. </p>
 
                 
             </div>
@@ -460,12 +414,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/solutions/">
-                                    <span class="chip bg-color">solutions</span>
+                                <a href="/tags/markdown/">
+                                    <span class="chip bg-color">markdown</span>
                                 </a>
                             
-                                <a href="/tags/CSAPP/">
-                                    <span class="chip bg-color">CSAPP</span>
+                                <a href="/tags/VSCode/">
+                                    <span class="chip bg-color">VSCode</span>
+                                </a>
+                            
+                                <a href="/tags/latex/">
+                                    <span class="chip bg-color">latex</span>
                                 </a>
                             
                         </div>
@@ -769,29 +727,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/09/22/insert-images-to-your-blog/">
+                <a href="/2022/10/09/Insert-1228-Fluently/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Insert Images to Your Blog">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Insert $$ Smoothly">
                         
-                        <span class="card-title">Insert Images to Your Blog</span>
+                        <span class="card-title">Insert $$ Smoothly</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Insert Images to Your Blog
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -804,19 +763,20 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
                     
                     <a href="/tags/VSCode/">
                         <span class="chip bg-color">VSCode</span>
                     </a>
                     
-                    <a href="/tags/images/">
-                        <span class="chip bg-color">images</span>
-                    </a>
-                    
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
+                    <a href="/tags/latex/">
+                        <span class="chip bg-color">latex</span>
                     </a>
                     
                 </div>
@@ -830,31 +790,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/09/19/ML-Probability-Distributions/">
+                <a href="/2022/10/08/AI-Introduction-Chapter-4-Homework/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="PRML Probability Distributions">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="AI Introduction Chapter 4 Homework">
                         
-                        <span class="card-title">PRML Probability Distributions</span>
+                        <span class="card-title">AI Introduction Chapter 4 Homework</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ML Probability Distributions
+                            AI Introduction Chapter1,2 Homework
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/notes/" class="post-category">
-                                    notes
+                            <a href="/categories/solutions/" class="post-category">
+                                    solutions
                                 </a>
                             
                             
@@ -864,16 +824,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ML/">
-                        <span class="chip bg-color">ML</span>
+                    <a href="/tags/solutions/">
+                        <span class="chip bg-color">solutions</span>
                     </a>
                     
-                    <a href="/tags/notes/">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
-                    <a href="/tags/PRML/">
-                        <span class="chip bg-color">PRML</span>
+                    <a href="/tags/AI-Introduction/">
+                        <span class="chip bg-color">AI Introduction</span>
                     </a>
                     
                 </div>

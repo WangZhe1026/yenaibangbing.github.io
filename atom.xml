@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-10-08T09:53:41.219Z</updated>
+  <updated>2022-10-09T14:06:27.050Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Insert $$ Smoothly</title>
+    <link href="https://yenaibangbing.github.io/2022/10/09/Insert-1228-Fluently/"/>
+    <id>https://yenaibangbing.github.io/2022/10/09/Insert-1228-Fluently/</id>
+    <published>2022-10-09T13:34:45.000Z</published>
+    <updated>2022-10-09T14:06:27.050Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;We always type &lt;code&gt;$$&lt;/code&gt; to inform the editor that we will edit formula in the next in put, but it’s quite complex cause we should</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
+    
+    
+    <category term="markdown" scheme="https://yenaibangbing.github.io/tags/markdown/"/>
+    
+    <category term="VSCode" scheme="https://yenaibangbing.github.io/tags/VSCode/"/>
+    
+    <category term="latex" scheme="https://yenaibangbing.github.io/tags/latex/"/>
+    
+  </entry>
   
   <entry>
     <title>AI Introduction Chapter 4 Homework</title>
@@ -28,12 +57,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;4-1&quot;&gt;4.1&lt;/h3&gt;
-&lt;p&gt;$$&lt;br&gt;
-CF(E_2)=0.6 * 0.5=0.3&lt;br&gt;
-$$&lt;br&gt;
-$$&lt;br&gt;
-CF(E_4)=0.8* MIN (E_2 , E_3) = 0.8 *</summary>
+    <summary type="html">&lt;h3 id=&quot;4-1&quot;&gt;&lt;a href=&quot;#4-1&quot; class=&quot;headerlink&quot; title=&quot;4.1&quot;&gt;&lt;/a&gt;4.1&lt;/h3&gt;&lt;p&gt;$$&lt;br&gt;CF(E_2)=0.6 * 0.5=0.3&lt;br&gt;$$&lt;br&gt;$$&lt;br&gt;CF(E_4)=0.8* MIN (E_2</summary>
         
       
     
@@ -60,8 +84,7 @@ CF(E_4)=0.8* MIN (E_2 , E_3) = 0.8 *</summary>
       
         
         
-    <summary type="html">&lt;h3 id=&quot;什么是原神第一定律&quot;&gt;什么是原神第一定律&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;原神第一定律&lt;/strong&gt;，或称&lt;strong&gt;OP第一定律&lt;/strong&gt;，在特定语境中可简称为&lt;strong&gt;第一定律&lt;/strong&gt;，是指在&lt;a</summary>
+    <summary type="html">&lt;h3 id=&quot;什么是原神第一定律&quot;&gt;&lt;a href=&quot;#什么是原神第一定律&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -83,14 +106,14 @@ CF(E_4)=0.8* MIN (E_2 , E_3) = 0.8 *</summary>
     <link href="https://yenaibangbing.github.io/2022/09/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-5-%E5%86%B3%E7%AD%96%E6%A0%91/"/>
     <id>https://yenaibangbing.github.io/2022/09/30/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-5-%E5%86%B3%E7%AD%96%E6%A0%91/</id>
     <published>2022-09-30T03:45:35.000Z</published>
-    <updated>2022-10-09T13:26:24.123Z</updated>
+    <updated>2022-10-09T13:31:45.240Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;5-1-概述&quot;&gt;5.1</summary>
+    <summary type="html">&lt;h2 id=&quot;5-1-概述&quot;&gt;&lt;a href=&quot;#5-1-概述&quot; class=&quot;headerlink&quot; title=&quot;5.1 概述&quot;&gt;&lt;/a&gt;5.1</summary>
         
       
     
@@ -148,13 +171,7 @@ CF(E_4)=0.8* MIN (E_2 , E_3) = 0.8 *</summary>
       
         
         
-    <summary type="html">&lt;h2 id=&quot;2-1-感知机模型&quot;&gt;2.1 感知机模型&lt;/h2&gt;
-&lt;p&gt;二类分类的线性分类模型，输出为$+1 -1$&lt;br&gt;
-定义：&lt;br&gt;
-$$&lt;br&gt;
-f(x)=sign(w^T · x + b)&lt;br&gt;
-$$&lt;br&gt;
-$w$为weight</summary>
+    <summary type="html">&lt;h2 id=&quot;2-1-感知机模型&quot;&gt;&lt;a href=&quot;#2-1-感知机模型&quot; class=&quot;headerlink&quot; title=&quot;2.1 感知机模型&quot;&gt;&lt;/a&gt;2.1 感知机模型&lt;/h2&gt;&lt;p&gt;二类分类的线性分类模型，输出为$+1</summary>
         
       
     
@@ -183,9 +200,7 @@ $w$为weight</summary>
       
         
         
-    <summary type="html">&lt;h3 id=&quot;3-2&quot;&gt;3.2&lt;/h3&gt;
-&lt;p&gt;消去存在量词，化为skolem标准型后略去全称量词&lt;br&gt;
-$\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
+    <summary type="html">&lt;h3 id=&quot;3-2&quot;&gt;&lt;a href=&quot;#3-2&quot; class=&quot;headerlink&quot; title=&quot;3.2&quot;&gt;&lt;/a&gt;3.2&lt;/h3&gt;&lt;p&gt;消去存在量词，化为skolem标准型后略去全称量词&lt;br&gt;$\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
 &lt;h3</summary>
         
       
@@ -213,8 +228,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
-&lt;p&gt;本文是对R.E.M乐队著名的反战歌曲Orange Crush的分析，如果你还没有听过，我建议你从&lt;a</summary>
+    <summary type="html">&lt;h3 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h3&gt;&lt;p&gt;本文是对R.E.M乐队著名的反战歌曲Orange Crush的分析，如果你还没有听过，我建议你从&lt;a</summary>
         
       
     
@@ -241,10 +255,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-基本分类&quot;&gt;1 基本分类&lt;/h2&gt;
-&lt;h3 id=&quot;1-1-监督学习&quot;&gt;1.1 监督学习&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;监督学习从training data中学习模型，对test</summary>
+    <summary type="html">&lt;h2 id=&quot;1-基本分类&quot;&gt;&lt;a href=&quot;#1-基本分类&quot; class=&quot;headerlink&quot; title=&quot;1 基本分类&quot;&gt;&lt;/a&gt;1 基本分类&lt;/h2&gt;&lt;h3 id=&quot;1-1-监督学习&quot;&gt;&lt;a href=&quot;#1-1-监督学习&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -273,9 +284,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Notice&quot;&gt;Notice:&lt;/h2&gt;
-&lt;p&gt;This article is only apply to those who store images locally.&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h2 id=&quot;Notice&quot;&gt;&lt;a href=&quot;#Notice&quot; class=&quot;headerlink&quot; title=&quot;Notice:&quot;&gt;&lt;/a&gt;Notice:&lt;/h2&gt;&lt;p&gt;This article is only apply to those who store</summary>
         
       
     
@@ -284,9 +293,9 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
     <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
     
     
-    <category term="images" scheme="https://yenaibangbing.github.io/tags/images/"/>
-    
     <category term="VSCode" scheme="https://yenaibangbing.github.io/tags/VSCode/"/>
+    
+    <category term="images" scheme="https://yenaibangbing.github.io/tags/images/"/>
     
     <category term="Typora" scheme="https://yenaibangbing.github.io/tags/Typora/"/>
     
@@ -304,8 +313,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h3 id=&quot;2-7&quot;&gt;2.7&lt;/h3&gt;
-&lt;p&gt;it only print &lt;code&gt;61 62 63 64 65 66&lt;/code&gt; cause &lt;code&gt;strlen&lt;/code&gt; doesn’t print the last character</summary>
+    <summary type="html">&lt;h3 id=&quot;2-7&quot;&gt;&lt;a href=&quot;#2-7&quot; class=&quot;headerlink&quot; title=&quot;2.7&quot;&gt;&lt;/a&gt;2.7&lt;/h3&gt;&lt;p&gt;it only print &lt;code&gt;61 62 63 64 65 66&lt;/code&gt; cause</summary>
         
       
     
@@ -332,9 +340,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-Bernoulli-Distribution&quot;&gt;1. Bernoulli Distribution&lt;/h2&gt;
-&lt;h3 id=&quot;1-1&quot;&gt;1.1&lt;/h3&gt;
-&lt;p&gt;If we are tossing</summary>
+    <summary type="html">&lt;h2 id=&quot;1-Bernoulli-Distribution&quot;&gt;&lt;a href=&quot;#1-Bernoulli-Distribution&quot; class=&quot;headerlink&quot; title=&quot;1. Bernoulli Distribution&quot;&gt;&lt;/a&gt;1. Bernoulli</summary>
         
       
     
@@ -363,7 +369,9 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h3</summary>
+    <summary type="html">&lt;h3 id=&quot;1-1&quot;&gt;&lt;a href=&quot;#1-1&quot; class=&quot;headerlink&quot; title=&quot;1.1&quot;&gt;&lt;/a&gt;1.1&lt;/h3&gt;&lt;p&gt;人工智能就是用人工的方法在计算机上实现的智能，也成为机器智能.&lt;br&gt;发展阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;孕育：1956年之前 </summary>
         
       
     
@@ -390,8 +398,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;p&gt;  At first I thought the method is dp or classification discussion, but they are all very copmlex.&lt;br&gt;
-  So I found it can be solved in</summary>
+    <summary type="html">&lt;p&gt;&amp;amp;emsp;&amp;amp;emsp;At first I thought the method is dp or classification discussion, but they are all very</summary>
         
       
     
@@ -418,9 +425,7 @@ $\neg P(x,f(x),z,g(x,z))$&lt;/p&gt;
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Error&quot;&gt;Error&lt;/h2&gt;
-&lt;p&gt;When I insert code block to my articles, I found the code blocks could’t be rendered correctly.&lt;br&gt;
-They are</summary>
+    <summary type="html">&lt;h2 id=&quot;Error&quot;&gt;&lt;a href=&quot;#Error&quot; class=&quot;headerlink&quot; title=&quot;Error&quot;&gt;&lt;/a&gt;Error&lt;/h2&gt;&lt;p&gt;When I insert code block to my articles, I found the code</summary>
         
       
     
