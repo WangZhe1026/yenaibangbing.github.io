@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-10-09T14:06:27.050Z</updated>
+  <updated>2022-10-18T11:46:06.059Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Implementation of Perceptron</title>
+    <link href="https://yenaibangbing.github.io/2022/10/18/Implementation-of-Perceptron/"/>
+    <id>https://yenaibangbing.github.io/2022/10/18/Implementation-of-Perceptron/</id>
+    <published>2022-10-18T11:44:27.000Z</published>
+    <updated>2022-10-18T11:46:06.059Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import random
+import numpy as np
+import matplotlib.pyplot as plt
+from</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
+    
+    
+    <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
+    
+    <category term="Perceptron" scheme="https://yenaibangbing.github.io/tags/Perceptron/"/>
+    
+    <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Insert $$ Smoothly</title>
@@ -124,9 +156,9 @@
     
     <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
     
-    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
-    
     <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
     
   </entry>
   
@@ -153,9 +185,9 @@
     
     <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
     
-    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
-    
     <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
     
   </entry>
   
@@ -182,9 +214,9 @@
     
     <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
     
-    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
-    
     <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
     
   </entry>
   
@@ -266,9 +298,9 @@
     
     <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
     
-    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
-    
     <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
     
   </entry>
   

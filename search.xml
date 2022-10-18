@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Implementation of Perceptron</title>
+      <link href="/2022/10/18/Implementation-of-Perceptron/"/>
+      <url>/2022/10/18/Implementation-of-Perceptron/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-none"><code class="language-none">import randomimport numpy as npimport matplotlib.pyplot as pltfrom scipy.special._precompute.gammainc_asy import etalearningrate = 0.5t = 100X = []Y = []W = 0B = 0#   二维的感知机算法def sample_point_gen():    #   先随机一条直线，用来确定点的标签Y    sample_line_w = random.random() * 20 - 10.00    sample_line_b = random.random() * 20 - 10.00    #   sample_line = sample_line_w * x + sample_line_b    #   随机生成一些点 X = [temp_x,temp_y] Y = 1 or -1 ,为标签    for iii in range(20):        temp_x = random.random() * 100 - 50        temp_y = random.random() * 100 - 50        X.append([temp_x,temp_y])        if sample_line_w * temp_x - temp_y + sample_line_b &gt;= 0:            Y.append(1)            plt.scatter(temp_x, temp_y, c='r')        else:            Y.append(-1)            plt.scatter(temp_x, temp_y, c='b')    return X, Yif __name__ == '__main__':    sample_point_gen()    eta = np.zeros((len(X[0]) + 1, 1))    error_list = []  # 误分点列表    # 开始训练    for _ in range(t):        error_count = 0        error_index = []        for i, x_i in enumerate(X):            y_i = eta[0] * x_i[0] + eta[1] * x_i[1] + eta[2]            # 如果该点被分类错误            if y_i * Y[i] &lt;= 0:                error_index.append(i)                error_count += 1        error_list.append(error_count)        if error_count &gt; 0:            i = random.choice(error_index)            eta[0] += learningrate * Y[i] * X[i][0]            eta[1] += learningrate * Y[i] * X[i][1]            eta[2] += learningrate * Y[i]    W = - eta[0] / eta[1]    B = - eta[2] / eta[1]    plot_y = W * X + B    plt.plot(X, plot_y, 'g', linewidth=1)    plt.show()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+            <tag> Perceptron </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Insert $$ Smoothly</title>
       <link href="/2022/10/09/Insert-1228-Fluently/"/>
       <url>/2022/10/09/Insert-1228-Fluently/</url>
@@ -107,9 +136,9 @@
             
             <tag> ML </tag>
             
-            <tag> notes </tag>
-            
             <tag> 统计学习方法 </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
@@ -136,9 +165,9 @@
             
             <tag> ML </tag>
             
-            <tag> notes </tag>
-            
             <tag> 统计学习方法 </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
@@ -165,9 +194,9 @@
             
             <tag> ML </tag>
             
-            <tag> notes </tag>
-            
             <tag> 统计学习方法 </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
@@ -248,9 +277,9 @@
             
             <tag> ML </tag>
             
-            <tag> notes </tag>
-            
             <tag> 统计学习方法 </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
