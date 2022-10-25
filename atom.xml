@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-10-18T11:46:06.059Z</updated>
+  <updated>2022-10-25T13:06:46.246Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -17,11 +17,76 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>（摆烂版）Largrange Dual Problem</title>
+    <link href="https://yenaibangbing.github.io/2022/10/25/%EF%BC%88%E6%91%86%E7%83%82%E7%89%88%EF%BC%89Largrange-Dual-Problem/"/>
+    <id>https://yenaibangbing.github.io/2022/10/25/%EF%BC%88%E6%91%86%E7%83%82%E7%89%88%EF%BC%89Largrange-Dual-Problem/</id>
+    <published>2022-10-25T12:59:09.000Z</published>
+    <updated>2022-10-25T13:06:46.246Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;由于椰奶棒冰实在是太懒了，有关拉格朗日对偶的问题就直接放纸质笔记了，打公式贼耗时间（&lt;/p&gt;
+&lt;p&gt;如果你识别图像中文字的算力不足，我的建议是赶快跳过这一章&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;76A850D28E6629DB06E169E10717B2BE.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/categories/notes/"/>
+    
+    
+    <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
+    
+    <category term="Largrange Dual Problem" scheme="https://yenaibangbing.github.io/tags/Largrange-Dual-Problem/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学习方法 6 逻辑斯蒂回归与最大熵模型</title>
+    <link href="https://yenaibangbing.github.io/2022/10/22/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-6-%E9%80%BB%E8%BE%91%E6%96%AF%E8%92%82%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://yenaibangbing.github.io/2022/10/22/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-6-%E9%80%BB%E8%BE%91%E6%96%AF%E8%92%82%E5%9B%9E%E5%BD%92%E4%B8%8E%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/</id>
+    <published>2022-10-22T13:59:39.000Z</published>
+    <updated>2022-10-23T08:11:04.143Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;6-1-参数估计&quot;&gt;&lt;a href=&quot;#6-1-参数估计&quot; class=&quot;headerlink&quot; title=&quot;6.1 参数估计&quot;&gt;&lt;/a&gt;6.1 参数估计&lt;/h3&gt;&lt;p&gt;设：&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;P(Y=1|x)=\pi(x),P(Y=0|x)= 1 -</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/categories/notes/"/>
+    
+    
+    <category term="ML" scheme="https://yenaibangbing.github.io/tags/ML/"/>
+    
+    <category term="统计学习方法" scheme="https://yenaibangbing.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/tags/notes/"/>
+    
+    <category term="logistic" scheme="https://yenaibangbing.github.io/tags/logistic/"/>
+    
+    <category term="最大熵模型" scheme="https://yenaibangbing.github.io/tags/%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Implementation of Perceptron</title>
     <link href="https://yenaibangbing.github.io/2022/10/18/Implementation-of-Perceptron/"/>
     <id>https://yenaibangbing.github.io/2022/10/18/Implementation-of-Perceptron/</id>
     <published>2022-10-18T11:44:27.000Z</published>
-    <updated>2022-10-18T11:46:06.059Z</updated>
+    <updated>2022-10-19T10:47:46.011Z</updated>
     
     
       
