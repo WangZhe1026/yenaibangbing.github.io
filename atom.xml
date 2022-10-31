@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-10-25T13:06:46.246Z</updated>
+  <updated>2022-10-29T13:28:39.532Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计学习方法 7 SVM</title>
+    <link href="https://yenaibangbing.github.io/2022/10/29/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-7-SVM/"/>
+    <id>https://yenaibangbing.github.io/2022/10/29/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-7-SVM/</id>
+    <published>2022-10-29T13:28:39.000Z</published>
+    <updated>2022-10-29T13:28:39.532Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>（摆烂版）Largrange Dual Problem</title>
@@ -134,9 +147,9 @@ from</summary>
     <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
     
     
-    <category term="markdown" scheme="https://yenaibangbing.github.io/tags/markdown/"/>
-    
     <category term="VSCode" scheme="https://yenaibangbing.github.io/tags/VSCode/"/>
+    
+    <category term="markdown" scheme="https://yenaibangbing.github.io/tags/markdown/"/>
     
     <category term="latex" scheme="https://yenaibangbing.github.io/tags/latex/"/>
     
@@ -390,9 +403,9 @@ from</summary>
     <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
     
     
-    <category term="VSCode" scheme="https://yenaibangbing.github.io/tags/VSCode/"/>
-    
     <category term="images" scheme="https://yenaibangbing.github.io/tags/images/"/>
+    
+    <category term="VSCode" scheme="https://yenaibangbing.github.io/tags/VSCode/"/>
     
     <category term="Typora" scheme="https://yenaibangbing.github.io/tags/Typora/"/>
     
