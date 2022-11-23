@@ -4,13 +4,66 @@
   
     
     <entry>
+      <title>指数族分布</title>
+      <link href="/2022/11/23/%E6%8C%87%E6%95%B0%E6%97%8F%E5%88%86%E5%B8%83%E2%80%98/"/>
+      <url>/2022/11/23/%E6%8C%87%E6%95%B0%E6%97%8F%E5%88%86%E5%B8%83%E2%80%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="标准形式"><a href="#标准形式" class="headerlink" title="标准形式"></a>标准形式</h4><p>$P(x|\eta)=h(x)·exp(\eta^T \phi(x))·exp(-A(\eta))$</p><p>$A(\eta)$ 是 log partition function ，通常是把函数表达式映射到概率[0,1]之间</p><p>$\phi(x)$ 是 充分统计量</p><p>$\eta$ 是参数向量</p><h4 id="共轭"><a href="#共轭" class="headerlink" title="共轭"></a>共轭</h4><p>即<strong>后验概率与先验概率有相同的分布形式</strong> 主要是为了计算上的方便（解决积分难的问题）</p><h4 id="广义线性模型"><a href="#广义线性模型" class="headerlink" title="广义线性模型"></a>广义线性模型</h4><ol><li>线性组合 $w ^T x$</li><li>link function(激活函数的反函数)</li><li>指数族分布：y | x ~指数族分布</li></ol><h3 id="高斯分布的指数族分布"><a href="#高斯分布的指数族分布" class="headerlink" title="高斯分布的指数族分布"></a>高斯分布的指数族分布</h3><p>如何把$p(x|\theta)=\frac{1}{\sqrt{2\pi}\sigma} exp(-\frac{(x-\mu)^2}{2\sigma ^2})$改写成标准形式？</p><p>显然</p><p><img src="image-20221123222652000.png" alt="image-20221123222652000"></p><p>对照一下，有</p><p><img src="9H@XH2%7DHGZDXUXOZH%5D1J0D.jpg" alt="img"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+            <tag> notes </tag>
+            
+            <tag> 指数族分布 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>统计学习方法 7 SVM</title>
       <link href="/2022/10/29/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-7-SVM/"/>
       <url>/2022/10/29/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95-7-SVM/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="7-1-3-间隔最大化"><a href="#7-1-3-间隔最大化" class="headerlink" title="7.1.3 间隔最大化"></a>7.1.3 间隔最大化</h3><p>考虑<br>$$<br>max_{w,b} \frac{\gamma}{||w||}<br>$$</p><p>$$<br>s.t. y_i(w*x_i + b) \geq \gamma<br>$$</p><p>易知间隔$\gamma$对问题求解无影响，即可改写为<br>$$<br>min_{w} \frac{1}{2} ||w|| ^2<br>$$</p><p>$$<br>s.t. y_i(w<em>x_i + b) - 1 \geq 0 , i=1,2,…,N<br>$$<br>求得最优解$w^</em>$和$b^*$后，可以得到解</p><p>$$<br>w^* <em>x + b^</em>=0<br>$$<br>和<br>$$<br>f(x)=sign(w^*<em>x+b^</em>)<br>$$<br>容易证明这个超平面是唯一的<br><strong>支持向量</strong>：样本点中和超平面最近的样本点称为support vector，即使<br>$$<br>y_i(w*x_i+b)-1=0<br>$$<br>成立的点<br>在这两条直线上的点都是支持向量  </p>]]></content>
       
       
+      <categories>
+          
+          <category> notes </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+            <tag> 统计学习方法 </tag>
+            
+            <tag> notes </tag>
+            
+            <tag> SVM </tag>
+            
+            <tag> 核技巧 </tag>
+            
+            <tag> SMO </tag>
+            
+        </tags>
       
     </entry>
     
@@ -124,9 +177,9 @@
       
         <tags>
             
-            <tag> VSCode </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> VSCode </tag>
             
             <tag> latex </tag>
             
@@ -379,9 +432,9 @@
       
         <tags>
             
-            <tag> images </tag>
-            
             <tag> VSCode </tag>
+            
+            <tag> images </tag>
             
             <tag> Typora </tag>
             
