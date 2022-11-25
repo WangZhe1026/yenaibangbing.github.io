@@ -1,0 +1,1356 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Aerodynamics 0x00, Yenaibangbing&#39;s Blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Aerodynamics 0x00 | Yenaibangbing&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Yenaibangbing's Blog" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Yenaibangbing&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Yenaibangbing&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Aerodynamics 0x00</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/aerodynamics/">
+                                <span class="chip bg-color">aerodynamics</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/notes/" class="post-category">
+                                notes
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-11-25
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="0-Review-of-Low-Speed-Flows-and-Looking-Ahead…"><a href="#0-Review-of-Low-Speed-Flows-and-Looking-Ahead…" class="headerlink" title="0. Review of Low-Speed Flows and Looking Ahead…"></a>0. Review of Low-Speed Flows and Looking Ahead…</h3><p>空气动力学模型。</p>
+<pre><code>1. 伯努利方程（第3章）
+</code></pre>
+<ol start="2">
+<li>低速薄翼理论（第3章和第4章）</li>
+<li>提升线理论（第5章）</li>
+</ol>
+<p>课程中要学习到的空气动力学模型</p>
+<p>A: Q1D FSAC（第10章）<br>    冲击-膨胀理论（第8、9章）<br>    线性化超音速流动理论（第11、12章）<br>    亚音速相似性定律（第11章）<br>B: 可压缩库伊特流（第16章）<br>    低速边界理论（Blasius解和其他，第18章）<br>    湍流BL解决方案（第19章）<br>    湍流模型（第19章）</p>
+<p>老师锐评：</p>
+<ol>
+<li>核心内容的介绍：1. verbal reasoning（文字推理是啥玩意）2. 公式，方程，派生（？），计算</li>
+<li>难度：高（似乎很抽象；容易被混淆）。</li>
+<li>警告：第3周涉及的材料是关键。</li>
+<li>建议：空气动力学模型是关键。</li>
+<li>一句废话</li>
+<li>关注某个物体的：(1)它在流体中的运动，或(2)流过（？fluids going through）</li>
+<li>在特定情况下应用流体运动的基本governing equations</li>
+<li>设计符合某些要求的物体。</li>
+</ol>
+<h3 id="1-追求更高的速度"><a href="#1-追求更高的速度" class="headerlink" title="1. 追求更高的速度"></a>1. 追求更高的速度</h3><p>(1) Capability: Being able to fly (Wright brothers).<br>(2) Transportation: Flight as a mean of transportation (Being faster, while safely, is important).<br>(3) Efficiency.<br>(4) Environmental Issues.</p>
+<h4 id="Review-Weight-vs-Lift-and-Thrust-vs-Drag"><a href="#Review-Weight-vs-Lift-and-Thrust-vs-Drag" class="headerlink" title="Review: Weight vs. Lift and Thrust vs. Drag"></a>Review: Weight vs. Lift and Thrust vs. Drag</h4><p>(1) 对于恒定的$C_D$，D与飞行速度的平方成正比。<br>(2) 当速度接近音速（音障）时，$C_D$会有很大的增加。<br>(3) 仅仅增加发动机的推力可能是不够的。</p>
+<h4 id="一个例子-准一维流动"><a href="#一个例子-准一维流动" class="headerlink" title="一个例子:准一维流动"></a>一个例子:准一维流动</h4><p><img src="image-20221125212433320.png" alt="image-20221125212433320"></p>
+<p>我们主要关心x轴方向的变化而忽视截面的变化，即<img src="image-20221125212727577.png" alt="image-20221125212727577">,横截面积的变化A=A(x)</p>
+<p>这里我们讨论的是稳定的、不可压缩的、无粘性的Q1D流</p>
+<p><img src="image-20221125212930395.png" alt="image-20221125212930395"></p>
+<p>给定ρ， a1, v1, p1时候的扩散:当a2变大时，v2→0;p2→p0;动能→热力学能</p>
+<p>给定ρ a1 v1 p1时的Nozzle （气体喷出口？）当a2变小时，v2→∞;p2→-∞;动能←热力学能</p>
+<p>有人说:p2只能降到0。当p2→0时，密度能保持不变吗?聪明的小盆友，请你来解答一下。</p>
+<p><strong>Volta Conference</strong> (1935): see Section 7.1, Anderson</p>
+<p>讨论:时速800公里的飞机(1934年的航速纪录:700公里/小时，见下文附录B)</p>
+<p>误解:音障;后掠翼设计(A. Busemann)</p>
+<p>变密度空气动力学的重要性;跨音速和超音速风洞</p>
+<p>高速-&gt;高动能-&gt;加热-&gt;温度升高</p>
+<p>可压缩流理论领域(亚音速、跨音速、超声速、高超声速)</p>
+<h4 id="我们可以按照像stan那样引领世界科学研究潮流的顶级科学家和工程师的思路提出问题："><a href="#我们可以按照像stan那样引领世界科学研究潮流的顶级科学家和工程师的思路提出问题：" class="headerlink" title="我们可以按照像stan那样引领世界科学研究潮流的顶级科学家和工程师的思路提出问题："></a>我们可以按照像<strong>stan</strong>那样引领世界科学研究潮流的顶级科学家和工程师的思路提出问题：</h4><p>问题0101：为什么当飞行速度高时，我们需要考虑密度的变化？<br>问题0102：从数量上看，”高 “速度究竟意味着什么？<br>问题0103：究竟是什么导致了密度的变化？</p>
+<p>一些飞行器的例子（懒得放图了）</p>
+<h3 id="2-飞行速度和马赫数-一个例子"><a href="#2-飞行速度和马赫数-一个例子" class="headerlink" title="2. 飞行速度和马赫数:一个例子"></a>2. 飞行速度和马赫数:一个例子</h3><p>在我们揭晓 Volta Conference一节中列出的问题的答案之前，我们首先看一下我们之前研究过的一个例子</p>
+<p>飞机在空中以恒定的速度V飞行。以空气为标准海平面大气压。将问题转换到固定在飞机上的坐标系(聪明的小盆友想一想为什么我们要转换到这样的坐标系?)求进流在不同V值时的马赫数。</p>
+<p><img src="image-20221125213858441.png" alt="image-20221125213858441"></p>
+<p>对于情况1和2，我们可以使用空气动力学I中涉及的低速理论来求解飞机（或确切地说，机翼部分和机翼）的升力系数。<br>飞机（或者准确地说，机翼部分和机翼）的升力系数。案例3对我们来说已经是一个延伸<br>的低速空气动力学模型。情况4到8肯定超出了我们目前的知识范围。<br>马赫数在上面的表格中列出。但是，我们没有以严格的方式来处理它。它<br>只是简单地说，0.3的马赫数是低速和高速流动的分界点。当然。<br>我们需要弄清楚音速到底是什么，以及为什么我们要把流速与音速进行比较。<br>速度进行比较，然后我们才能理解可压缩流。<br>我们将在第11章和第12章中再次讨论解决围绕机翼（或机身）的高速流动问题。</p>
+<p>你可能会发现，从现在开始到这些章节，我们所涉及的材料大多是针对所谓的<br>准一维（Q1D）流动。这些简单的流动，以及一些二维的情况，实际上为我们提供了<br>这些简单的流动以及一些二维案例实际上为我们提供了几乎所有的无粘性可压缩流动的精髓，当我们复习整个课程的时候，我们就会明白这一点。<br>当我们回顾整个课程的时候，我们就会明白。</p>
+<h3 id="3-流体的压缩性"><a href="#3-流体的压缩性" class="headerlink" title="3.流体的压缩性"></a>3.流体的压缩性</h3><p>可压缩性是任何流体的一个物理特性。我们所需要的是一个定量的衡量标准，以衡量流体压缩/膨胀的容易/困难程度。<br>压缩/膨胀流体的难易程度。根据常识，我们可以说，水（液体）不容易被压缩<br>而空气（气体）是容易压缩的。我们将流体的可压缩性定义为：</p>
+<p><img src="image-20221125214725116.png" alt="image-20221125214725116"></p>
+<p>v是比容（？），p是压强。因此，从定义来看，τ是每单位压强变化的比体积的相对变化。或者，压强增加1pa, 1kg质量的流体所占的体积发生了多少变化(减少)。对于正的dp(压缩)，dv是负的，所以我们在定义中有负号，使τ为正参数。我们可以用密度来代替这个表达式，因为在空气动力学中使用密度比体积更常见，</p>
+<p><img src="image-20221125220058106.png" alt="image-20221125220058106"></p>
+<p>当然，τ是流体的一个物理参数。我们可以在各种条件/过程下进行测量。</p>
+<p>一般来说，τ的值取决于压缩的精确过程，而不仅仅是开始和结束的热力学状态。我们可以进一步将等温压缩性和等熵压缩性分别定义为:</p>
+<p><img src="image-20221125220130086.png" alt="image-20221125220130086"></p>
+<p>这是一个在热力学意义上更精确的式子</p>
+<p>在这里，我们用静态的方法处理了流体的可压缩性。当流体运动时，它会发生什么，这是我们在空气动力学中真正关心的情况</p>
+<h4 id="4-音速"><a href="#4-音速" class="headerlink" title="4.音速"></a>4.音速</h4><p>让我们看一个例子:对于到处都是静止的空气，p， ρ， T的热力学状态恒定，假设在a点有一个扰动，一个微小的实心球突然爆炸。从物理学的角度来看，a处的固体会与周围的空气分子发生相互作用(将空气向外推)。</p>
+<p><img src="image-20221125220430793.png" alt="image-20221125220430793"></p>
+<p>分子-&gt;宏观上，波是球体/圆柱体/平面。</p>
+<p>碰撞力-&gt;动量传递，静止流体获得宏观速度。</p>
+<p>动能和热能传递-&gt;流体获得动能和热能。</p>
+<p>从流体力学的角度来看，我们说有压力波从a点传播。空气被推，它的压力会增加，尽管增加的量很小。ρ和T也发生了类似的变化。</p>
+<p>我们声明:从流体力学理论，我们可以找出波的传播速度!</p>
+<p>考虑到情况的对称性，压力波是球形的，这将使解的过程比下面的情况更复杂一些，它被留作家庭作业。我们接下来要讨论一个比较容易的问题。</p>
+<p>考虑一个面积恒定的管道中的流体:V=0, p， ρ， t，一个非常小的波在其中通过。波速是恒定的c。现在，我们假设这个速度是恒定的。</p>
+<p>波通过后，参数变为p+dp， ρ+ dp, T+dT, c-dV。让观赏者随波而行，即在不同的参照系(F.O.R)中。现在，我们有三个未知数:dV dp dp dp。</p>
+<p>即，在不同的参考系中(F.O.R)。现在，我们有三个未知数:dV dp dp dp。</p>
+<p><img src="image-20221125220755098.png" alt="image-20221125220755098"></p>
+<p>该过程可以被认为是绝热的：过程迅速；温度变化小。该过程也可以<br>可以被认为是可逆的：p和T的变化极小。因此，该过程可被视为<br>等熵，同时我们有：</p>
+<p><img src="image-20221125220842301.png" alt="image-20221125220842301"></p>
+<p>因此，压力变化引起的密度变化可以用速度度量(m/s)来量化。</p>
+<p>由此，我们至少可以模糊地看出，流动速度与流体的可压缩性有关。当流量达到足够高的速度时，可压缩性变得非常重要。等熵压缩性可表示为:<img src="image-20221125220959415.png" alt="image-20221125220959415"></p>
+<p>定义：声速是指介质中微小扰动的传播速度。</p>
+<p>对于理想气体，等熵关系是成立的</p>
+<p><img src="image-20221125221109073.png" alt="image-20221125221109073"></p>
+<p>关于声速的锐评：</p>
+<p>(1) 通过公式2，我们可以看到由小干扰引起的压力波的速度只取决于<br>对特定的完美气体来说，取决于温度。<br>(2) 声速，即使在其名称中带有速度一词，实际上是一个热力学参数；它不<br>它并不取决于流速! 将声速和流速进行比较是完全不自然的。<br>(3) 流速可以是任意坐标系中的任意值。因此，谈论流速的任意相对值是毫无意义的。流动速度与声速的比较应该是在流动速度相对于干扰源的意义上。高流速应该意味着相对于扰动源(如迫使流动改变方向的固体壁)，流速较大。<br>(4) 对于15℃的空气：c约为340m/s=1,224 km/h（注：见下面的标准大气模型）；对于液体：c约为1500m/s=5,400 km/h。对于不可压缩的流动，c是无穷大的，这意味着任何扰动都会在整个流场中立即感受到。<br>在整个流场中立即感受到。<br>(5) 对于一般的流场，我们可以将热力学参数视为时空领域。因此，公式2也可以被看作是一个场，即c是一个热力学场。</p>
+<h4 id="5-移动平均扰动"><a href="#5-移动平均扰动" class="headerlink" title="5.移动平均扰动"></a>5.移动平均扰动</h4><p>扰动源是静止的，空气也是静止的情况已经被讨论过了</p>
+<p>我们现在把注意力转向干扰源(一条直线)在静止空气中匀速移动的情况(你可能会想:与此对应的真实情况是什么?)如下图和图9.4所示，我们可以绘制出源和它在几个瞬时时间产生的波。</p>
+<p>在图1中，设线源在t=0处的位置为坐标系原点。取点移动的方向为-x。设线源速度为V，设c=1m/s, V=2c=2m/s，水平实线上每个小区间的长度为1m。</p>
+<p><img src="image-20221125221435991.png" alt="image-20221125221435991"></p>
+<p>结果显示，在V小于、等于或大于c的情况下，图片有质的区别。<br>大于c的情况下，图片的质量是不同的。波族的图案肯定会彼此不同。当V是<br>小于c时，一个较大的波（半径较大，产生时间较短）包含一个较小的波（半径较小。<br>最近产生的）。当V与c相同时，一个较大的波包含一个较小的波，但它们共享一个<br>共同点，这也是源头目前所在的点。当V比c大时，一个较大的波<br>可能不包含一个较小的波，而且源总是在所有波的左边。另外，存在一个楔形<br>(点源的情况下是圆锥)，其顶端在源头，包含所有的波。更准确地说，这个楔子<br>楔子与所有波相切，这当然看起来更有趣。楔形/锥体似乎是<br>特殊的东西。它有一个名字：马赫锥体（或马赫楔体）。当然，楔形/锥形的形状<br>可以完全由它的半角来表示，它满足</p>
+<p><img src="image-20221125221610126.png" alt="image-20221125221610126"></p>
+<p>我们称这个角为μ马赫角。要使它有意义，M=V/c必须不小于1。</p>
+<p>重看：流体运动领域</p>
+<p>(1) 声学。与c相比，V是非常小的；但p、ρ、T的变化是很大的<br>(2) 不可压缩的。V不小，p、T的变化很大，ρ的变化不大。<br>(3) 可压缩的。V不小，p, ρ, T的变化是显著</p>
+<p>马赫数:M=V/c</p>
+<p>M&lt;1：流动为亚音速；M&gt;1：流动为超音速；M&lt;1和&gt;1并存：跨音速。M的含义和意义是什么？M代表宏观动能与内能的比率。所以当M小的时候，V对流体的热力学状态的影响很小。M还代表运动中的流体的可压缩性。M对可压缩流来说是一个非常重要的参数</p>
+<p>可压缩流的本质</p>
+<p>(1) 如果我们将任何流场视为均匀流动和障碍物（如固体）之间的相互作用。其结果是所有作用于原始未受干扰的流动之上的干扰的组合。</p>
+<p>(2) 扰动，是由分子碰撞引起的，用压力波表示。<br>(3) “可压缩性 “意味着密度的变化。可压缩性是流体的一个物理属性。所有流体都是可压缩性。必须有一个衡量压缩流体的容易/困难程度的标准。该措施必须是一个该措施必须是流体本身的物理属性和其当前热力学状态的函数。<br>(4) 导致密度变化的机制有几种。但其本质是压力波导致了密度的显著变化。这就是我们在空气动力学中所关心的。</p>
+<p>可压缩流的例子</p>
+<p>(1)高速流动不是一个普通的事件!<br>(2)高速飞行的。飞机/火箭/航天器<br>(3) 流经。燃气轮机/蒸汽轮机/其他应用<br>(4) 爆炸波…<br>(5) 主要是与动力/推力有关的工程应用<br>(6) 空气动力学是航空航天工程中最重要的基础学科</p>
+<h3 id="标准大气压（回顾）"><a href="#标准大气压（回顾）" class="headerlink" title="标准大气压（回顾）"></a>标准大气压（回顾）</h3><p>(1) 大气层是飞机航行的地方。当然，我们需要知道它的特性。<br>(2) 大气层有季节性的变化。<br>(3) 大气层在各种天气条件下会有所不同。<br>(4) 对于航空工程师来说，这里最重要的参数是海拔高度。常识告诉我们<br>海拔越高，空气越冷，气压越低。<br>(5) 人们设计了一个术语，叫做标准大气，它给出了海拔高度的空气特性<br>从零（海平面）到外缘。它以经验数据为基础，是季节平均的。<br>(6) 现在，我们通常使用美国标准大气层（1976年）作为我们获得空气属性的来源。请参考 “US_Standard_Air1976.m “和 “US_Standard_Air1976_test.m “来获取空气特性。下面是标准空气在0至80公里高度的压力、密度和温度图。80公里的标准空气的压力和温度图。<br>(7) 你在今后的学习中需要使用这些Matlab文件，所以要学习它们的工作原理。</p>
+<p><img src="image-20221125231244472.png" alt="image-20221125231244472"></p>
+<p>(1) 追求更高的速度<br>(2) 密度变化（可压缩）在高速飞行时是很明显的<br>(3) “高速 “是相对于 “音速 “而言的，音速是小干扰（压力波）的传播速度。<br>波）马赫数和马赫锥的 “依赖区域 “和 “影响区域”<br>(4) 压力变化引起的密度变化是主要关注点（可压缩流的本质）<br>关键词：高速；可压缩；压力波</p>
+<h4 id="附录A-Fundamental-Governing-Equations回顾"><a href="#附录A-Fundamental-Governing-Equations回顾" class="headerlink" title="附录A: Fundamental Governing Equations回顾"></a>附录A: Fundamental Governing Equations回顾</h4><p>为了发展流体流动的理论，我们必须有。</p>
+<ol>
+<li>一个基于物理物质的特定兴趣对象，这使我们能够……</li>
+<li>定义一组物理变量（有各自的数值和单位）。</li>
+<li>必须遵守所有的基本物理规律，从而导致……</li>
+<li>一组决定每个物理变量行为的管理方程（理论的在于：我们可以建立A，并建立A=B，当B已知时，A就成为一个已知值）。</li>
+</ol>
+<p>流体力学/空气动力学。<br>概念。连续流场<br>定义。动力学：速度矢量；热力学：压力、密度…<br>基本法则。质量/动量/能量守恒<br>管理方程。5个方程，5个未知数<br>空气动力模型。简化/具体理论</p>
+<h4 id="关注对象-“概念”"><a href="#关注对象-“概念”" class="headerlink" title="关注对象-“概念”"></a>关注对象-“概念”</h4><p>力学：粒子和刚体<br>有变形的质量体<br>我们可以采取多体方法吗？事实证明，我们应该把流体作为一个连续体，并关注<br>关注流体的宏观属性<br>例如：定义密度场。我们将不使用分析 “流体粒子 “的方法，而是使用<br>一小部分流体粒子的总和–”流体元素”<br>重要的力是施加在表面上的，而不是施加在具体的粒子上。这就是<br>经典力学研究和连续力学研究之间的主要区别。<br>总结：</p>
+<ol>
+<li>所关注的最小质量被称为流体元素，它是空间中无限小的点。</li>
+<li>一个流体元素的物理特性是许多流体分子的宏观特性。</li>
+<li>流体的任何部分都由连续分布的流体元素组成</li>
+</ol>
+<h4 id="参数定义"><a href="#参数定义" class="headerlink" title="参数定义"></a>参数定义</h4><p>懒得翻译了</p>
+<h4 id="无粘流控制方程的推导"><a href="#无粘流控制方程的推导" class="headerlink" title="无粘流控制方程的推导"></a>无粘流控制方程的推导</h4><p>Control Volume</p>
+<p>我们能在欧拉方法中直接将物理定律应用于流体粒子吗？(答案是否定的）。<br>相反，我们使用一个控制体积，将物理定律应用于其中。<br>控制体积（CV）是由一个封闭的表面所包围的体积，它可以是任意形状的（见<br>下面的图1）。<br>通常情况下，控制体在空间中的位置是固定的（不随时间变化）。<br>流体颗粒填充在CV中<br>我们考虑CV内部物理变量的变化和通过CV表面进行的交换。<br>的表面（我们称其为控制面，CS）进行交换。<br>在CS上，流体粒子或者流入或者流出CV<br>随着时间的推移，CV内部的流体粒子在不断变化<br>例如：我们可以得到在时间t内CV的总质量为。</p>
+<p><img src="image-20221125231952788.png" alt="image-20221125231952788"></p>
+<h4 id="a-Control-Volume-and-Control-Surface"><a href="#a-Control-Volume-and-Control-Surface" class="headerlink" title="a. Control Volume and Control Surface"></a>a. Control Volume and Control Surface</h4><p>一个任意的控制体积如图A1所示。体积被一个封闭的表面S所包围，这个表面被称为称为控制面。在欧拉方法中，我们让它在空间有一个固定的位置。随着时间的推移，流体进入/离开CS</p>
+<p><img src="image-20221125232112527.png" alt="image-20221125232112527"></p>
+<p>例如，当你扣b，淫水就会流出来。如果我们想分析水管内的水流，我们可以建立一个像这样的control volume</p>
+<p><img src="image-20221125232201413.png" alt="image-20221125232201413"></p>
+<p>随着时间的推移，水从左边流入CV，从右边流出CV。在阴道壁上，我们知道不会有淫水流入/流出。</p>
+<h4 id="b-Control-Surface的一段"><a href="#b-Control-Surface的一段" class="headerlink" title="b. Control Surface的一段"></a>b. Control Surface的一段</h4><p>回到图A1。让我们拿出CS的一小部分。这一小块的面积是dS。我们用点A表示dS。点A的坐标是(x1, y1, z1)我们定义dS的外法线方向为n，它是一个单位向量，垂直于dS并指向远离CV。然后我们用一个约定来定义向量dS，如下所示，</p>
+<p><img src="image-20221125232554570.png" alt="image-20221125232554570"></p>
+<p><img src="image-20221125232603017.png" alt="image-20221125232603017"></p>
+<p>如图A3所示，在dS上，我们可以定义流体的局部速度向量V。现在，我们感兴趣的是CV通过dS的流出/流入的质量。几何学告诉我们，<img src="image-20221125232618314.png" alt="image-20221125232618314"></p>
+<p>平行分量，V t，不会通过dS带来CV质量上的增减。只是以dS为单位流动。从时间t到t+Δt，通过dS进出CV的质量是</p>
+<p><img src="image-20221125232735831.png" alt="image-20221125232735831"></p>
+<p>其中减号是由于惯例，流入CV的质量被标记为正，而流出的质量被视为负。流出的质量则被视为负数。单位时间内通过dS的质量流量为。</p>
+<p><img src="image-20221125232807952.png" alt="image-20221125232807952"></p>
+<h4 id="c-通过整个-Control-Surface的质量流"><a href="#c-通过整个-Control-Surface的质量流" class="headerlink" title="c.通过整个 Control Surface的质量流"></a>c.通过整个 Control Surface的质量流</h4><p>整个CS的总质量流量是dS的所有小部分的总和，<img src="image-20221125232849166.png" alt="image-20221125232849166"></p>
+<h4 id="d-质量守恒"><a href="#d-质量守恒" class="headerlink" title="d.质量守恒"></a>d.质量守恒</h4><p>现在回到建立连续性方程。质量守恒定律只是说:质量不能被消灭，也不能被创造。对于图A1所示的情况，我们有，</p>
+<p>(1) CV内总质量的时间变化率必须等于</p>
+<p>(2)通过CS的质量流量</p>
+<p>我们计算了后一个值(Eq. A2)。现在，让我们计算第一部分。</p>
+<h4 id="e-无穷小流体元件和控制体积内的质量"><a href="#e-无穷小流体元件和控制体积内的质量" class="headerlink" title="e.无穷小流体元件和控制体积内的质量"></a>e.无穷小流体元件和控制体积内的质量</h4><p>首先考虑在CV内(x2, y2, z2)点B周围的一个无穷小流体元素，它的质量为</p>
+<p><img src="image-20221125233013109.png" alt="image-20221125233013109"></p>
+<p>CV内部的总质量是所有小元素的总和的极限，当d(Vol)} 0的大小</p>
+<p><img src="image-20221125233028316.png" alt="image-20221125233028316"></p>
+<p>CV内总质量的时间变化率为<img src="image-20221125233043217.png" alt="image-20221125233043217"></p>
+<p>注意CV不随时间变化，所以我们可以在积分内对t求导</p>
+<h4 id="f-连续性方程-积分形式"><a href="#f-连续性方程-积分形式" class="headerlink" title="f.连续性方程(积分形式)"></a>f.连续性方程(积分形式)</h4><p>质量守恒定理规定(A2)=(A3)</p>
+<p><img src="image-20221125233140623.png" alt="image-20221125233140623"></p>
+<p>公式A4是连续性方程的积分形式。我们没有假设任何关于控制体的形状和位置的信息。唯一的要求是CS是一个闭合曲面。因此，公式A4适用于流场中任意形状和大小的CV。注:从严格的微积分角度来看，对物理变量的CS和微分性质有要求。</p>
+<p>其中包括变量的连续性、可微性等。如果你对这些感兴趣，请查阅相关书籍。现在，我们假设等式A4可以被写出来，任何额外的要求都隐含满足了。</p>
+<p>Eq. A4可以通过高斯定理化为一个单独的积分。高斯定理说，</p>
+<p><img src="image-20221125233423368.png" alt="image-20221125233423368"></p>
+<p>这意味着，对于任何向量A，它在一个封闭曲面S上的积分，等于A的散度在S包围的体积上的体积积分，将这个向量替换为ρV(这确实是一个向量)，我们得到(A4)的LHS为，<img src="image-20221125233510138.png" alt="image-20221125233510138"></p>
+<h4 id="g-连续方程-微分形式"><a href="#g-连续方程-微分形式" class="headerlink" title="g.连续方程(微分形式)"></a>g.连续方程(微分形式)</h4><p>公式A5对于流场中的任何CV都是有效的。在这种情况下，函数的体积积分处处为零。为了使它成立，函数本身必须在流场中处处为零。</p>
+<p>因此，我们得到，在flow field的任何地方<img src="image-20221125233615036.png" alt="image-20221125233615036"></p>
+<h4 id="h-连续性方程的两个特例"><a href="#h-连续性方程的两个特例" class="headerlink" title="h. 连续性方程的两个特例"></a>h. 连续性方程的两个特例</h4><p>定义:当所有物理位置的所有物理变量的值都不随时间变化时，流被称为稳态(或稳态)，即:</p>
+<p><img src="image-20221125233650434.png" alt="image-20221125233650434"></p>
+<p>对于定常流，连续性方程为<img src="image-20221125233707116.png" alt="image-20221125233707116"></p>
+<p>定义:如果所有流体元素的密度不随时间变化，则流体被认为是不可压缩的。不可压缩并不一定意味着ρ(x, y, z, t)=常数。我们可以有两个不同密度值的元素，它们不随时间变化。我们将在后面讨论这个问题。对于均匀不可压缩流体流动，ρ(x, y, z, t)=常数，我们得到，</p>
+<p><img src="image-20221125233726055.png" alt="image-20221125233726055"></p>
+<p>对于定常和非定常流动都是如此。</p>
+<p><strong>动量方程</strong></p>
+<p>再次看图A1，牛顿第二定律表明，</p>
+<p>(1) CV动量变化的时间变化率</p>
+<p>=(2)通过CS进入CV的动量流率</p>
+<p>+(3)作用在CV上的总力。</p>
+<p><img src="image-20221125233832069.png" alt="image-20221125233832069"></p>
+<p>我们将遵循与得到连续性方程相同的步骤。CV内的总动量是</p>
+<p><img src="image-20221125233856287.png" alt="image-20221125233856287"></p>
+<p>CV内总动量的时间变化率为，</p>
+<p><img src="image-20221125233913988.png" alt="image-20221125233913988"></p>
+<p>再次注意，CV不随时间变化，所以我们可以在积分内求偏导。</p>
+<p>透过CS</p>
+<p><img src="image-20221125233939835.png" alt="image-20221125233939835"></p>
+<p>作用在CV上的力可以分为两组。首先，有力作用在CV内部的每个流体元素上，但没有直接接触。我们称之为“身体力”。例如，重力是一种身体力。我们用F表示单位质量的力。</p>
+<p><img src="image-20221125233959785.png" alt="image-20221125233959785"></p>
+<p>其次，有一些力作用在CS上。我们已经讨论了压强和剪力(shear forces)。这些力在本质上是分子的。它们作用于CS上的流体元素。力的来源来自相邻的流体元素或固体。这里，我们只考虑压强。由于忽略了剪切力，即忽略了粘性的影响，我们的研究仅限于无粘性流动。如下图所示，作用在小dS上的压力总是在-n方向上。</p>
+<p><img src="image-20221125234103345.png" alt="image-20221125234103345"></p>
+<p><img src="image-20221125234115747.png" alt="image-20221125234115747"></p>
+<p><img src="image-20221125234136014.png" alt="image-20221125234136014"></p>
+<p><strong>能量方程</strong></p>
+<p>(1) CV的能量变化率</p>
+<p>=(2)通过CS进入CV的能量率</p>
+<p>+(3)作用在CV上的力做功速率</p>
+<p>+(4)作用在CS上的表面力做功速率</p>
+<p>我们将遵循得到连续性和动量方程的相同步骤。</p>
+<p>CV内的总能量是，</p>
+<p><img src="image-20221125234221831.png" alt="image-20221125234221831"></p>
+<p>e是热力学能(单位质量)。</p>
+<p>CV内总能量的时间变化率为，<img src="image-20221125234300426.png" alt="image-20221125234300426"></p>
+<p><img src="image-20221125234318189.png" alt="image-20221125234318189"></p>
+<p>压强所做的功的速率</p>
+<p><img src="image-20221125234352169.png" alt="image-20221125234352169"></p>
+<h3 id="附录B"><a href="#附录B" class="headerlink" title="附录B"></a>附录B</h3><p>看起来没啥用，不翻译了</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/aerodynamics/">
+                                    <span class="chip bg-color">aerodynamics</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'SkNYDuVoJSwPhZpZYjRLnJ6I-gzGzoHsz',
+        appKey: '3ux1osQB9R9ocL7Cnn6VaKk6',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2022/11/25/Aerodynamics-0x00/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Aerodynamics 0x00">
+                        
+                        <span class="card-title">Aerodynamics 0x00</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            aerodynamics
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/notes/" class="post-category">
+                                    notes
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/aerodynamics/">
+                        <span class="chip bg-color">aerodynamics</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/11/23/%E6%8C%87%E6%95%B0%E6%97%8F%E5%88%86%E5%B8%83%E2%80%98/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="指数族分布">
+                        
+                        <span class="card-title">指数族分布</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            统计学习方法 指数族分布
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/notes/" class="post-category">
+                                    notes
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ML/">
+                        <span class="chip bg-color">ML</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">
+                        <span class="chip bg-color">统计学习方法</span>
+                    </a>
+                    
+                    <a href="/tags/notes/">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8C%87%E6%95%B0%E6%97%8F%E5%88%86%E5%B8%83/">
+                        <span class="chip bg-color">指数族分布</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022</span>
+            
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">Yenaibangbing</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/yenaibangbing" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2698118175@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/yenaibangbing" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/yenaibangbing" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <link href="https://yenaibangbing.github.io/atom.xml" rel="self"/>
   
   <link href="https://yenaibangbing.github.io/"/>
-  <updated>2022-11-23T14:29:31.719Z</updated>
+  <updated>2022-11-25T15:44:42.617Z</updated>
   <id>https://yenaibangbing.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Aerodynamics 0x00</title>
+    <link href="https://yenaibangbing.github.io/2022/11/25/Aerodynamics-0x00/"/>
+    <id>https://yenaibangbing.github.io/2022/11/25/Aerodynamics-0x00/</id>
+    <published>2022-11-25T13:00:48.000Z</published>
+    <updated>2022-11-25T15:44:42.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;0-Review-of-Low-Speed-Flows-and-Looking-Ahead…&quot;&gt;&lt;a href=&quot;#0-Review-of-Low-Speed-Flows-and-Looking-Ahead…&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="notes" scheme="https://yenaibangbing.github.io/categories/notes/"/>
+    
+    
+    <category term="aerodynamics" scheme="https://yenaibangbing.github.io/tags/aerodynamics/"/>
+    
+  </entry>
+  
+  <entry>
     <title>指数族分布</title>
     <link href="https://yenaibangbing.github.io/2022/11/23/%E6%8C%87%E6%95%B0%E6%97%8F%E5%88%86%E5%B8%83%E2%80%98/"/>
     <id>https://yenaibangbing.github.io/2022/11/23/%E6%8C%87%E6%95%B0%E6%97%8F%E5%88%86%E5%B8%83%E2%80%98/</id>
     <published>2022-11-23T13:57:13.000Z</published>
-    <updated>2022-11-23T14:29:31.719Z</updated>
+    <updated>2022-11-23T15:16:47.960Z</updated>
     
     
       
@@ -573,33 +598,6 @@ from</summary>
     <category term="solutions" scheme="https://yenaibangbing.github.io/tags/solutions/"/>
     
     <category term="codeforces" scheme="https://yenaibangbing.github.io/tags/codeforces/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How to Solve Code Block Appearance Exception</title>
-    <link href="https://yenaibangbing.github.io/2022/09/16/How-to-Solve-Code-Block-Appearance-Exception/"/>
-    <id>https://yenaibangbing.github.io/2022/09/16/How-to-Solve-Code-Block-Appearance-Exception/</id>
-    <published>2022-09-16T13:43:49.000Z</published>
-    <updated>2022-09-22T08:28:32.168Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Error&quot;&gt;&lt;a href=&quot;#Error&quot; class=&quot;headerlink&quot; title=&quot;Error&quot;&gt;&lt;/a&gt;Error&lt;/h2&gt;&lt;p&gt;When I insert code block to my articles, I found the code</summary>
-        
-      
-    
-    
-    
-    <category term="tech" scheme="https://yenaibangbing.github.io/categories/tech/"/>
-    
-    
-    <category term="matery" scheme="https://yenaibangbing.github.io/tags/matery/"/>
-    
-    <category term="debug" scheme="https://yenaibangbing.github.io/tags/debug/"/>
     
   </entry>
   
